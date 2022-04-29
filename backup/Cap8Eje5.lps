@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="42"/>
+        <CursorPos X="39" Y="65"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="13" HistoryIndex="12">
+      <Position1>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Column="41"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="34" Column="7" TopLine="11"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="24" Column="32" TopLine="18"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="44" Column="15" TopLine="27"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="43" Column="10" TopLine="20"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="45" Column="5" TopLine="28"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="55" Column="38" TopLine="34"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="38" Column="3" TopLine="22"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="24" Column="26" TopLine="11"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="54" Column="31" TopLine="39"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="49" Column="39" TopLine="37"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="54" Column="20" TopLine="41"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Cap8Eje5.lpr"/>
+        <Caret Line="67" Column="19" TopLine="43"/>
+      </Position13>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

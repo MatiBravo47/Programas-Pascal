@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="16"/>
+        <CursorPos X="20" Y="35"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="10" HistoryIndex="9">
+      <Position1>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="4" Column="26"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="14" Column="4"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="15" Column="7" TopLine="2"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="18" Column="7" TopLine="5"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="19" Column="5" TopLine="6"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="20" Column="3" TopLine="7"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="27" Column="5" TopLine="14"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="31" Column="4" TopLine="18"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="32" Column="25" TopLine="11"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="11" Column="16"/>
+      </Position10>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="Ok"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>

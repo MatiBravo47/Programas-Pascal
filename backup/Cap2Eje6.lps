@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Cap2Eje6.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="12"/>
+        <CursorPos X="48" Y="36"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="6" HistoryIndex="5">
+      <Position1>
+        <Filename Value="Cap2Eje6.pas"/>
+        <Caret Line="31" Column="5"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Cap2Eje6.pas"/>
+        <Caret Line="33" Column="3" TopLine="8"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Cap2Eje6.pas"/>
+        <Caret Line="31" Column="6" TopLine="7"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Cap2Eje6.pas"/>
+        <Caret Line="32" Column="8" TopLine="8"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Cap2Eje6.pas"/>
+        <Caret Line="19" Column="6" TopLine="8"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Cap2Eje6.pas"/>
+        <Caret Line="16" Column="9" TopLine="4"/>
+      </Position6>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

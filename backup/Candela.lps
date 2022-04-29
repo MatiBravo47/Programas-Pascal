@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Candela.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="iannonefinal"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="32"/>
+        <CursorPos X="27" Y="46"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="5" HistoryIndex="4">
+      <Position1>
+        <Filename Value="Candela.lpr"/>
+        <Caret Line="58" Column="46"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Candela.lpr"/>
+        <Caret Line="39" Column="120" TopLine="32"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Candela.lpr"/>
+        <Caret Line="54" TopLine="33"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Candela.lpr"/>
+        <Caret Line="17" Column="57" TopLine="3"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Candela.lpr"/>
+        <Caret Line="54" TopLine="33"/>
+      </Position5>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="Matriz"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>

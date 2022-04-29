@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="ParcialComida.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="19"/>
+        <CursorPos X="7" Y="37"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="38" TopLine="19"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="32" TopLine="19"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="36" TopLine="19"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="37" TopLine="19"/>
+      </Position4>
+      <Position5>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="38" TopLine="19"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="32" TopLine="19"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="36" TopLine="19"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="37" TopLine="19"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="38" TopLine="19"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="32" TopLine="19"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="36" TopLine="19"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="37" TopLine="19"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="38" TopLine="19"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="32" TopLine="19"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="36" TopLine="19"/>
+      </Position15>
+      <Position16>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="37" TopLine="19"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="38" TopLine="19"/>
+      </Position17>
+      <Position18>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="32" TopLine="19"/>
+      </Position18>
+      <Position19>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="36" TopLine="19"/>
+      </Position19>
+      <Position20>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="37" TopLine="19"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="38" TopLine="19"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="32" TopLine="19"/>
+      </Position22>
+      <Position23>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="36" TopLine="19"/>
+      </Position23>
+      <Position24>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="37" TopLine="19"/>
+      </Position24>
+      <Position25>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="38" TopLine="19"/>
+      </Position25>
+      <Position26>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="32" TopLine="19"/>
+      </Position26>
+      <Position27>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="36" TopLine="19"/>
+      </Position27>
+      <Position28>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="37" TopLine="19"/>
+      </Position28>
+      <Position29>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="38" TopLine="19"/>
+      </Position29>
+      <Position30>
+        <Filename Value="ParcialComida.pas"/>
+        <Caret Line="32" TopLine="19"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="4">
+      <Item1>
+        <Expression Value="Mat"/>
+      </Item1>
+      <Item2>
+        <Expression Value="i"/>
+      </Item2>
+      <Item3>
+        <Expression Value="j"/>
+      </Item3>
+      <Item4>
+        <Expression Value="k"/>
+      </Item4>
+    </Watches>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="19"/>
+        <CursorPos X="30" Y="41"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="29" HistoryIndex="28">
+      <Position1>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="4" Column="26"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="14" Column="4"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="15" Column="7" TopLine="2"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="18" Column="7" TopLine="5"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="19" Column="5" TopLine="6"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="20" Column="3" TopLine="7"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="27" Column="5" TopLine="14"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="31" Column="4" TopLine="18"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="32" Column="25" TopLine="11"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="11" Column="16"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="38" Column="5" TopLine="17"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="14"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="15"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="16"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="17" TopLine="16"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="14"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="15"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="16"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="17"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="18"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="19" TopLine="5"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="20" TopLine="5"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="23" TopLine="5"/>
+      </Position23>
+      <Position24>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="25" TopLine="5"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="29" TopLine="8"/>
+      </Position25>
+      <Position26>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="35" TopLine="19"/>
+      </Position26>
+      <Position27>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="38" Column="69" TopLine="19"/>
+      </Position27>
+      <Position28>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="39" Column="26" TopLine="19"/>
+      </Position28>
+      <Position29>
+        <Filename Value="Cap1Eje4.Pas"/>
+        <Caret Line="40" Column="59" TopLine="19"/>
+      </Position29>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="4">
+      <Item1>
+        <Expression Value="Ok"/>
+      </Item1>
+      <Item2>
+        <Expression Value="X"/>
+      </Item2>
+      <Item3>
+        <Expression Value="Mayus"/>
+      </Item3>
+      <Item4>
+        <Expression Value="N"/>
+      </Item4>
+    </Watches>
+  </Debugging>
+</CONFIG>

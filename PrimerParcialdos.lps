@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="83"/>
+        <CursorPos X="113" Y="93"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="34" TopLine="16"/>
+      </Position1>
+      <Position2>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="35" TopLine="16"/>
+      </Position2>
+      <Position3>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="27" Column="9" TopLine="18"/>
+      </Position3>
+      <Position4>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="53" TopLine="34"/>
+      </Position4>
+      <Position5>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="35" Column="57" TopLine="18"/>
+      </Position5>
+      <Position6>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="52" TopLine="33"/>
+      </Position6>
+      <Position7>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="53" TopLine="33"/>
+      </Position7>
+      <Position8>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="77" Column="7" TopLine="54"/>
+      </Position8>
+      <Position9>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="8" Column="4"/>
+      </Position9>
+      <Position10>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="14" Column="6" TopLine="2"/>
+      </Position10>
+      <Position11>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="7" Column="9"/>
+      </Position11>
+      <Position12>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="33" Column="5" TopLine="41"/>
+      </Position12>
+      <Position13>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="41" Column="20" TopLine="28"/>
+      </Position13>
+      <Position14>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="62" Column="46" TopLine="50"/>
+      </Position14>
+      <Position15>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="68" Column="50" TopLine="56"/>
+      </Position15>
+      <Position16>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="77" Column="24" TopLine="57"/>
+      </Position16>
+      <Position17>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="90" Column="77" TopLine="67"/>
+      </Position17>
+      <Position18>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="73" Column="12" TopLine="60"/>
+      </Position18>
+      <Position19>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="83" Column="25" TopLine="72"/>
+      </Position19>
+      <Position20>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="101" Column="25" TopLine="81"/>
+      </Position20>
+      <Position21>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="88" Column="8" TopLine="80"/>
+      </Position21>
+      <Position22>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="86" Column="37" TopLine="83"/>
+      </Position22>
+      <Position23>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="94" Column="44" TopLine="83"/>
+      </Position23>
+      <Position24>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="98" TopLine="83"/>
+      </Position24>
+      <Position25>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="99" TopLine="83"/>
+      </Position25>
+      <Position26>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="100" TopLine="83"/>
+      </Position26>
+      <Position27>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="101" TopLine="83"/>
+      </Position27>
+      <Position28>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="102" TopLine="83"/>
+      </Position28>
+      <Position29>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="103" TopLine="83"/>
+      </Position29>
+      <Position30>
+        <Filename Value="PrimerParcialdos.pas"/>
+        <Caret Line="90" TopLine="83"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="8">
+      <Item1>
+        <Expression Value="Car"/>
+      </Item1>
+      <Item2>
+        <Expression Value="Costo"/>
+      </Item2>
+      <Item3>
+        <Expression Value="VCant"/>
+      </Item3>
+      <Item4>
+        <Expression Value="VMasL"/>
+      </Item4>
+      <Item5>
+        <Expression Value="I"/>
+      </Item5>
+      <Item6>
+        <Expression Value="N"/>
+      </Item6>
+      <Item7>
+        <Expression Value="Z"/>
+      </Item7>
+      <Item8>
+        <Expression Value="VCant[i]"/>
+      </Item8>
+    </Watches>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="41"/>
+        <CursorPos X="17" Y="61"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="35" TopLine="23"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="36" TopLine="23"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="33" TopLine="23"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="35" TopLine="23"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="36" TopLine="23"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="33" TopLine="23"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="35" TopLine="23"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="36" TopLine="23"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="33" TopLine="23"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="35" TopLine="23"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="36" TopLine="23"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="33" TopLine="23"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="35" TopLine="23"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="36" TopLine="23"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="33" TopLine="23"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="35" TopLine="23"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="36" TopLine="23"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="33" TopLine="23"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="38" TopLine="23"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="39" TopLine="23"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="40" TopLine="23"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="42" TopLine="23"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="30" TopLine="23"/>
+      </Position23>
+      <Position24>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="44" TopLine="25"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="26" TopLine="22"/>
+      </Position25>
+      <Position26>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="45" TopLine="34"/>
+      </Position26>
+      <Position27>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="56" TopLine="36"/>
+      </Position27>
+      <Position28>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="57" TopLine="37"/>
+      </Position28>
+      <Position29>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="61" Column="5" TopLine="41"/>
+      </Position29>
+      <Position30>
+        <Filename Value="Cap5Eje6.lpr"/>
+        <Caret Line="60" Column="4" TopLine="41"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="3">
+      <Item1>
+        <Expression Value="LongMax"/>
+      </Item1>
+      <Item2>
+        <Expression Value="Palabra"/>
+      </Item2>
+      <Item3>
+        <Expression Value="CantPal"/>
+      </Item3>
+    </Watches>
+  </Debugging>
+</CONFIG>

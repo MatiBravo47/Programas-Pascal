@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="12"/>
+        <CursorPos X="19" Y="29"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="35" TopLine="14"/>
+      </Position1>
+      <Position2>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="31" TopLine="14"/>
+      </Position2>
+      <Position3>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="37" TopLine="16"/>
+      </Position3>
+      <Position4>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="57" TopLine="36"/>
+      </Position4>
+      <Position5>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="58" TopLine="36"/>
+      </Position5>
+      <Position6>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="23" TopLine="10"/>
+      </Position6>
+      <Position7>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="24" TopLine="10"/>
+      </Position7>
+      <Position8>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="25" TopLine="10"/>
+      </Position8>
+      <Position9>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="27" TopLine="10"/>
+      </Position9>
+      <Position10>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="28" TopLine="10"/>
+      </Position10>
+      <Position11>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="29" TopLine="10"/>
+      </Position11>
+      <Position12>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="30" TopLine="10"/>
+      </Position12>
+      <Position13>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="22" Column="20" TopLine="22"/>
+      </Position13>
+      <Position14>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="57" TopLine="36"/>
+      </Position14>
+      <Position15>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="58" TopLine="36"/>
+      </Position15>
+      <Position16>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="23" TopLine="10"/>
+      </Position16>
+      <Position17>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="24" TopLine="10"/>
+      </Position17>
+      <Position18>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="25" TopLine="10"/>
+      </Position18>
+      <Position19>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="27" TopLine="10"/>
+      </Position19>
+      <Position20>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="28" TopLine="10"/>
+      </Position20>
+      <Position21>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="29" Column="19" TopLine="17"/>
+      </Position21>
+      <Position22>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="57" TopLine="36"/>
+      </Position22>
+      <Position23>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="58" TopLine="36"/>
+      </Position23>
+      <Position24>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="23" TopLine="10"/>
+      </Position24>
+      <Position25>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="24" TopLine="10"/>
+      </Position25>
+      <Position26>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="25" TopLine="10"/>
+      </Position26>
+      <Position27>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="27" TopLine="10"/>
+      </Position27>
+      <Position28>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="28" TopLine="10"/>
+      </Position28>
+      <Position29>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="29" TopLine="10"/>
+      </Position29>
+      <Position30>
+        <Filename Value="PrimerParcialCuatro.pas"/>
+        <Caret Line="30" TopLine="12"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="4">
+      <Item1>
+        <Expression Value="VNOM"/>
+      </Item1>
+      <Item2>
+        <Expression Value="TProm"/>
+      </Item2>
+      <Item3>
+        <Expression Value="CantV"/>
+      </Item3>
+      <Item4>
+        <Expression Value="Nombre"/>
+      </Item4>
+    </Watches>
+  </Debugging>
+</CONFIG>

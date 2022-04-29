@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Cap2Eje1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="47" Y="12"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="4" HistoryIndex="3">
+      <Position1>
+        <Filename Value="Cap2Eje1.pas"/>
+        <Caret Line="14" Column="30"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Cap2Eje1.pas"/>
+        <Caret Line="4" Column="7"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Cap2Eje1.pas"/>
+        <Caret Line="11" Column="32"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Cap2Eje1.pas"/>
+        <Caret Line="10" Column="37"/>
+      </Position4>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

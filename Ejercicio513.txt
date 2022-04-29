@@ -1,0 +1,1 @@
+Para la letra ingresada, calcular e informar la clave de máximo promedio

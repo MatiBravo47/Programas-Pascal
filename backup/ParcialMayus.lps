@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="ParcialMayus.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="22"/>
+        <CursorPos X="9" Y="41"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="25" HistoryIndex="24">
+      <Position1>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="17" Column="3"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="15" Column="28"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="20"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="9"/>
+      </Position4>
+      <Position5>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="10" Column="13"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="20"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="17" Column="39" TopLine="4"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="21" Column="10" TopLine="9"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="33" Column="22" TopLine="10"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="32" TopLine="11"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="33" TopLine="11"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="21" Column="24" TopLine="11"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="22" TopLine="11"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="23" TopLine="11"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="24" TopLine="11"/>
+      </Position15>
+      <Position16>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="23" TopLine="11"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="24" TopLine="11"/>
+      </Position17>
+      <Position18>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="23" TopLine="11"/>
+      </Position18>
+      <Position19>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="24" TopLine="11"/>
+      </Position19>
+      <Position20>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="23" TopLine="11"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="24" TopLine="11"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="23" Column="44" TopLine="14"/>
+      </Position22>
+      <Position23>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="34" Column="27" TopLine="21"/>
+      </Position23>
+      <Position24>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="43" Column="25" TopLine="21"/>
+      </Position24>
+      <Position25>
+        <Filename Value="ParcialMayus.pas"/>
+        <Caret Line="41" Column="10" TopLine="21"/>
+      </Position25>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="7">
+      <Item1>
+        <Expression Value="N"/>
+      </Item1>
+      <Item2>
+        <Expression Value="M"/>
+      </Item2>
+      <Item3>
+        <Expression Value="Mat"/>
+      </Item3>
+      <Item4>
+        <Expression Value="i"/>
+      </Item4>
+      <Item5>
+        <Expression Value="j"/>
+      </Item5>
+      <Item6>
+        <Expression Value="Mayus"/>
+      </Item6>
+      <Item7>
+        <Expression Value="Mat[i,j]"/>
+      </Item7>
+    </Watches>
+  </Debugging>
+</CONFIG>

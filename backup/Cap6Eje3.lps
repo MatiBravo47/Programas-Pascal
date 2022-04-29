@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Cap6Eje3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="17" Y="25"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="25" HistoryIndex="24">
+      <Position1>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="14" Column="6" TopLine="2"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="13" TopLine="2"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="14" TopLine="2"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="15" TopLine="2"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="16" TopLine="2"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="18" TopLine="2"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="20" TopLine="2"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="21" TopLine="2"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="22" TopLine="3"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="23" TopLine="4"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="18" TopLine="4"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="20" TopLine="4"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="21" TopLine="4"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="23" TopLine="4"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="18" TopLine="4"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="20" TopLine="4"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="21" TopLine="4"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="23" TopLine="4"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="18" TopLine="4"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="20" TopLine="4"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="21" TopLine="4"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="23" TopLine="4"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="24" TopLine="5"/>
+      </Position23>
+      <Position24>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="18" TopLine="5"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Cap6Eje3.pas"/>
+        <Caret Line="26" TopLine="7"/>
+      </Position25>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="2">
+      <Item1>
+        <Expression Value="Prim"/>
+      </Item1>
+      <Item2>
+        <Expression Value="Ult"/>
+      </Item2>
+    </Watches>
+  </Debugging>
+</CONFIG>

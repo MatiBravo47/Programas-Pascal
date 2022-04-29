@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="92"/>
+        <CursorPos X="42" Y="106"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="C:\Users\Mati Bravo Neron\Downloads\Tp7_Ejer5 (1).pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos X="17" Y="63"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+    </Units>
+    <JumpHistory Count="12" HistoryIndex="11">
+      <Position1>
+        <Filename Value="Cap7Eje5.lpr"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="111" TopLine="98"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="18" TopLine="5"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="19" TopLine="5"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="9" Column="49" TopLine="5"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="25" Column="44" TopLine="5"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="15" Column="27" TopLine="5"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="33" Column="50" TopLine="24"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="117" TopLine="97"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="83" Column="21" TopLine="18"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="12" Column="5"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Cap7Eje5.lpr"/>
+        <Caret Line="14" Column="31"/>
+      </Position12>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="Car"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>
