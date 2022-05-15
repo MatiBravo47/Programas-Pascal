@@ -3,31 +3,41 @@ uses crt;
 Type
   TR = Record
     Club:string;
-    PJ:byte;
+    PJ,puntaje:byte;
   end;
 TV = array [1..10] of TR; //Vector que guarda todos los datos
 
-Procedure LeeArch(Var Equipos:TV;Var N:byte); //comentario
+
+Procedure IniciaVec(N:Byte; Var Puntaje:TV);
+var
+  i:byte;
+begin
+for i:=1 to N do
+    Puntaje[i]:=0;
+end;
+Procedure LeeArch(Var Puntaje,Equipos:TV;Var N:byte);
 Var
   arch:text;
-  i,partidos:byte;
+  i,j,PJ:byte;
   nombre: string[6];
+  perdio:boolean;
+  Res,blanco:char;
 Begin
 ASSIGN(Arch,'Ejercicio74.txt');RESET(Arch);
 Readln(Arch,N);//Lee cantidad de equipos
+IniciaVec(N,Puntaje);
 For i:=1 to N do
   begin
   perdio:=false;
-  puntaje:=0;
-    With V[i] do
+    With Equipos[i] do
     Read(Arch,Nombre,PJ);
     For j:=1 to PJ do
       begin
-      Read(Arch,Res);
+      Read(Arch,Res,blanco);
       if res = 'G' then
-        Puntaje:=Puntaje + 3;
+        Puntaje[i]:=Puntaje[i] + 3;
       if res = 'E' then
-        Puntaje := Puntaje + 1;
+        Puntaje[i] := Puntaje[i] + 1;
       if res = 'P' then
         Perdio:=true; //clequear esto
        end;
@@ -36,6 +46,21 @@ For i:=1 to N do
 CLOSE(Arch);
 end;
 
+
+Procedure Listado();
+var
+Begin
+For i:=1 to N do
+  Writeln('Equipo : ',Equipos.Nombre ,'puntos: ',)
+end;
+
+Var
+  equipos:TV;
+  n:byte;
+//Programa principal
 begin
+  leeArch(Equipos,N);
+
+
 end.
 
