@@ -7,7 +7,7 @@ Type
   end;
 TV = array [1..10] of TR; //Vector que guarda todos los datos
 
-Procedure LeeArch(Var Equipos:TV);
+Procedure LeeArch(Var Equipos:TV;Var N:byte); //comentario
 Var
   arch:text;
   i,partidos:byte;
