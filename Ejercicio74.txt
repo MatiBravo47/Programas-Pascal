@@ -1,0 +1,5 @@
+4
+River   5 G G G G G        
+Boca    5 G P G P G
+Racing  5 G G G G E
+Tigre   5 P P P P G
