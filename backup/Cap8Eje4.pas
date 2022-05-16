@@ -3,7 +3,7 @@ uses crt;
 
 Function Invierte(Pal:String;i:byte):String;
 Begin
-  if i=1 then   //si llega a la ultima letra
+  if i=1 then
     invierte:=pal[i]
   else
     invierte:=pal[i] + invierte(pal,i-1);
