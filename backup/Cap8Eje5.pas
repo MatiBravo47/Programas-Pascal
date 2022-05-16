@@ -18,9 +18,8 @@ end;
 
 Function Suma(V:TV;N:byte):integer;
 begin
-  if (n=1) then
-  suma:=v[n]
-  else
+Suma:=0;
+  while (n>0) do
   Suma :=V[N] + suma(V,N-1);
 end;
 Var
