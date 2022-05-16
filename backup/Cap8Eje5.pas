@@ -37,6 +37,21 @@ if (n>1) then
   Inver(V,n-1);
 end;
 
+function Max(V:tv;n:byte):integer;
+var
+  aux:integer;
+begin
+if n=1 then
+  max:=v[n]
+else
+begin
+  aux:=Max(V,n-1);
+  if v[n]> aux then
+    max :=v[n]
+  else
+    max:=aux;
+  end;
+end;
 Var
   v:tv;
   n:byte;
@@ -47,6 +62,8 @@ begin
   muestra(V,n);
   Writeln;
   inver(v,n);
+  Writeln;
+  Writeln('El valor maximo del vector es: ',Max (V,N));
   readln;
 end.
 
