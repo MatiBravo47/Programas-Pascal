@@ -52,6 +52,11 @@ begin
     max:=aux;       //sino queda el antiguo valor
   end;
 end;
+
+function Promedio(v:Tv;n:byte):real;
+begin
+  promedio:=suma(V,n) / n ;
+end;
 Var
   v:tv;
   n:byte;
@@ -64,6 +69,7 @@ begin
   inver(v,n);
   Writeln;
   Writeln('El valor maximo del vector es: ',Max (V,N));
+  Writeln ('El promedio es',promedio(v,n):5:2);
   readln;
 end.
 

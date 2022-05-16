@@ -41,16 +41,21 @@ function Max(V:tv;n:byte):integer;
 var
   aux:integer;
 begin
-if n=1 then
+if n=1 then //El primero es el maximo momentaneo
   max:=v[n]
 else
 begin
-  aux:=Max(V,n-1);
-  if v[n]> aux then
-    max :=v[n]
+  aux:=Max(V,n-1); //guardo maximo en auxiliar
+  if v[n]> aux then //si el valor actual es mayor
+    max :=v[n]      //se guarda en maximo
   else
-    max:=aux;
+    max:=aux;       //sino queda el antiguo valor
   end;
+end;
+
+function Promedio(v:Tv;n:byte):real;
+begin
+  promedio:=suma(V,n) / n ;
 end;
 Var
   v:tv;
@@ -64,6 +69,7 @@ begin
   inver(v,n);
   Writeln;
   Writeln('El valor maximo del vector es: ',Max (V,N));
+  Writeln ('El promedio es',promedio(v,n));
   readln;
 end.
 
