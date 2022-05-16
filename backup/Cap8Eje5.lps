@@ -9,13 +9,13 @@
         <Filename Value="Cap8Eje5.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="5"/>
-        <CursorPos X="9" Y="21"/>
+        <TopLine Value="20"/>
+        <CursorPos X="10" Y="32"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>
     </Units>
-    <JumpHistory Count="19" HistoryIndex="18">
+    <JumpHistory Count="24" HistoryIndex="23">
       <Position1>
         <Filename Value="Cap8Eje5.pas"/>
         <Caret Line="24"/>
@@ -92,6 +92,26 @@
         <Filename Value="Cap8Eje5.pas"/>
         <Caret Line="22" TopLine="5"/>
       </Position19>
+      <Position20>
+        <Filename Value="Cap8Eje5.pas"/>
+        <Caret Line="21" Column="9" TopLine="5"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Cap8Eje5.pas"/>
+        <Caret Line="29" TopLine="9"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Cap8Eje5.pas"/>
+        <Caret Line="30" TopLine="10"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Cap8Eje5.pas"/>
+        <Caret Line="31" TopLine="10"/>
+      </Position23>
+      <Position24>
+        <Filename Value="Cap8Eje5.pas"/>
+        <Caret Line="25" Column="27" TopLine="8"/>
+      </Position24>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
@@ -105,7 +125,7 @@
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="Cap8Eje5.pas"/>
-        <Line Value="32"/>
+        <Line Value="43"/>
       </Item1>
     </BreakPoints>
     <Watches Count="3">

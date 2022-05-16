@@ -18,10 +18,19 @@ end;
 
 Function Suma(V:TV;N:byte):integer;
 begin
-Suma:=0;
-  while (n>0) do
+  if (n=1) then
+  suma:=v[n]
+  else
   Suma :=V[N] + suma(V,N-1);
 end;
+
+Procedure muestra(V:TV;n:byte);
+Begin
+  if (n>1) then
+    mostrar(V,n-1);
+write(V[N],' ');
+end;
+
 Var
   v:tv;
   n:byte;
@@ -29,6 +38,7 @@ begin
   clrscr;
   LeeArch(v,n);
   Writeln('La suma de los elementos es: ' , Suma(V,N));
+  muestra(V,n);
   readln;
 end.
 
