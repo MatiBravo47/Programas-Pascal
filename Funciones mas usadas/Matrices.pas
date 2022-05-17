@@ -42,7 +42,29 @@ for j:=2 to M do
 minfila:=Min;
 end;
 
-Function MaxFila(Mat:TM)
+//Genera Arregla con el maximo de cada fila y lo muestra
+Procedure MaxFila(Mat:TM;N,M:byte);
+Var
+  i,j,k:byte;
+  max:integer;
+  v:TV;
+begin
+k:=1;
+Writeln('El arreglo con el maximo de cada fila es : ');
+For i:=1 to N do
+  begin
+  max:=Mat[i,1];
+  for j:=1 to M do
+    if Max<Mat[i,j] then
+      max:=Mat[i,j];
+  V[k]:=Max;
+  Write(' ',v[k]);
+  k:=k+1;
+  end;
+Writeln('');
+end;
+
+
 
 //Utilizacion la funcion generar un arreglo VMin de N elementos,
 //que contenta el minimo de cada fila.
@@ -127,6 +149,7 @@ While (i<=n) and (PS[i,col]<>0) and (pb[i,col]<>0) do
    i:=i+1;
 ColumnaCeros:=i<=N;
 end;
+
 //Si encuentra 0's cuenta
 Function CantColumnaCeros(PS,PB:TM;N,M:byte):byte;
 Var
@@ -138,6 +161,7 @@ for j:=1 to M do
     cont :=cont+1;
 CantColumnaCeros:=Cont;
 end;
+
 //Mas aparariciones entre 2 cosas
 Function Color(N:Byte;T1:TMCHAR):String;
 Var
@@ -196,8 +220,8 @@ begin
 IniciaMatriz(Mat,n,m);
 Writeln('El minimo de una matriz es',minimo(Mat,n,m));
 Writeln('Elija la fila donde quiere calcular el minimo');
-Readln(filaELE);
-Writeln('El minimo de una fila ',FilaEle, ' es',MinFila(Mat,i,m);
+Readln(filaEle);//Fila elegida
+Writeln('El minimo de una fila ',FilaEle, ' es',MinFila(Mat,filaEle,m));
 VectorMinimos(Mat,n,m,vmin);
 end.
 
