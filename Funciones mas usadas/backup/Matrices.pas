@@ -1,4 +1,9 @@
 program Matrices;
+Uses crt;
+Type
+  TM=array[1..10,1..10] of integer;
+  TV=array[1..20] of integer;
+  TMCHAR=array[1..10,1..10] of char;
 
 //Inicializa matriz en 0
 Procedure IniciaMatriz(Var Mat:TM;N,M:byte);
@@ -52,7 +57,7 @@ end;
 //A partir de la matriz y de un vector de M elementos reales
 //calcular cuantas filas coinciden con el vector.
 
-Function CuantosCoinciden(Mat:TM;N,M:byte;Vec:TV);
+Function CuantosCoinciden(Mat:TM;N,M:byte;Vec:TV):byte;
 Var
   Cont,i,j:byte;
 begin
@@ -65,14 +70,14 @@ for i:=1 to N do
   if Vec[j] = Mat[i,j] then
     cont:=Cont +1;
   end;
-CuantosCoindicen:=Cont;
+CuantosCoinciden:=Cont;
 end;
 
 //Dada una columna X,ingresada por el usuario,hallar el promedio
 //de sus elementos.
 Function Promedio(N:byte;x:integer;Mat:TM):real;
 var
-  acu:word:
+  acu:word;
   cant,i:byte;
 begin
 acu:=0;
@@ -94,7 +99,7 @@ begin
 Acum:=0;
 for j:=1 to M do
   Acum:=Acum+p[Fila,j];
-PXP:=Acum;
+TotalFila:=Acum;
 end;
 
 //Almacena total de cada fila en un vector
@@ -103,10 +108,13 @@ var
   i:byte;
 Begin
 for i:=1 to N do
-  V[i]:=PXP(P,i,m)
+  V[i]:=TotalFila(P,i,m)
 end;
+
 //Devuelve la posicion del maximo
 Function Maximo(V:TV;N:byte):byte;
+begin
+end;
 
 //recorre filas en la columna ,buscando 0
 Function ColumnaCeros (PS,PB:TM;N,Col:byte):boolean;
@@ -125,13 +133,68 @@ Var
 begin
 cont:=0;
 for j:=1 to M do
-  if ColumnaCeros(PS,PB;N,j) then
+  if ColumnaCeros(PS,PB,N,j) then
     cont :=cont+1;
 CantColumnaCeros:=Cont;
 end;
+//Mas aparariciones entre 2 cosas
+Function Color(N:Byte;T1:TMCHAR):String;
+Var
+i,j:Byte;
+Rojo,Azul:Word;
+Begin
+Rojo:=0;
+Azul:=0;
+For i:=1 to N do
+  For j:=1 to N do
+    Begin
+    If T1[i,j]='A' then
+    Azul:=Azul+1
+    else
+    Rojo:=Rojo+1;
+    end;
+If Rojo>Azul then
+Color:='Rojo'
+else
+  if Azul>Rojo then
+  Color:='Azul'
+  else
+  Color :='empate entre ambos';
+end;
 
+//Color con mas fichas
+Function MasFichas(N:Byte;T1:TMChar;T2:TM):String;  //Creo que no funciona bien
+Var
+Rojo,azul:Word;
+i,j:Byte;
+Begin
+Rojo:=0;
+Azul:=0;
+For i:=1 to N do
+  Begin
+  For j:=1 to N do
+    Begin
+    If T1[i,j]='R' then
+    Rojo:=Rojo+T2[i,j]
+    else
+    Azul:=Azul+T2[i,j];
+    end;
+  end;
+If Rojo >Azul then //Falta mejorar de si son iguales
+Masfichas:='Rojo'
+else
+Masfichas:='Azul'
+end;
 
+Var
+  Mat:TM;
+  N,X,m:byte;
+  v:TV;
 //Programa principal
 begin
+IniciaMatriz(Mat,n,m);
+Writeln('El minimo de una matriz es',minimo(Mat,n,m));
+Writeln('El minimo de una fila es',MinFila(Mat,i,m);
+VectorMinimos(Mat,n,m,vmin);
 end.
 
