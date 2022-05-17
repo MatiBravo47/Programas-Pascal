@@ -129,30 +129,6 @@ for j:=1 to M do
     cont :=cont+1;
 CantColumnaCeros:=Cont;
 end;
-//Mas aparariciones entre 2 cosas
-Function Color(N:Byte;T1:TMCHAR):String;
-Var
-i,j:Byte;
-Rojo,Azul:Word;
-Begin
-Rojo:=0;
-Azul:=0;
-For i:=1 to N do
-  For j:=1 to N do
-    Begin
-    If T1[i,j]='A' then
-    Azul:=Azul+1
-    else
-    Rojo:=Rojo+1;
-    end;
-If Rojo>Azul then
-Color:='Rojo'
-else
-  if Azul>Rojo then
-  Color:='Azul'
-  else
-  Color :='empate entre ambos';
-end;
 
 
 //Programa principal
