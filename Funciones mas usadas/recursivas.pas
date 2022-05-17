@@ -9,7 +9,7 @@ type
 Procedure inicializar(fil:byte;var vec:tv);
 Begin
 if fil = 1 then
-  vec[fil]:= 0;
+  vec[fil]:= 0
 else
   begin
   vec[fil]:=0;
@@ -191,23 +191,23 @@ Procedure EscribirMatriz(Mat:TM;i,j,n,m:byte);
 begin
 if i>0 then
   begin
-  write(Mat[n-1+1,m-j+1]:10:2);
-  if j:=1 then
+  write(Mat[n-1+1,m-j+1]);
+  if j=1 then
     begin
     Writeln;
     EscribirMatriz(Mat,i-1,m,n,m);
-    end;
+    end
   else
     EscribirMatriz(Mat,i,j-1,n,m);
   end;
 end;
 //Cantidad de positivos de una matriz
-Function ContarPosi(fil,col,num:byte;Mat:TM):byte
+Function ContarPosi(fil,col,num:byte;Mat:TM):byte;
 var
   suma:byte;
 Begin
 if fil=0 then
-  ContarPosi:=0;
+  ContarPosi:=0
 else
   begin
   if mat[fil,col]>0 then
@@ -218,14 +218,14 @@ else
 if col>1 then
   ContarPosi:=Suma+ContarPosi(fil,col-1,num,mat)
 else
-  contarPosi:=Suma+ContarPosi(fil-1,col,num,mat)';
+  contarPosi:=Suma+ContarPosi(fil-1,col,num,mat);
 end;
 
 //Inicializar matriz cuadrada
-Procedure IniciaMatriz(fil,col,num:byte;var mat:tm);
+Procedure IniciaMat(fil,col,num:byte;var mat:tm);
 begin
 if (fil=1) and (col=1) then
-  mat[fil,col]:=0;
+  mat[fil,col]:=0
 else
   begin
   mat[fil,col]:=0;
@@ -234,8 +234,6 @@ else
   else
    iniciaMat(num,col-1,num,mat);
   end;
-end;
-
 end;
 
 Var

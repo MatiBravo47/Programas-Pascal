@@ -9,13 +9,13 @@
         <Filename Value="recursivas.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="125"/>
-        <CursorPos X="81" Y="146"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="223"/>
+        <CursorPos Y="238"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit0>
     </Units>
-    <JumpHistory Count="11" HistoryIndex="10">
+    <JumpHistory Count="20" HistoryIndex="19">
       <Position1>
         <Filename Value="recursivas.pas"/>
         <Caret Line="9" Column="35"/>
@@ -26,40 +26,76 @@
       </Position2>
       <Position3>
         <Filename Value="recursivas.pas"/>
-        <Caret Line="53" Column="29" TopLine="122"/>
+        <Caret Line="88" Column="43" TopLine="77"/>
       </Position3>
       <Position4>
         <Filename Value="recursivas.pas"/>
-        <Caret Line="88" Column="43" TopLine="77"/>
+        <Caret Line="102" Column="14" TopLine="95"/>
       </Position4>
       <Position5>
         <Filename Value="recursivas.pas"/>
-        <Caret Line="102" Column="14" TopLine="95"/>
+        <Caret Line="115" Column="43" TopLine="105"/>
       </Position5>
       <Position6>
         <Filename Value="recursivas.pas"/>
-        <Caret Line="115" Column="43" TopLine="105"/>
+        <Caret Line="145" Column="27" TopLine="122"/>
       </Position6>
       <Position7>
         <Filename Value="recursivas.pas"/>
-        <Caret Line="145" Column="27" TopLine="122"/>
+        <Caret Line="143" Column="10" TopLine="123"/>
       </Position7>
       <Position8>
         <Filename Value="recursivas.pas"/>
-        <Caret Line="143" Column="10" TopLine="123"/>
+        <Caret Line="145" Column="81" TopLine="124"/>
       </Position8>
       <Position9>
         <Filename Value="recursivas.pas"/>
-        <Caret Line="145" Column="81" TopLine="124"/>
+        <Caret Line="144" Column="10" TopLine="124"/>
       </Position9>
       <Position10>
         <Filename Value="recursivas.pas"/>
-        <Caret Line="144" Column="10" TopLine="124"/>
+        <Caret Line="143" Column="8" TopLine="125"/>
       </Position10>
       <Position11>
         <Filename Value="recursivas.pas"/>
-        <Caret Line="143" Column="8" TopLine="125"/>
+        <Caret Line="17" Column="7" TopLine="37"/>
       </Position11>
+      <Position12>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="12" Column="13"/>
+      </Position12>
+      <Position13>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="194" Column="26" TopLine="182"/>
+      </Position13>
+      <Position14>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="195" Column="7" TopLine="183"/>
+      </Position14>
+      <Position15>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="199" Column="8" TopLine="188"/>
+      </Position15>
+      <Position16>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="205" Column="51" TopLine="194"/>
+      </Position16>
+      <Position17>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="210" Column="16" TopLine="199"/>
+      </Position17>
+      <Position18>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="221" Column="49" TopLine="210"/>
+      </Position18>
+      <Position19>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="228" Column="18" TopLine="217"/>
+      </Position19>
+      <Position20>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="225" Column="20" TopLine="221"/>
+      </Position20>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

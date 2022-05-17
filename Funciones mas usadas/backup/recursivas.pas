@@ -5,6 +5,18 @@ type
   tm=array[1..10,1..10] of integer;
 
 //VECTOR
+//Inicializar vector
+Procedure inicializar(fil:byte;var vec:tv);
+Begin
+if fil = 1 then
+  vec[fil]:= 0
+else
+  begin
+  vec[fil]:=0;
+  inicializar(fil-1,vec);
+  end;
+end;
+
 //Muestra un vector
 Procedure muestra(V:TV;n:byte);
 Begin
@@ -63,6 +75,36 @@ begin
     esta:=esta(v,n-1,x)
   else
     esta:=false
+end;
+
+//Busqueda lineal posicion de un vector desordenado
+Function buscar(Cont:byte;Vec:TV;Elemento:real):byte;
+begin
+  if cont>0 then
+    if vec[cont]=elemento then
+      buscar:=cont
+    else
+      buscar(cont-1,vec,elemento)
+  else
+      buscar:=0;
+end;
+
+//busqueda bienaria para vector ordenado en forma ascendente
+function buscar (ini,fin:byte;vec:tv;elemento:real):byte;
+var
+  Prom:byte;
+begin
+prom:=(Ini+fin) div 2;
+if (Vec[prom]<>elemento) and (ini<fin) then
+  if vec[prom] > elemento then
+    buscar:=buscar (ini,prom-1,vec,elemento)
+  else
+    buscar:=buscar(prom+1,fin,vec,elemento)
+else
+    if (vec[prom]=elemento) then
+      buscar:=(prom)
+    else
+      buscar:=0;
 end;
 
 //MATRIZ
@@ -149,23 +191,23 @@ Procedure EscribirMatriz(Mat:TM;i,j,n,m:byte);
 begin
 if i>0 then
   begin
-  write(Mat[n-1+1,m-j+1]:10:2);
-  if j:=1 then
+  write(Mat[n-1+1,m-j+1]);
+  if j=1 then
     begin
     Writeln;
     EscribirMatriz(Mat,i-1,m,n,m);
-    end;
+    end
   else
     EscribirMatriz(Mat,i,j-1,n,m);
   end;
 end;
 //Cantidad de positivos de una matriz
-Function ContarPosi(fil,col,num:byte;Mat:TM):byte
+Function ContarPosi(fil,col,num:byte;Mat:TM):byte;
 var
   suma:byte;
 Begin
 if fil=0 then
-  ContarPosi:=0;
+  ContarPosi:=0
 else
   begin
   if mat[fil,col]>0 then
@@ -176,14 +218,14 @@ else
 if col>1 then
   ContarPosi:=Suma+ContarPosi(fil,col-1,num,mat)
 else
-  contarPosi:=Suma+ContarPosi(fil-1,col,num,mat)';
+  contarPosi:=Suma+ContarPosi(fil-1,col,num,mat);
 end;
 
 //Inicializar matriz cuadrada
-Procedure IniciaMatriz(fil,col,num:byte;var mat:tm);
+Procedure IniciaMat(fil,col,num:byte;var mat:tm);
 begin
 if (fil=1) and (col=1) then
-  mat[fil,col]:=0;
+  mat[fil,col]:=0
 else
   begin
   mat[fil,col]:=0;
