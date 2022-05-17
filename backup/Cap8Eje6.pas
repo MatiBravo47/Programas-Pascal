@@ -35,7 +35,6 @@ procedure busqueda (v:TV; N,X:byte);
 var
    pos:byte;
 begin
-Writeln('Ingrese el numero que desea buscar: ');Readln(X);
 pos:=buscapos(v,N,X);
 If (pos<>0) then
    Writeln('La posicion de ',X:2,' es ',pos)
