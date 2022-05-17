@@ -62,7 +62,7 @@ begin
   clrscr;
   leeArch(v,n);
   Writeln('Ingrese un numero');Readln(x);
-  busqueda(V:TV,N,X);
+  busqueda(V,N,X);
   readln;
 end.
 

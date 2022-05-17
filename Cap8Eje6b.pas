@@ -40,7 +40,7 @@ else
    buscapos:=0;
 end;
 
-procedure BUSQUEDA (v:TV; N,X:byte);
+procedure Binaria(v:TV; N,X:byte);
 var
    pos,pri,ult,medio:byte;
 begin
@@ -62,7 +62,7 @@ begin
   clrscr;
   leeArch(v,n);
   Writeln('Ingrese un numero');Readln(x);
-  busqueda(V,N,X);
+  Binaria(V,N,X);
   readln;
 end.
 
