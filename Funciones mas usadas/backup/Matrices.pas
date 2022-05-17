@@ -30,7 +30,6 @@ minimo:=Min;
 end;
 
 //Calcular el minimo elemento de una fila
-
 Function MinFila(Mat:TM;i,m:byte):integer;
 Var
   j:byte;

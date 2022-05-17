@@ -29,18 +29,20 @@ for i:=1 to N do
 minimo:=Min;
 end;
 
-//Calcular el minimo elemento de una fila
-Function MinFila(Mat:TM;i,m:byte):integer;
+//Calcular el minimo elemento de una fila en particular
+Function MinFila(Mat:TM;filaEle,m:byte):integer;
 Var
   j:byte;
   min:Integer;
 begin
-min:=Mat[i,1];
+min:=Mat[filaEle,1];
 for j:=2 to M do
-  if min>mat[i,j] then
-    min:=Mat[i,j];
+  if min>mat[filaEle,j] then
+    min:=Mat[filaEle,j];
 minfila:=Min;
 end;
+
+Function MaxFila(Mat:TM)
 
 //Utilizacion la funcion generar un arreglo VMin de N elementos,
 //que contenta el minimo de cada fila.
@@ -187,13 +189,15 @@ end;
 
 Var
   Mat:TM;
-  N,X,m:byte;
+  N,X,m,filaEle:byte;
   v:TV;
 //Programa principal
 begin
 IniciaMatriz(Mat,n,m);
 Writeln('El minimo de una matriz es',minimo(Mat,n,m));
-Writeln('El minimo de una fila es',MinFila(Mat,i,m);
+Writeln('Elija la fila donde quiere calcular el minimo');
+Readln(filaELE);
+Writeln('El minimo de una fila ',FilaEle, ' es',MinFila(Mat,i,m);
 VectorMinimos(Mat,n,m,vmin);
 end.
 
