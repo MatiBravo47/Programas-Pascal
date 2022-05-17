@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="recursivas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="125"/>
+        <CursorPos X="81" Y="146"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="9" Column="35"/>
+      </Position1>
+      <Position2>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="4" Column="30"/>
+      </Position2>
+      <Position3>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="53" Column="29" TopLine="122"/>
+      </Position3>
+      <Position4>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="88" Column="43" TopLine="77"/>
+      </Position4>
+      <Position5>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="102" Column="14" TopLine="95"/>
+      </Position5>
+      <Position6>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="115" Column="43" TopLine="105"/>
+      </Position6>
+      <Position7>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="145" Column="27" TopLine="122"/>
+      </Position7>
+      <Position8>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="143" Column="10" TopLine="123"/>
+      </Position8>
+      <Position9>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="145" Column="81" TopLine="124"/>
+      </Position9>
+      <Position10>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="144" Column="10" TopLine="124"/>
+      </Position10>
+      <Position11>
+        <Filename Value="recursivas.pas"/>
+        <Caret Line="143" Column="8" TopLine="125"/>
+      </Position11>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

@@ -1,5 +1,8 @@
 //Functiones y procedimientos recursivos mas usados
-program recursivasMasUtilizas;
+program recursivas;
+type
+  tv=array[1..10] of integer;
+  tm=array[1..10,1..10] of integer;
 //Muestra un vector
 Procedure muestra(V:TV;n:byte);
 Begin
@@ -47,7 +50,7 @@ begin
 end;
 
 //Minimo matriz
-Function MinimoMatriz(Mat:TipoMatriz;i,j,N:byte):integer; //Recorro la matriz por fila
+Function MinimoMatriz(Mat:TM;i,j,N:byte):integer; //Recorro la matriz por fila
 var
   minimo:integer;
 begin
@@ -80,6 +83,67 @@ begin
     end;
   end;
 end;
+
+//Verificar si un valor X se encuentra en un arreglo V de N elementos
+Function Esta(V:TV;N:byte;x:real):boolean;
 begin
+  if n>0 then
+    if v[n] = x then
+      esta :=true
+    else
+    esta:=esta(v,n-1,x)
+  else
+    esta:=false
+end;
+
+//Recorre una matriz numerica de N*M y devolver la cantidad
+//de negativos que almacena.
+
+Function CantNeg(Mat: TM;I,J,M:byte):byte;
+var
+  incr:byte;
+begin
+if i=0 then
+  cantNeg:=0
+else
+  begin
+  if mat[i,j] < 0 then
+    incr:=1
+  else
+    incr:=0;
+  if j>1 then
+    CantNeg:= Incr + cantNeg (Mat,i,j-1,M)
+  else
+    CantNeg:=Incr + CantNeg (Mat,i-1,m,m)
+  end;
+end;
+
+
+//Verificar si una matriz mat de N*M,cumple que un elemento
+//X se encuentra al menos una vez en cada columna
+
+Function Cumple (Mat:TM;X:real;i,j,n:byte):boolean;
+begin
+if j=0 then
+  cumple:=true
+else
+  if mat[i,j] = x then
+    cumple:= cumple(mat,x,n,j-1,n) //columna anterior,ultima fila
+  else
+    if i>1 then //sigue buscando en la misma columna
+      cumple:=cumple(mat,x,i-1,j,n)//fila anterior,misma columna
+    else
+      cumple:=false //x no esta en la columna
+end;
+
+
+
+Var
+  V:TV;
+  x,n,m:byte;
+  mat:TM;
+begin
+Write('Tiene al menos una vez el valor',X,'en cada columna',Cumple(Mat,x,n,m,n);
+Write(CantNeg(Mat,n,M,M));
 end.
 
