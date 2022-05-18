@@ -34,10 +34,11 @@ end;
 Procedure Mezclar ( Var a:TV; pri, medio, ult: byte);
 Var
 i, j,k, n, t : byte;
-b:TV;UNMDP Programación I
-89
+b:TV;
 Begin
-k:=0; i:= pri; j:= medio +1; n:= ult - pri + 1;
+k:=0; i:= pri;
+j:= medio +1;
+n:= ult - pri + 1;
 while (i <= medio) and (j<= ult) do
 begin
 k:=k+1;
