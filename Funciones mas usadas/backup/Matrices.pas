@@ -134,7 +134,7 @@ for i:=1 to N do
   V[i]:=TotalFila(P,i,m)
 end;
 
-//Devuelve la posicion del maximo
+//Devuelve la posicion del maximo del vector
 Function Maximo(V:TV;N:byte):byte;
 begin
 end;
@@ -212,16 +212,25 @@ Masfichas:='Azul'
 end;
 
 Var
-  Mat:TM;
+  Mat,P,T2:TM;
   N,X,m,filaEle:byte;
-  v:TV;
+  v,vmin,vec:TV;
+  T1:TMCHAR;
 //Programa principal
 begin
 IniciaMatriz(Mat,n,m);
 Writeln('El minimo de una matriz es',minimo(Mat,n,m));
 Writeln('Elija la fila donde quiere calcular el minimo');
 Readln(filaEle);//Fila elegida
-Writeln('El minimo de una fila ',FilaEle, ' es',MinFila(Mat,filaEle,m);
+Writeln('El minimo de una fila ',FilaEle, ' es',MinFila(Mat,filaEle,m));
 VectorMinimos(Mat,n,m,vmin);
+VectorTotalFilas(P,M,N,V);
+Writeln('El color que tiene mas fichas es :',MasFichas(N,T1,T2));
+Maxfila(Mat,N,M);
+Writeln('Ingrese una columna');Readln(X);
+Writeln('Su promedio es: ',promedio(n,x,mat));
+cuantoscoinciden(Mat,n,m,vec);
+Writeln()
+
 end.
 
