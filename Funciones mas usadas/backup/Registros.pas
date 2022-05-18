@@ -36,15 +36,15 @@ While (Res='S') and (N<MaxElem) do
     Readln(edad);
     Writeln('Ingrese peso');
     Readln(Peso);
-    Writeln('Ingrese altura');
-    Readln(Altura);
+    //Writeln('Ingrese altura');
+    //Readln(Altura);
     end;
   Write('Ingrese datos(S/N)');Readln(Res);
   end;
 end;
 
 //Consulta de peso a partir del nombre
-Procedure Consulta(V:TV;N:byte;Nom:st20;var pesop:real);
+Procedure Consulta(V:TV;N:byte;Nom:st20;var peso:real);
 Var
   j:byte;
 begin
@@ -53,11 +53,11 @@ While (j<=N) and (V[j].nombre<>nom) do //Busca nombre
   j:=j+1;  //Si no coincide,suma indice
 if j<=N then
   begin
-  pesop:=V[j].Peso;
-  Writeln('El peso es: ',Pesop);
+  peso:=V[j].Peso;
+  Writeln('El peso es: ',Peso:5:2);
   end
 else
-  pesop:=0;
+  peso:=0;
 end;
 
 //Programa principal
@@ -66,13 +66,12 @@ Var
   V:Tv;
   N:byte;
   nom:st20;
-  pesoP:real;
 begin
 clrscr;
 LeeVector(V,N);
 Writeln('Ingrese nombre de la persona');
 Readln(nom);
-Consulta(V,N,Nom,pesoP);
+Consulta(V,N,Nom,peso);
 readln;
 end.
 
