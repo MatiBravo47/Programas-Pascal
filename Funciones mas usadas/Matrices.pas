@@ -5,6 +5,28 @@ Type
   TV=array[1..20] of integer;
   TMCHAR=array[1..10,1..10] of char;
 
+//Lee Archivo
+//4 5
+//1 2 3 4 5
+//2 2 2 2 2
+//5 5 5 4 5
+//9 9 9 9 8
+Procedure LeeArch(Var N,M:Byte;Var Mat:TM);
+Var
+  i,j:Byte;
+  Arch:text;
+Begin
+  ASSIGN(Arch,'Matriz.txt');RESET(Arch);
+  Readln(Arch,N,M);
+  For i:=1 to N do
+  Begin
+    For j:=1 to M do
+    Read(Arch,Mat[i,j]);
+  Readln(Arch);
+  end;
+  CLOSE(Arch);
+end;
+
 //Inicializa matriz en 0
 Procedure IniciaMatriz(Var Mat:TM;N,M:byte);
 Var
@@ -64,11 +86,8 @@ For i:=1 to N do
 Writeln('');
 end;
 
-
-
 //Utilizacion la funcion generar un arreglo VMin de N elementos,
 //que contenta el minimo de cada fila.
-
 Procedure VectorMinimos(Mat:TM;N,M:byte;var Vmin:TV);
 Var
   i:byte;
@@ -79,7 +98,6 @@ end;
 
 //A partir de la matriz y de un vector de M elementos reales
 //calcular cuantas filas coinciden con el vector.
-
 Function CuantosCoinciden(Mat:TM;N,M:byte;Vec:TV):byte;
 Var
   Cont,i,j:byte;
@@ -218,7 +236,9 @@ Var
   T1:TMCHAR;
 //Programa principal
 begin
-IniciaMatriz(Mat,n,m);
+//Inicia matriz en 0
+//IniciaMatriz(Mat,n,m);
+LeeArch(N,M,Mat);
 Writeln('El minimo de una matriz es',minimo(Mat,n,m));
 Writeln('Elija la fila donde quiere calcular el minimo');
 Readln(filaEle);//Fila elegida
