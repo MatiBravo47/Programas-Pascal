@@ -1,7 +1,5 @@
 program Vectores;
 
-uses unit1;
-
 type
   St10=String[10];
   TVString=array[1..10] of St10;

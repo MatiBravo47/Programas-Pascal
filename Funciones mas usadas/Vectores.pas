@@ -32,6 +32,20 @@ begin
   minimo:=Min;
 end;
 
+Function Max(V:TVec;N:Byte):Integer;
+Var
+  i:Byte;
+  Maximo:Integer;
+Begin
+  Maximo:=V[1];
+  For i:=2 to N do
+    Begin
+    If V[i]>=Maximo then
+    Maximo:=V[i];
+    end;
+Max:=Maximo;
+end;
+
 //Escribe Vector
 Procedure EscVector(V:TV;L:integer);
 var
