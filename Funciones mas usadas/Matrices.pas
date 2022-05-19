@@ -7,9 +7,9 @@ Type
 
 //Lee Archivo
 //4 5
-//1 2 3 4 5
+//1 2 3 0 5
 //2 2 2 2 2
-//5 5 5 4 5
+//5 0 5 4 5
 //9 9 9 9 8
 Procedure LeeArch(Var N,M:Byte;Var Mat:TM);
 Var
@@ -158,24 +158,24 @@ begin
 end;
 
 //recorre filas en la columna ,buscando 0
-Function ColumnaCeros (PS,PB:TM;N,Col:byte):boolean;
+Function ColumnaCeros (Mat:TM;N,Col:byte):boolean;
 Var
   i:byte;
 begin
 i:=1;
-While (i<=n) and (PS[i,col]<>0) and (pb[i,col]<>0) do
+While (i<=n) and (Mat[i,col]<>0) do
    i:=i+1;
 ColumnaCeros:=i<=N;
 end;
 
 //Si encuentra 0's cuenta
-Function CantColumnaCeros(PS,PB:TM;N,M:byte):byte;
+Function CantColumnaCeros(Mat:TM;N,M:byte):byte;
 Var
   j,cont:byte;
 begin
 cont:=0;
 for j:=1 to M do
-  if ColumnaCeros(PS,PB,N,j) then
+  if ColumnaCeros(Mat,N,j) then
     cont :=cont+1;
 CantColumnaCeros:=Cont;
 end;
@@ -239,18 +239,19 @@ begin
 //Inicia matriz en 0
 //IniciaMatriz(Mat,n,m);
 LeeArch(N,M,Mat);
-Writeln('El minimo de una matriz es',minimo(Mat,n,m));
+Writeln('El minimo de la matriz es ',minimo(Mat,n,m));
 Writeln('Elija la fila donde quiere calcular el minimo');
 Readln(filaEle);//Fila elegida
-Writeln('El minimo de una fila ',FilaEle, ' es',MinFila(Mat,filaEle,m));
+Writeln('El minimo de una fila ',FilaEle, ' es ',MinFila(Mat,filaEle,m));
 VectorMinimos(Mat,n,m,vmin);
 VectorTotalFilas(P,M,N,V);
-Writeln('El color que tiene mas fichas es :',MasFichas(N,T1,T2));
+//Writeln('El color que tiene mas fichas es :',MasFichas(N,T1,T2));
 Maxfila(Mat,N,M);
 Writeln('Ingrese una columna');Readln(X);
-Writeln('Su promedio de la columna es : ',promedio(n,x,mat));
+Writeln('Su promedio de la columna es : ',promedio(n,x,mat):5:2);
 cuantoscoinciden(Mat,n,m,vec);
-Writeln('El color que mas aparece es: ',color(n,t1));
-
+//Writeln('El color que mas aparece es: ',color(n,t1));
+Writeln('La cantidad columna con algun cero es:  ',cantcolumnaceros(Mat,n,m));
+Readln;
 end.
 

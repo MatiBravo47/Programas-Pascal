@@ -11,13 +11,13 @@ Const
   V:TV=(31,28,31,30,31,30,31,31,30,31,30,31);
 
 //Suma todos los elementos del vector
-Function Suma (A:TV;N:integer):integer;
+Function Suma (V:TV;N:integer):integer;
 Var
   i,sum:integer;
 Begin
   Sum:=0;
   for i:=1 to N do
-    sum:=Sum+A[i];
+    sum:=Sum+V[i];
   suma:=Sum;
 end;
 
