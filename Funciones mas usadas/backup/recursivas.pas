@@ -6,6 +6,27 @@ type
   tm=array[1..10,1..10] of integer;
 const
   V:tv=(5,1,12,8,-1,3,10,9,14,0,15,7);
+  //Lee Archivo
+  //4 5
+  //1 -1 3 0 5
+  //2 2 2 2 2
+  //5 0 5 4 -1
+  //9 9 9 9 8
+Procedure LeeArch(Var N,M:Byte;Var Mat:TM);
+Var
+  i,j:Byte;
+  Arch:text;
+Begin
+  ASSIGN(Arch,'Matriz.txt');RESET(Arch);
+  Readln(Arch,N,M);
+  For i:=1 to N do
+  Begin
+    For j:=1 to M do
+    Read(Arch,Mat[i,j]);
+  Readln(Arch);
+  end;
+  CLOSE(Arch);
+end;
 //VECTOR
 //Inicializar vector en 0
 Procedure inicializar(fil:byte;var vec:tv);
@@ -95,19 +116,19 @@ If (buscarLineal>n) then
   buscarLineal:=0;
 end;
 
-//busqueda bienaria para vector ordenado en forma ascendente
-function buscarBi (ini,fin:byte;vec:tv;elemento:real):byte;
+//busqueda binaria para vector ordenado en forma ascendente
+function buscarBi (ini,fin:byte;V:TV;elemento:real):byte;
 var
   Prom:byte;
 begin
 prom:=(Ini+fin) div 2;
-if (Vec[prom]<>elemento) and (ini<fin) then
-  if vec[prom] > elemento then
-    buscarBi:=buscarBi (ini,prom-1,vec,elemento)
+if (V[prom]<>elemento) and (ini<fin) then
+  if V[prom] > elemento then
+    buscarBi:=buscarBi (ini,prom-1,V,elemento)
   else
-    buscarBi:=buscarBi(prom+1,fin,vec,elemento)
+    buscarBi:=buscarBi(prom+1,fin,V,elemento)
 else
-    if (vec[prom]=elemento) then
+    if (V[prom]=elemento) then
       buscarBi:=(prom)
     else
       buscarBi:=0;
@@ -174,6 +195,25 @@ else
   end;
 end;
 
+//Cantidad de positivos de una matriz
+Function CantPosi(Mat:TM;i,j,M:byte):byte;
+var
+  Incr:byte;
+Begin
+if i=0 then
+  CantPosi:=0
+else
+  begin
+  if mat[i,j]>0 then
+    incr:=1
+  else
+    incr:=0;
+  if j>1 then
+  CantPosi:=Incr+CantPosi(Mat,i,j-1,M)
+else
+  CantPosi:=Incr+CantPosi(Mat,i-1,M,M);
+end;
+end;
 
 //Verificar si una matriz mat de N*M,cumple que un elemento
 //X se encuentra al menos una vez en cada columna
@@ -207,25 +247,8 @@ if i>0 then
     EscribirMatriz(Mat,i,j-1,n,m);
   end;
 end;
-//Cantidad de positivos de una matriz
-Function ContarPosi(fil,col,num:byte;Mat:TM):byte;
-var
-  suma:byte;
-Begin
-if fil=0 then
-  ContarPosi:=0
-else
-  begin
-  if mat[fil,col]>0 then
-    suma:=1
-  else
-    Suma:=0;
-  end;
-if col>1 then
-  ContarPosi:=Suma+ContarPosi(fil,col-1,num,mat)
-else
-  contarPosi:=Suma+ContarPosi(fil-1,col,num,mat);
-end;
+
+
 
 //Inicializar matriz cuadrada
 Procedure IniciaMat(fil,col,num:byte;var mat:tm);
@@ -243,11 +266,11 @@ else
 end;
 
 Var
-  x,n,m:byte;
+  x,n,m,i,j,aux:byte;
   mat:TM;
 begin
 clrscr;
-N:=12;
+Leearch(N,M,Mat);
 //Write('Tiene al menos una vez el valor ',X,' en cada columna ',Cumple(Mat,x,n,m,n));
 //Write(CantNeg(Mat,n,M,M));
 Muestra(V,N);
@@ -263,7 +286,13 @@ If esta(V,N,X) then
 else
   Writeln('El valor ',x,' no se encuentra en el vector' );
 Writeln('Se encuentra en la posicion ',buscarLineal(V,N,X));
-
+GeneraVec(V,Mat,n,m,m,aux);
+Writeln('La cantidad de negativos de la matriz es ',CantNeg(Mat,n,m,mat));
+If cumple(Mat,x,n,m,n) then
+  Writeln('El valor ',X,' se encuentra en cada columna')
+else
+  Writeln('El valor ',x, ' no se encuentra en cada columna');
+Writeln('La cantidad de positivos de la matriz es: ',CantPosi(Mat,n,m,mat));
 readln;
 end.
 
