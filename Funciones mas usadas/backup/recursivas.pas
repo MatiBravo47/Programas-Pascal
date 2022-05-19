@@ -9,7 +9,7 @@ const
   //Lee Archivo
   //4 5
   //1 -1 3 0 5
-  //2 2 2 2 2
+  //2 0 2 2 2
   //5 0 5 4 -1
   //9 9 9 9 8
 Procedure LeeArch(Var N,M:Byte;Var Mat:TM);
@@ -29,14 +29,14 @@ Begin
 end;
 //VECTOR
 //Inicializar vector en 0
-Procedure inicializar(fil:byte;var vec:tv);
+Procedure iniciaV(fil:byte;var A:tv);
 Begin
 if fil = 1 then
-  vec[fil]:= 0
+  A[fil]:= 0
 else
   begin
-  vec[fil]:=0;
-  inicializar(fil-1,vec);
+  A[fil]:=0;
+  iniciaV(fil-1,A);
   end;
 end;
 
@@ -155,27 +155,24 @@ begin
 end;
 
 //Devuelve en un arreglo Maximo de cada fila
-procedure GeneraVec(Var V:TV;Mat:TM;i,j,M:byte;Aux:integer);
+procedure GeneraVec(Var Vec:TV;Mat:TM;i,j,M:byte;Aux:integer);
 begin
   if i > 0 then
   begin
     if Mat[i,j] > Aux then
       Aux:=Mat[i,j];
     if j > 1 then
-      GeneraVec(V,Mat,i,j-1,M,Aux)
+      GeneraVec(Vec,Mat,i,j-1,M,Aux)
     else
     begin
-      V[i]:=Aux;
-      GeneraVec(V,Mat,i-1,M,M,-999);
+      Vec[i]:=Aux;
+      GeneraVec(Vec,Mat,i-1,M,M,-999);
     end;
   end;
 end;
 
-
-
 //Recorre una matriz numerica de N*M y devolver la cantidad
 //de negativos que almacena.
-
 Function CantNeg(Mat: TM;I,J,M:byte):byte;
 var
   incr:byte;
@@ -217,7 +214,6 @@ end;
 
 //Verificar si una matriz mat de N*M,cumple que un elemento
 //X se encuentra al menos una vez en cada columna
-
 Function Cumple (Mat:TM;X:real;i,j,n:byte):boolean;
 begin
 if j=0 then
@@ -237,7 +233,7 @@ Procedure EscribirMatriz(Mat:TM;i,j,n,m:byte);
 begin
 if i>0 then
   begin
-  write(Mat[n-1+1,m-j+1]);
+  write(Mat[n-i+1,m-j+1]);
   if j=1 then
     begin
     Writeln;
@@ -247,8 +243,6 @@ if i>0 then
     EscribirMatriz(Mat,i,j-1,n,m);
   end;
 end;
-
-
 
 //Inicializar matriz cuadrada
 Procedure IniciaMat(fil,col,num:byte;var mat:tm);
@@ -268,13 +262,16 @@ end;
 Var
   x,n,m,i,j,aux:byte;
   mat:TM;
+  Vec,A:tv;
 begin
 clrscr;
 Leearch(N,M,Mat);
 //Write('Tiene al menos una vez el valor ',X,' en cada columna ',Cumple(Mat,x,n,m,n));
 //Write(CantNeg(Mat,n,M,M));
+Writeln('El vector es: ');
 Muestra(V,N);
 Writeln();
+Writeln('El vector alreves es');
 inver(V,N);
 Writeln;
 Writeln('El maximo del vector es :',max(V,N));
@@ -286,13 +283,21 @@ If esta(V,N,X) then
 else
   Writeln('El valor ',x,' no se encuentra en el vector' );
 Writeln('Se encuentra en la posicion ',buscarLineal(V,N,X));
-GeneraVec(V,Mat,n,m,m,aux);
-Writeln('La cantidad de negativos de la matriz es ',CantNeg(Mat,n,m,mat));
+Writeln('El vector con el maximo de cada fila es :' );
+GeneraVec(Vec,Mat,n,m,m,aux);
+Muestra(Vec,N);
+writeln();
 If cumple(Mat,x,n,m,n) then
   Writeln('El valor ',X,' se encuentra en cada columna')
 else
   Writeln('El valor ',x, ' no se encuentra en cada columna');
-Writeln('La cantidad de positivos de la matriz es: ',CantPosi(Mat,n,m,mat));
+Writeln('La cantidad de positivos de la matriz es: ',CantPosi(Mat,n,m,m));
+Writeln('La cantidad de negativos de la matriz es: ',CantNeg(Mat,n,m,m));
+Writeln('La matriz es ');
+EscribirMatriz(Mat,n,m,n,m);
+IniciaV(4,A);
+Muestra(A,4);
 readln;
+
 end.
 
