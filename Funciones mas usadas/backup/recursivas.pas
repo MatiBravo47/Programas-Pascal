@@ -249,10 +249,10 @@ end;
 Procedure IniciaMat(fil,col,num:byte;var b:tm);
 begin
 if (fil=1) and (col=1) then //si es el primer elemento
-  b[fil,col]:=1   //guarda 0 en esa pos
+  b[fil,col]:=0   //guarda 0 en esa pos
 else
   begin
-  b[fil,col]:=1;
+  b[fil,col]:=0;
   if col>1 then
     iniciaMat(fil,col-1,num,b) //Baja columna
   else
@@ -283,7 +283,10 @@ If esta(V,N,X) then
   Writeln('El valor ',x,' se encuentra en el vector ')
 else
   Writeln('El valor ',x,' no se encuentra en el vector' );
-Writeln('Se encuentra en la posicion ',buscarLineal(V,N,X));
+If (buscarLineal(V,N,X)=0) then
+  Writeln('Ese valor no se encuentra en el vector')
+else
+  Writeln('Ese valor se encuentra en la posicion ',buscarLineal(V,N,X));
 Writeln('El vector con el maximo de cada fila es :' );
 GeneraVec(Vec,Mat,n,m,m,aux);
 Muestra(Vec,N);

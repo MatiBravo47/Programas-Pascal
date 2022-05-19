@@ -283,7 +283,8 @@ If esta(V,N,X) then
   Writeln('El valor ',x,' se encuentra en el vector ')
 else
   Writeln('El valor ',x,' no se encuentra en el vector' );
-Writeln('Se encuentra en la posicion ',buscarLineal(V,N,X));
+If (buscarLineal(V,N,X)<>0) then
+  Writeln('Ese valor se encuentra en la posicion ',buscarLineal(V,N,X));
 Writeln('El vector con el maximo de cada fila es :' );
 GeneraVec(Vec,Mat,n,m,m,aux);
 Muestra(Vec,N);
