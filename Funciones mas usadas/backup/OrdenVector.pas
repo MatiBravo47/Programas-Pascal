@@ -13,7 +13,7 @@ Begin
 for k:=1 to N-1 do //N-1 pasadas
   begin
   min:=k;
-  for i:=K+1 to N do //Elementos de la pasada k-esima,se selecciona el indice del minimo min
+  for i:=1 to N do //Elementos de la pasada k-esima,se selecciona el indice del minimo min
     If V[min]>V[i] then
       min:=i;
   if min<>k then
@@ -101,10 +101,10 @@ n:byte;
 begin
 clrscr;
 N:=12;
-Seleccion(V,N);
+//Seleccion(V,N);
 //Burbujeo(V,N);
 //Shell(V,N);
-//Insercion(V,N);
+Insercion(V,N);
 Muestra(V,N);
 readln;
 end.
