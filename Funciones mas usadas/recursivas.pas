@@ -245,23 +245,24 @@ if i>0 then
 end;
 
 //Inicializar matriz cuadrada
-Procedure IniciaMat(fil,col,num:byte;var mat:tm);
+//Num es el stopper
+Procedure IniciaMat(fil,col,num:byte;var b:tm);
 begin
-if (fil=1) and (col=1) then
-  mat[fil,col]:=0
+if (fil=1) and (col=1) then //si es el primer elemento
+  b[fil,col]:=0   //guarda 0 en esa pos
 else
   begin
-  mat[fil,col]:=0;
+  b[fil,col]:=0;
   if col>1 then
-    iniciaMat(fil-1,col,num,mat)
+    iniciaMat(fil,col-1,num,b) //Baja columna
   else
-   iniciaMat(num,col-1,num,mat);
+   iniciaMat(fil-1,num,num,b); //Baja una fila y va a ultima columna
   end;
 end;
 
 Var
   x,n,m,i,j,aux:byte;
-  mat:TM;
+  mat,B:TM;
   Vec,A:tv;
 begin
 clrscr;
@@ -298,6 +299,10 @@ EscribirMatriz(Mat,n,m,n,m);
 Writeln('El vector inicializado en 0 es :');
 IniciaV(4,A);
 Muestra(A,4);
+Writeln();
+Writeln('La matriz inicializada en 0 es ');
+IniciaMat(2,3,3,B);
+EscribirMatriz(B,2,3,2,3);
 readln;
 
 end.
