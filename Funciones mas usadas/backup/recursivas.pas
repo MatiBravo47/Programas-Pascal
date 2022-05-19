@@ -1,11 +1,13 @@
 //Functiones y procedimientos recursivos mas usados
 program recursivas;
+uses crt;
 type
-  tv=array[1..10] of integer;
+  tv=array[1..12] of integer;
   tm=array[1..10,1..10] of integer;
-
+const
+  V:tv=(5,1,12,8,-1,3,10,9,14,0,15,7);
 //VECTOR
-//Inicializar vector
+//Inicializar vector en 0
 Procedure inicializar(fil:byte;var vec:tv);
 Begin
 if fil = 1 then
@@ -236,14 +238,17 @@ else
   end;
 end;
 
-end;
-
 Var
-  V:TV;
   x,n,m:byte;
   mat:TM;
 begin
-Write('Tiene al menos una vez el valor',X,'en cada columna',Cumple(Mat,x,n,m,n));
-Write(CantNeg(Mat,n,M,M));
+clrscr;
+N:=12;
+//Write('Tiene al menos una vez el valor ',X,' en cada columna ',Cumple(Mat,x,n,m,n));
+//Write(CantNeg(Mat,n,M,M));
+Muestra(V,N);
+Writeln();
+inver(V,N);
+readln;
 end.
 
