@@ -251,6 +251,8 @@ Writeln();
 inver(V,N);
 Writeln;
 Writeln('El maximo del vector es :',max(V,N));
+Writeln('La suma los componentes del vector es: ',Suma(V,N));
+Writeln('El promedio del vector es :',Promedio(V,N):5:2);
 readln;
 end.
 
