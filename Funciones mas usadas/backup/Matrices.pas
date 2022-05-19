@@ -251,7 +251,7 @@ Writeln('Ingrese una columna');Readln(X);
 Writeln('Su promedio de la columna es : ',promedio(n,x,mat):5:2);
 cuantoscoinciden(Mat,n,m,vec);
 //Writeln('El color que mas aparece es: ',color(n,t1));
-Writeln('La cantidad de ceros en toda la matriz es ',cantcolumnaceros(Mat,n,m));
+Writeln('La cantidad columna con algun cero es:  ',cantcolumnaceros(Mat,n,m));
 Readln;
 end.
 

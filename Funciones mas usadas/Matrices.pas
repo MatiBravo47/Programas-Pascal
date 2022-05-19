@@ -7,9 +7,9 @@ Type
 
 //Lee Archivo
 //4 5
-//1 2 3 0 5
-//2 2 2 2 2
-//5 0 5 4 5
+//1 -1 3 0 5
+//2 0 2 2 2
+//5 0 5 4 -1
 //9 9 9 9 8
 Procedure LeeArch(Var N,M:Byte;Var Mat:TM);
 Var
