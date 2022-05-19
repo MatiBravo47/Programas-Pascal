@@ -85,14 +85,11 @@ end;
 //Programa principal
 Var
   i:byte;
-  k: byte;
 begin
-QuickSort(a,1,12);
+//QuickSort(a,1,12);
+OrdenarMezcla(a,1,12);
 for i:=1 to 12 do
   write (a[i]:4);
-OrdenarMezcla(a,1,12);
-For k:= 1 to 12 do
-  writeln (a[k]:4);
 readln;
 end.
 

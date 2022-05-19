@@ -43,26 +43,30 @@ while (i <= medio) and (j<= ult) do
 begin
 k:=k+1;
 if a[i] < a[j] then
-begin
-b[k] := a[i]; i:= i + 1
-end
+  begin
+  b[k] := a[i]; i:= i + 1
+  end
 else
-begin
-b[k] := a[j]; j:= j + 1
-end
+  begin
+  b[k] := a[j];
+  j:= j + 1;
+  end
 end;
 For t:= i to medio do
-begin
-k:=k+1; b[k] := a[t];
-end;
+  begin
+  k:=k+1;
+  b[k] := a[t];
+  end;
 For t:= j to ult do
-begin
-k:=k+1; b[k] := a[t];
-end;
+  begin
+  k:=k+1;
+  b[k] := a[t];
+  end;
 For k:= 1 to n do
-begin
-a[pri]:=b[k]; pri:=pri + 1;
-end;
+  begin
+  a[pri]:=b[k];
+  pri:=pri + 1;
+  end;
 end;
 Procedure OrdenarMezcla(Var a:TV; pri,ult:byte);
 Var
@@ -86,9 +90,9 @@ begin
 QuickSort(a,1,12);
 for i:=1 to 12 do
   write (a[i]:4);
-OrdenarMezcla(a,1,12);
-For k:= 1 to 12 do
-  writeln (a[k]:4);
+//OrdenarMezcla(a,1,12);
+//For k:= 1 to 12 do
+//  writeln (a[k]:4);
 readln;
 end.
 
