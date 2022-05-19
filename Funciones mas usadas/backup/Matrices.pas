@@ -7,10 +7,33 @@ Type
 
 //Lee Archivo
 //4 5
-//1 2 3 0 5
-//2 2 2 2 2
-//5 0 5 4 5
+//1 -1 3 0 5
+//2 0 2 2 2
+//5 0 5 4 -1
 //9 9 9 9 8
+
+//Muestra Vector
+Procedure MuestraVec(V:TV;N:integer);
+var
+  i:integer;
+Begin
+  for i:=1 to N do
+    Write(V[I]:5)
+end;
+
+//Muestra Matriz
+Procedure MuestraMat(Mat:TM;N,M:byte);
+var
+  i,j:byte;
+begin
+  For i:=1 to N do
+  begin
+    for j:=1 to M do
+      Write(Mat[i,j],' ');
+  Writeln();
+  end;
+end;
+
 Procedure LeeArch(Var N,M:Byte;Var Mat:TM);
 Var
   i,j:Byte;
@@ -50,6 +73,19 @@ for i:=1 to N do
       min:=Mat[i,j];
 minimo:=Min;
 end;
+//Calcula Maximo de una matriz
+Function Maximo(Mat:TM;N,M:byte):integer;
+var
+  i,j:byte;
+  Max:integer;
+begin
+Max:=Mat[1,1];
+for i:=1 to N do
+  for j:=1 to M do
+    if Max<Mat[i,j] then
+      Max:=Mat[i,j];
+Maximo:=Max;
+end;
 
 //Calcular el minimo elemento de una fila en particular
 Function MinFila(Mat:TM;filaEle,m:byte):integer;
@@ -65,14 +101,14 @@ minfila:=Min;
 end;
 
 //Genera Arregla con el maximo de cada fila y lo muestra
-Procedure MaxFila(Mat:TM;N,M:byte);
+Procedure VecMaxFila(Mat:TM;N,M:byte);
 Var
   i,j,k:byte;
   max:integer;
   v:TV;
 begin
 k:=1;
-Writeln('El arreglo con el maximo de cada fila es : ');
+Writeln('El vector con el maximo de cada fila es : ');
 For i:=1 to N do
   begin
   max:=Mat[i,1];
@@ -87,7 +123,7 @@ Writeln('');
 end;
 
 //Utilizacion la funcion generar un arreglo VMin de N elementos,
-//que contenta el minimo de cada fila.
+//que contenga el minimo de cada fila.
 Procedure VectorMinimos(Mat:TM;N,M:byte;var Vmin:TV);
 Var
   i:byte;
@@ -144,12 +180,12 @@ TotalFila:=Acum;
 end;
 
 //Almacena total de cada fila en un vector
-Procedure VectorTotalFilas(P:TM;N,M:byte;Var V:TV);
+Procedure VectorTotalFilas(P:TM;N,M:byte;Var VTotFila:TV);
 var
   i:byte;
 Begin
 for i:=1 to N do
-  V[i]:=TotalFila(P,i,m)
+  VTotFila[i]:=TotalFila(P,i,m)
 end;
 
 //Devuelve la posicion del maximo del vector
@@ -232,26 +268,39 @@ end;
 Var
   Mat,P,T2:TM;
   N,X,m,filaEle:byte;
-  v,vmin,vec:TV;
+  v,vmin,vec,VTotFila:TV;
   T1:TMCHAR;
 //Programa principal
 begin
 //Inicia matriz en 0
 //IniciaMatriz(Mat,n,m);
 LeeArch(N,M,Mat);
+Writeln('La matriz es: ');
+MuestraMat(Mat,n,m);
 Writeln('El minimo de la matriz es ',minimo(Mat,n,m));
+Writeln('El maximo de la matriz es ',maximo(Mat,n,m));
+Writeln('La cantidad columna con algun cero es:  ',cantcolumnaceros(Mat,n,m));
+VecMaxfila(Mat,N,M);
+Writeln('El vector con el total de cada fila es: ');
+VectorTotalFilas(Mat,N,M,VTotFila);
+MuestraVec(VTotFila,N);
+Writeln();
+Writeln('El vector con el minimo de cada fila es:');
+VectorMinimos(Mat,n,m,Vmin);
+MuestraVec(Vmin,n);
+Writeln();
 Writeln('Elija la fila donde quiere calcular el minimo');
 Readln(filaEle);//Fila elegida
-Writeln('El minimo de una fila ',FilaEle, ' es ',MinFila(Mat,filaEle,m));
+Writeln('El minimo de la fila ',FilaEle, ' es ',MinFila(Mat,filaEle,m));
 VectorMinimos(Mat,n,m,vmin);
-VectorTotalFilas(P,M,N,V);
+
 //Writeln('El color que tiene mas fichas es :',MasFichas(N,T1,T2));
-Maxfila(Mat,N,M);
+Writeln();
 Writeln('Ingrese una columna');Readln(X);
-Writeln('Su promedio de la columna es : ',promedio(n,x,mat):5:2);
+Writeln('El promedio de la columna ',x,' es : ',promedio(n,x,mat):5:2);
 cuantoscoinciden(Mat,n,m,vec);
 //Writeln('El color que mas aparece es: ',color(n,t1));
-Writeln('La cantidad columna con algun cero es:  ',cantcolumnaceros(Mat,n,m));
+
 Readln;
 end.
 

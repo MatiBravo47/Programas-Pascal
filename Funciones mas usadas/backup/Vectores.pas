@@ -48,7 +48,7 @@ Max:=Maximo;
 end;
 
 //Escribe Vector
-Procedure EscVector(V:TV;N:integer);
+Procedure MuestraVec(V:TV;N:integer);
 var
   i:integer;
 Begin
@@ -63,7 +63,7 @@ begin
 clrscr;
 Writeln('Ingrese tamanio vector');Readln(N);
 Writeln('El vector es ');
-EscVector(V,N);
+MuestraVec(V,N);
 Writeln();
 Writeln('La suma del vector es ',Suma(V,N));
 Writeln('El minimo del vector es ',Minimo(v,n));
