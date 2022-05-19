@@ -80,33 +80,37 @@ begin
 end;
 
 //Busqueda lineal posicion de un vector desordenado
-Function buscar(Cont:byte;Vec:TV;Elemento:real):byte;
+Function buscarLineal(V:TV;N,X:byte):byte;
 begin
-  if cont>0 then
-    if vec[cont]=elemento then
-      buscar:=cont
-    else
-      buscar(cont-1,vec,elemento)
+if (v[N]=X) then
+  buscarLineal:=N
+else
+  begin
+  if (V[1]=X) then
+    buscarLineal:=1
   else
-      buscar:=0;
+    buscarLineal:=BuscarLineal(V,N-1,X);
+  end;
+If (buscarLineal>n) then
+  buscarLineal:=0;
 end;
 
 //busqueda bienaria para vector ordenado en forma ascendente
-function buscar (ini,fin:byte;vec:tv;elemento:real):byte;
+function buscarBi (ini,fin:byte;vec:tv;elemento:real):byte;
 var
   Prom:byte;
 begin
 prom:=(Ini+fin) div 2;
 if (Vec[prom]<>elemento) and (ini<fin) then
   if vec[prom] > elemento then
-    buscar:=buscar (ini,prom-1,vec,elemento)
+    buscarBi:=buscarBi (ini,prom-1,vec,elemento)
   else
-    buscar:=buscar(prom+1,fin,vec,elemento)
+    buscarBi:=buscarBi(prom+1,fin,vec,elemento)
 else
     if (vec[prom]=elemento) then
-      buscar:=(prom)
+      buscarBi:=(prom)
     else
-      buscar:=0;
+      buscarBi:=0;
 end;
 
 //MATRIZ
@@ -253,6 +257,12 @@ Writeln;
 Writeln('El maximo del vector es :',max(V,N));
 Writeln('La suma los componentes del vector es: ',Suma(V,N));
 Writeln('El promedio del vector es :',Promedio(V,N):5:2);
+Writeln('Ingrese un valor');Readln(x);
+If esta(V,N,X) then
+  Writeln('El valor ',x,' se encuentra en el vector ')
+else
+  Writeln('El valor ',x,' no se encuentra en el vector' );
+Writeln('Se encuentra en la posicion ',buscarLineal(V,N,X));
 readln;
 end.
 
