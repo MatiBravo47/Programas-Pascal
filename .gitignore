@@ -2,4 +2,4 @@
 *.exe
 *.lpi
 
-git rm -r --cached .exe
+git rm .exe
