@@ -1,5 +1,6 @@
-# ignore ALL .exe files
+# ignore ALL .exe and .lpi files
 *.exe
 *.lpi
 
-git rm *.exe
+#ignore all files in direc lib
+/lib
