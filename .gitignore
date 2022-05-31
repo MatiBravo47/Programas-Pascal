@@ -1,3 +1,5 @@
 # ignore ALL .exe files
 *.exe
 *.lpi
+
+git rm -r --cached .exe
