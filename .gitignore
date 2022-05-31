@@ -2,4 +2,4 @@
 *.exe
 *.lpi
 
-git rm --.exe
+git rm *.exe
