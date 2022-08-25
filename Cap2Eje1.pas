@@ -11,7 +11,7 @@ Else
   If (X>='a') and (X<='z') then
     writeln ('Es minuscula')
   else
-    Writeln ('Es otra cosa');
+    Writeln ('No es mayuscula ni minuscula');
 readln;
 end.
 

@@ -6,12 +6,12 @@ begin
   clrscr;
   NNec:=0;
   BNec:=0;
-  Writeln('Ingrese cantidad de pintura blanca');(Readln(N));
+  Writeln('Ingrese cantidad de litros de pintura blanca');(Readln(N));
+  Writeln('Ingrese cantidad de litros de pintura negra ');(Readln(M));
   NNec:=((70*N)/30);
-  Writeln('Necesitas ',NNec:4:2,'de pintura negra');
-  Writeln('Ingrese cantidad de pintura negra');(Readln(M));
   BNec:=((30*M)/70);
-  Writeln('Necesitas',BNec:4:2,'de pintura blanca');
+  Writeln('Necesitas comprar ',NNec:4:2,' litros de pintura negra');
+  Writeln('Necesitas comprar ',BNec:4:2,' litros de pintura blanca');
   Readln;
 end.
 

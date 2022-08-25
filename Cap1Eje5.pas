@@ -7,7 +7,7 @@ Var
 
 begin
   Clrscr;
-  Writeln('Ingrese largo de la superficie que se quiera embaldosar');
+  Writeln('Ingrese largo de la superficie que se quiere embaldosar');
   Readln(N);
   Writeln('Ingrese ancho de la superficie que se quiere embaldosar');
   Readln(M);

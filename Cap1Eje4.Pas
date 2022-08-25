@@ -20,13 +20,13 @@ Car:='B';
   Clrscr;
   //Punto 1)
   //redundante
-  Mayus:=Upcase(car)=car;
+  Mayus:=Upcase(car) = car;
   //Bien semantica y sintacticamente
-  Cumple:= (X<=LimInf) and (x>=LimSup);
+  Cumple:= (X <= LimInf) and (x >= LimSup);
   //Mal sintacticamente
   //Mayus:= 'A'=Car or car='B' or true;
   //Mal Sintacticamente
-  Cumple:= Length(Cadena)> LimSup;
+  Cumple:= Length(Cadena) > LimSup;
   //Mal semanticamente
  // M:= N/LimInf;
   //Mal sintacticamente
