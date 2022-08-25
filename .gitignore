@@ -1,6 +1,9 @@
 # ignore ALL .exe and .lpi files
 *.exe
 *.lpi
+*.lpr
+*.lps
 
 #ignore all files in direc lib
 /lib
+/backup
