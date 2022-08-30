@@ -1,7 +1,18 @@
+//Ej 13) Dada una cantidad X de pesos y un tipo de moneda extranjera,
+//ambos ingresados por teclado, se desea determinar e informar cuánto
+//se puede comprar dada la siguiente tabla de cotizaciones:
+//D=Dolar 120.80
+//E=Euro  150.10
+//R=Real 26.50
 program Cap2Eje13;
 uses crt;
+const
+  D=120.80;
+  E=150.10;
+  R=26.50;
+
 Var
-X,Compra:real;
+X:real;
 Moneda:Byte;
 
 begin
@@ -13,16 +24,10 @@ Writeln('2)Euro');
 Writeln('3)Real');
 Readln(Moneda);
 Case Moneda of
-1: Compra:=X/120.80;
-2: Compra:= X/150.10;
-3: Compra:= X/26.50;
+1: Writeln('Se pueden comprar ', (X / D):5:2, ' Dolares');
+2: Writeln('Se pueden comprar ', (X / E):5:2, ' Euros');
+3: Writeln('Se pueden comprar ', (X / R):5:2, ' Reales');
 end;
-If moneda=1 then
-Writeln('Se pueden comprar ', Compra:5:2, ' dolares');
-If moneda=2 then
-Writeln('Se pueden comprar ',Compra:5:2, ' euros');
-If moneda=2 then
-Writeln('Se pueden comprar ', Compra:5:2, 'Reales');
 Readln;
 end.
 
