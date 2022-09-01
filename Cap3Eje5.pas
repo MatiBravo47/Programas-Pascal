@@ -1,20 +1,22 @@
+//Ej 5) Generar y mostrar los múltiplos de K menores que un valor Q.
+//(K y Q se leen de teclado)
 program Cap3Eje5;
 uses crt;
 Var
-K,Q,Mult:Integer;
-Cont:Byte;
+num, tope, Mult: Integer;
+Cont: Byte;
 begin
 Clrscr;
-Cont:=0;
-Mult:=0;
-Writeln('Ingrese un numero');Readln(K);
-Writeln('Ingrese un tope');Readln(Q);
-Writeln('Los multiplos de ', K ,' menores a ',Q ,' son :');
-While Mult<Q do
+Cont := 0;
+Mult := 0;
+Writeln('Ingrese un numero'); Readln(num);
+Writeln('Ingrese un tope'); Readln(tope);
+Writeln('Los multiplos de ', num ,' menores a ',tope ,' son :');
+While (Mult < tope) do
 Begin
-Cont:=Cont+1;
-Mult:=K*Cont;
-Writeln('',Mult);
+Cont := Cont+1;
+Mult := num * Cont;
+Writeln('', Mult); //Muestra multiplos
 end;
 Readln;
 end.
