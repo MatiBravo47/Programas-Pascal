@@ -11,7 +11,7 @@ Begin
     Sum:=0; Cont:= 0;
     While NOT eof (Arch) do
       Begin
-      Readln(Arch,A);
+      Read(Arch,A);
       If (A > 0) then //Si es positivo
       	 begin
          Sum:= Sum + A; //Suma positivos
