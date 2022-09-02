@@ -18,18 +18,16 @@ var
  Arch: Text;
  Patente,MasViajesPat: String[6];
 
-
 begin
 clrscr;
 MenosKm:= 7000; //valor imposible para menos km
 MasViajes:= 0;
-Viajes:= 0;
 Assign(Arch,'Ejercicio316.txt'); Reset(Arch);
 Readln(Arch, N); //lee cantidad de vehiculos
 For i:=1 to N do
     Begin
-    Kmt:=0;
-    Viajes:=0;
+    Kmt:= 0;
+    Viajes:= 0;
     Readln(Arch, Patente, LConsu); //lee patente y litros consumidos
     Read(Arch, Km);
     While (Km <> 0) do //lee km hasta que encuentre 0
@@ -43,12 +41,12 @@ For i:=1 to N do
     Writeln(Kmt:8:2,' KM totales');
     Writeln('Tuvo un consumo de ',(KmT*LConsu):8:2, ' litros por kilometros');
     Writeln();
-    If (KmT < MenosKm) then
+    If (KmT < MenosKm) then  //Patente con mas KM
         Begin
       	MenosKm:= KmT;
       	MenosLt:= LConsu;
       	end;
-    If (Viajes > MasViajes) then
+    If (Viajes > MasViajes) then  //Patente con mas viajes
         Begin
       	MasViajes:= Viajes;
       	MasViajesPat:= Patente;
