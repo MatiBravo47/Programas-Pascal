@@ -1,3 +1,7 @@
+//15)A partir de un archivo de texto que contiene una secuencia
+//de caracteres terminada en punto, desarrollar un programa para
+//cada item:
+//b) Cuántas palabras contienen una letra que ingresa por teclado
 program Cap3Eje15B;
 uses crt;
 Var
@@ -5,7 +9,6 @@ Var
   arch: text;
   cant: byte;
   palabra, fin: boolean;
-
 
 begin
 clrscr;
