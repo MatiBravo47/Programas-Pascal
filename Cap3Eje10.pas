@@ -24,7 +24,7 @@ begin
       If (Pri <> Seg) then
         Begin
         Writeln (Pri,'            ',Frec);
-        Frec:=1;
+        Frec:= 1;
         end;
     Pri:= Seg;
   end;
