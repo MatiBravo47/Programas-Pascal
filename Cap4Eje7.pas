@@ -31,11 +31,11 @@ end;
 Var
   Arch: Text;
   N, i: Byte;
-  Nombre: String[4];
+  Nombre ,menosFacturo: String[4];
   Inscr, Basura: Char;
-  ImporteTotal, ImporteMax, Importe: Real;
+  ImporteTotal, ImporteMin, Importe: Real;
 Begin
-  ImporteMax:= 0;
+  ImporteMin:= 999999;
   Assign(Arch,'Ejercicio47.txt'); Reset(Arch);
   Readln(Arch, N);//cantidad de meses facturacion
   while not eof (Arch) do
@@ -52,8 +52,16 @@ Begin
      writeln('Es responsable inscripto')
    else
      Writeln('No es resposable inscrito');
-   Writeln('Pago de iva ', Impuesto(Inscr, ImporteTotal):5:2);
-  end;
-Readln;
+   Writeln('Pago de iva ', Impuesto(Inscr, ImporteTotal):5:2); //A)
+   If (importeTotal < importeMin) and (inscr = 'S') then
+     begin
+     importeMin:= importeTotal;
+     menosFacturo:= Nombre;
+     end;
+   end;
+  close(arch);
+  Writeln('El comercio responsable que menos facturo fue: ', menosFacturo);
+  Readln;
 end.
+
 
