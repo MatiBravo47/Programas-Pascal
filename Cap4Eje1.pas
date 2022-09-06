@@ -1,21 +1,25 @@
+//Ej 1) Desarrollar una función booleana que dado un caracter diga si es
+//letra o no
 program Cap4Eje1;
 
-Function LetraoNo(Car:Char):boolean;
+Function esLetra(car: Char): boolean;
 Begin
-  If (Car in ['a'..'z']) or (car in['A'..'Z'] )then
-  letraoNo:=true
+  If (car in ['a'..'z']) or (car in['A'..'Z'] )then
+    esLetra:= true
   else
-    letraoNo:=False;
+    esLetra:= False;
 end;
+
 Var
-  Car:Char;
+  Car: Char;
+
 begin
-  Writeln('Ingrese una caracter');Readln(Car);
-  LetraoNo(Car);
-  If LetraoNo(Car) then
-  Writeln('El caracter ingresado es una letra')
+  Writeln('Ingrese una caracter'); Readln(Car);
+  esLetra(Car);
+  If esLetra(Car) then
+    Writeln('El caracter ingresado es una letra')
   else
-  Writeln('El caracter ingresado no es una letra');
+    Writeln('El caracter ingresado no es una letra');
 Readln;
 end.
 
