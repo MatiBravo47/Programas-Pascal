@@ -1,106 +1,36 @@
+//Ej 5) Calcular la solución por determinantes de un sistema de dos
+//ecuaciones lineales con dos incógnitas(se supone compatible y determinado).
+//Desarrollar la función que dados a,b,d,e obtenga x. Recordar que el
+//determinante
+//explicacion:
+//https://www.electrontools.com/Home/WP/metodo-de-determinantes-o-metodo-de-cramer/
 program Cap4Eje5;
 uses crt;
-type
-  TM=array[1..4,1..4] of integer;
-  TV=array[1..4] of integer;
-Procedure IniciaMatriz(n:byte;var m:TM);//inicializa matriz en 0
-Var
-  i,j:byte;
-Begin
-For i:=1 to n do// Personas
-  for j:=1 to 4 do // columna tipo de compra
-    M[i,j]:=0;
-end;
-
-Procedure LeeArch(Var N:byte;Var M:TM);
-Var
-  Arch:Text;
-  NroCli,Tipo:byte;
-  Compra:Integer;
+Function Determinante(q,w,r,t: integer):integer;
 begin
-ASSIGN(arch,'Ejercicio65.txt');RESET(Arch);
-Readln(Arch,N);
-IniciaMatriz(N,M);
-While not eof (arch) do
-  Begin
-  Readln(Arch,NroCli,Tipo,compra);
-  M[NroCli,Tipo]:=M[NroCli,tipo]+compra;
-  end;
+  determinante:= q * w - r * t;
+  //det =|q r|
+  //     |t w|
 end;
 
-Procedure TCompras(M:TM;N:byte); //Sumar columna y mostrar
-Var
-  i,j:byte;
-  Total:integer;
-Begin
-  For j:=1 to 4 do //tipos de producto
-  begin
-  Total:=0;
-    For i:=1 to N do //numero de clientes
-    Total:=Total+M[I,J];
-  Writeln('En el rubro ',j,' se gasto : ',total);
-  end;
-end;
-
-Procedure Supero(N:byte;M:TM);
-Var
-  i:byte;
-Begin
-  For i:=1 to N do
-    if ((M[i,1])> (M[i,3])) then //si supermercado supera a indumentaria
-    Writeln('El cliente ',i,' gasto mas en indumentaria que supermercado ')
-end;
-Procedure IniciaTot(n:byte;var TOTAL:TV);
 var
-  i:byte;
-begin
-For i:=1 to N do
-  Total[i]:=0;
-end;
-
-Procedure Prom(N:byte;M:TM;total:tv);
-var
-  i,j:byte;
-Begin            //Recorro por fila
-for i:=1 to N do
-  begin
-  total[i]:=0;
-    For j:=1 to 4 do
-      Total[i]:=total[i] + M[I,J];
-  Writeln('El promedio de compra del cliente ',i,' es: ',(total[i]/4):5:2);
-  end;
-end;
-
-Function masConsumo(total:tv;n:byte):byte;
-Var
-  i,maxi:byte;
-  max:integer;
-Begin
-Max:=Total[1];
-MaxI:=1;
-  For i:=2 to N do
-    If total[i]>Max then
-    begin
-    MaxI:=i;
-    Max:=Total[i];
-    end;
-Masconsumo:=MaxI;
-end;
-//Programa principal
-Var
-  n:byte;
-  m:TM;
-  total:tv;
+  a, b, c, d, e, f: integer;
+  ax,ay,at: Real;
 begin
   clrscr;
-  LeeArch(N,M);
-  TCompras(M,N);
-  Supero(N,M);
-  Prom(N,M,total);
-  iniciaTot(n,total);
-  Writeln('El que mas consumo tuvo fue el cliente', MasConsumo(total,n));
-
-
+  Writeln('Ingrese a, b y c de la siguiente ecuacion: aX + bY= C');
+  Write('A:'); Readln(A);
+  Write('B: '); Readln(B);
+  Write('C: '); Readln(C);
+  Writeln('Ingrese d, e y f de la siguiente ecuacion: dX + eY= f');
+  Write('D: '); Readln(D);
+  Write('E: '); Readln(E);
+  Write('F: '); Readln(F);
+  AX:= Determinante(c, e, b, f);//calculo determinante x
+  AY:= Determinante(a, f, c, d);//calculo determinante y
+  AT:= Determinante(a , e, b, d);//calculo determinante del sistema
+  Writeln('X :',AX/At:4:2);
+  Writeln('Y :',AY/At:4:2);
   readln;
 end.
 
