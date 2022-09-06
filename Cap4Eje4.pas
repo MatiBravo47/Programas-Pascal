@@ -1,8 +1,8 @@
 //Ej 4) Desarrollar una función que calcule la potencia n-ésima de un
 //número X ( Xn )
 program Cap4Eje4;
-Function Potencia(X, N: Word): Integer;
 
+Function Potencia(X, N: Word): Integer;
 Var
   Pot: Integer;
 begin
