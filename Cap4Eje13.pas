@@ -22,13 +22,18 @@ begin
         horaF := horaF mod 24;
      segTotal:= segTotal mod 3600;
      end;
-  If (segTotal > 60 ) then
+  If (segTotal >= 60 ) then
      begin
      mFinal:= M + (segTotal div 60);
+     if (mFinal >= 60) then
+        begin
+        horaF := horaF + 1;
+        mFinal := mFinal mod 60;
+        end;
      segTotal:= segTotal mod 60;
      end;
   if (segTotal < 60) then
-     sFinal:= S + segTotal;
+     sFinal:= segTotal;
 Writeln('La hora final es ',HoraF,':',mFinal,':',sFinal);
 end;
 //PROGRAMA PRINCIPAL
