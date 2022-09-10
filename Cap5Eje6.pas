@@ -15,7 +15,7 @@
 program Cap5Eje6;
 Uses crt;
 Var
-  palabras,longMax: byte;
+  palabras, longMax: byte;
 
 Procedure LeeArch(Var palabras, longMax: byte);
 Var
@@ -34,9 +34,9 @@ Begin
       read(arch, car)// si es blanco lee otro caracter
     else
       begin //el comienzo de la palabra
-      Pal:='';//inicializa palabra
-      long:=0;
-      While (Car<>'.') and (Car<>',') and (Car<>' ') do
+      Pal:= '';//inicializa palabra
+      long:= 0;
+      While (Car <> '.') and (Car <> ',') and (Car <> ' ') do
         Begin
         Pal:= Pal + car;
         Long:= Long + 1;
@@ -51,8 +51,9 @@ end;
 
 begin
   Clrscr;
-  LeeArch(palabras,longMax);
-  Writeln('Contiene ',palabras);
+  LeeArch(palabras, longMax);
+  Writeln('Contiene ', palabras,' palabras');
+  Writeln('La longitud de la palabra mas larga es: ', longMax );
   Readln;
 end.
 
