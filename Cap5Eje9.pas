@@ -19,10 +19,11 @@ Var
   Arch: Text;
   ant, Num: Integer;
 Begin
-  Assign(Arch, 'Ejercicio59.txt'); Reset(Arch);
-  Read(Arch, ant);
   N:= 1;
-  VA[N]:= ant; //Asigno el primer valor como maximo
+  Assign(Arch, 'Ejercicio59.txt'); Reset(Arch);
+  Read(Arch, num);
+  ant:= num;
+  VA[N]:= num; //Asigno el primer valor como anterior
   While not eof (arch) do
   Begin
     Read(Arch, Num);
@@ -48,33 +49,28 @@ Procedure VectorB(N: Byte; VA: TVec; Var VB: TVec);
 Var
   i, j: Byte;
 Begin
-  i:= 1;
-  j:= N;
-  While (i <> j) do
+  i:= 1; //asigna primer indice
+  j:= N; //asigna ultimo indice vector
+  While (i <> j) or (j - 1 = i)do  // (i <> j) vector impar (j - 1 = i) para pares
   Begin
-    If (VA[i] > VA[J]) then
+    If (VA[i] >= VA[J]) then
       Begin
-      If ((VA[i])mod(VA[j]) = 0) then
-        Begin
+      If ((VA[i])mod(VA[j]) = 0) then //si es divisible
+        Begin          //guarda en vector b
         VB[i]:= VA[i];
-        VB[J]:= Va[j];
+        VB[J]:= VA[j];
         end
       end
     Else
-      begin
-      If (VA[i] < VA[J]) then
-        Begin
         If ((VA[J]) mod (VA[I]) = 0) then
           Begin
           VB[i]:= VA[i];
           VB[J]:= Va[j];
           end;
-         end;
-       end;
     i:= i + 1;
     J:= J - 1;
     end;
-  If (i = j) then
+  If (i = j) or (j - 1 = i ) then //guarda ultimo elemento
     VB[i]:= VA[i];
 end;
 
