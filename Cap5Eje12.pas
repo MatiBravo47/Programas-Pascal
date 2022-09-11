@@ -38,10 +38,10 @@ Type
   TVReal = Array[1..4] of Real;
   TVChar = Array[1..4] of Char;
 Var
-  VClave:TVString;
-  VProm:TVReal;
-  VCar:TVChar;
-  N:Byte;
+  VClave: TVString;
+  VProm: TVReal;
+  VCar: TVChar;
+  N: Byte;
 
 Procedure LeeArch(var VClave: TVString;var VProm: TVReal; VCar: TvChar;var  N: Byte);
 Var
