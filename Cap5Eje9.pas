@@ -1,19 +1,27 @@
+//Ej 9) Dado un archivo de números enteros no nulos, almacenar en un
+//arreglo A aquellos que formen una secuencia ascendente. A partir de A
+//generar B con la misma cantidad de elementos de A pero poniendo
+//ceros en aquellas componentes simétricas donde la simétrica derecha
+//no sea múltiplo de la izquierda.
+//Escribir ambos arreglos.
+//Ejemplo: Archivo: 5, 7, 1, 12, 15, -10, 10, 24, -25, 26, 50, 13
+//A = (5, 7, 12, 15, 24, 26, 50)  B= (5, 0, 12, 15, 24, 0, 50)
 program Cap5Eje9;
 Uses crt;
 Type
   TVec=array[1..15] of integer;
 Var
-  N,M,O:Byte;
-  V,VA,VB:TVec;
-Procedure VectorA(Var N:Byte;Var VA:Tvec);
+  N, M, O: Byte;
+  V, VA, VB: TVec;
+Procedure VectorA(Var N: Byte;Var VA: Tvec);
 Var
-  Arch:Text;
-  Max,Num:Integer;
+  Arch: Text;
+  Max, Num: Integer;
 Begin
-  Assign(Arch,'Ejercicio59.txt');Reset(Arch);
-  Read(Arch,Max);
-  VA[1]:=Max;
-  N:=1;
+  Assign(Arch, 'Ejercicio59.txt'); Reset(Arch);
+  Read(Arch, Max);
+  VA[1]:= Max;
+  N:= 1;
   While not eof (arch) do
   Begin
     Read(Arch,Num);
