@@ -47,7 +47,7 @@ Procedure LeeArch(var VClave: TVString;var VProm: TVReal; VCar: TvChar;var  N: B
 Var
   Arch: Text;
   Clave: String;
-  Car,UCar ,mayus: Char;
+  Car,UCar : Char;
   Esp, i: Byte;
   Num: Word;
   Total: Real;
@@ -65,8 +65,7 @@ Begin
     Clave:= '';  //Inicia palabra clave
     While (Car <> ' ') do //mientras sea distinto de espacio
       begin
-      mayus:= upcase(car);
-      if not(((Mayus >= 'A') and (mayus <= 'Z')) or ((mayus >= '1') and (mayus <= '9'))) then
+      if not (upcase(car) in ['A'..'Z']) and (upcase(car) in ['1'..'9']) then
          esp:= esp + 1; //cuenta especiales
       clave:= clave + car;
       ucar:= car;
