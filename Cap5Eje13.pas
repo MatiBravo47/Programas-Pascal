@@ -26,6 +26,7 @@ Begin
       Vec[Upcase(Car)]:= Vec[Upcase(Car)] + 1;
   end;
 end;
+
 Procedure EscribeVec(Vec: TV);
 Var
   i: Char;
@@ -33,6 +34,8 @@ Begin
   For i:='A' to 'Z' do
     Writeln(i,' : ',Vec[i]);
 end;
+
+//Programa principal
 begin
   Clrscr;
   IniciaVec(Vec);
