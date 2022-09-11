@@ -1,8 +1,8 @@
-Ale
+ALE
 4 4
-Carlos
+CARLOS
 1 8
-Matias
+MATIAS
 9 9
-Tomas
+TOMAS
 4 5 
