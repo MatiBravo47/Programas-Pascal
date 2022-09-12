@@ -67,7 +67,7 @@ For i:=1 to N do
   If (Prom[i] > X) then
     Supera:= Supera + 1;
   end;
-Sup:= Supera;
+Sup:=Supera;
 end;
 
 Procedure Mostrar(Tot: TVecWord; Prom: TVecReal; N: Byte; Cod: TVString);
