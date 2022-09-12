@@ -1,7 +1,7 @@
 # Programas_Pascal
 
 ### Capitulo 1 - Estructura Secuencial
-<br>
+
 Temas
 <br>
 • Tipos de datos. Variables y constantes. Expresiones
@@ -12,7 +12,7 @@ Temas
 <br>
   
 ### Capitulo 2 – Estructura de Decisión
-<br>
+
 Temas
 <br>
 • Sentencias secuenciales
@@ -25,7 +25,7 @@ Temas
 <br>
 
 ### Capitulo 3 – Estructura Iterativa
-<br>
+
 Temas
 <br>
 • Estructura iterativa o ciclo.
@@ -35,7 +35,7 @@ Temas
 • Ciclos anidados.
 
 ### Capitulo 4 – Procedimientos y Funciones
-<br>
+
 Temas
 <br>
 • Funciones.
@@ -45,7 +45,7 @@ Temas
 • Pasaje de parámetros
 
 ### Práctica 5 – Vectores
-<br>
+
 Temas
 <br>
 • Estructura de datos: arreglos unidimensionales
