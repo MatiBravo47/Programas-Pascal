@@ -25,10 +25,8 @@ Begin
     Begin
     N:= N + 1;
     Readln(Arch, Pat[N], Rec[N]);
-    write(rec[n],' ');
     end;
   Close(Arch);
-  writeln(n);
 end;
 
 Function Prom(N: Byte; Rec: TVNum): Real;
@@ -49,10 +47,8 @@ Var
 Begin
   Writeln('Ingrese valor a superar'); Readln(X);
   For i:=1 to N do
-  Begin
     If (Rec[i] > X) then
       Writeln('La patente ', Pat[i] ,' supera el monto');
-  end;
 end;
 
 Function Menor(Rec: TVNum; N: Byte; Pat: TVString): String ;
@@ -64,10 +60,10 @@ Begin
   For i:= 2 to N do
   Begin
     If (Rec[i] < Min) then
-    Begin
-    Min:= Rec[i];
-    IMin:= i;
-    end;
+      Begin
+      Min:= Rec[i];
+      IMin:= i;
+      end;
   end;
   Menor:= Pat[iMin];
 end;
