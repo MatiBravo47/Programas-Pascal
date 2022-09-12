@@ -99,8 +99,6 @@ Begin
   end;
   MasImporte:= Imax;
 end;
-
-//Programa principal
 begin
   Clrscr;
   N:= 5;
