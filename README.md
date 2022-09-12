@@ -1,6 +1,6 @@
 # Programas_Pascal
 
-Capitulo 1 - Estructura Secuencial
+### Capitulo 1 - Estructura Secuencial
 <br>
 Temas
 <br>
@@ -11,7 +11,7 @@ Temas
 • Prueba de escritorio
 <br>
   
-Capitulo 2 – Estructura de Decisión
+### Capitulo 2 – Estructura de Decisión
 <br>
 Temas
 <br>
@@ -24,7 +24,7 @@ Temas
 • Sentencias selectivas múltiples
 <br>
 
-Capitulo 3 – Estructura Iterativa
+### Capitulo 3 – Estructura Iterativa
 <br>
 Temas
 <br>
@@ -34,7 +34,7 @@ Temas
 <br>
 • Ciclos anidados.
 
-Capitulo 4 – Procedimientos y Funciones
+### Capitulo 4 – Procedimientos y Funciones
 <br>
 Temas
 <br>
@@ -44,7 +44,7 @@ Temas
 <br>
 • Pasaje de parámetros
 
-Práctica 5 – Vectores
+### Práctica 5 – Vectores
 <br>
 Temas
 <br>
