@@ -25,8 +25,10 @@ Begin
     Begin
     N:= N + 1;
     Readln(Arch, Pat[N], Rec[N]);
+    write(rec[n],' ');
     end;
   Close(Arch);
+  writeln(n);
 end;
 
 Function Prom(N: Byte; Rec: TVNum): Real;
