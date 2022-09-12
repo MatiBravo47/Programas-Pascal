@@ -73,7 +73,7 @@ Var
   i: Byte;
 Begin
   For i:= 1 to N do
-    VCer[Tcer[i]]:= VCer[Tcer[i]] + Ton[i];
+    VCer[Tcer[i]]:= VCer[Tcer[i]] + Ton[i];//indice con significado
   Writeln('Trigo ocupa un ',((VCer[1] * 100) / TonTot):5:2);
   Writeln('Girasol ocupa un ',((VCer[2] * 100) / TonTot):5:2);
   Writeln('Soja ocupa un ',((VCer[3] * 100) / TonTot):5:2);
@@ -97,6 +97,34 @@ Begin
   end;
 end;
 
+Procedure Burbujeo(Var Vnom: TVString; N: byte);
+Var
+  aux: string;
+  i, k, tope: byte;
+begin
+  tope:= N;
+  repeat
+    k:= 0;
+    for i:=1 to tope - 1 do
+      if (vnom[i] > vnom[i+1]) then
+      begin
+      aux:= Vnom[i];
+      vnom[i]:= vnom[i+1];
+      vnom[i+1]:= Aux;
+      k:= i;
+      end;
+    tope:= k;
+  until (k <= 1);
+end;
+
+Procedure muestraVector(vnom:tvstring; n:byte);
+var
+  i:byte;
+begin
+  for i:=1 to N do
+  write(Vnom[i],' ');
+end;
+
 //Programa principal
 begin
   Clrscr;
@@ -104,6 +132,9 @@ begin
   LeeArch(N, VNom, Pat, TCer, Ton, TonTot);
   Porcentaje(N, VCer);
   Patente(VNom, N, Pat, TCer, Ton);
+  burbujeo(vnom,n);
+  muestraVector(vnom,n);
+
   Readln;
 end.
 
