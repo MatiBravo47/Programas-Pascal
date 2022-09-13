@@ -1,3 +1,12 @@
+//En un archivo de texto se han grabado números naturales, uno por línea.
+//Se pide leerlos, teniendo en cuenta solamente los que están ubicados
+//en el rango de 1 a 99.
+//Se pide, calcular e informar:
+//- la cantidad de números analizados en cada una de las decenas
+//(ej. 34 corresponde a decena 3).
+//- el número máximo que apareció en cada decena.
+//Por fin de proceso, indicar si hubo o no números en todas las decenas
+//mediante una función
 program Parcial080520;
 uses crt;
 type
@@ -33,6 +42,18 @@ Begin
    close(arch);
 end;
 
+function Decenas(n: byte; vcant: tvnum): boolean;
+var
+  existe: boolean;
+  i: byte;
+begin
+existe:= true;
+for i:=1 to N do
+  if (vcant[i] = 0) then
+    existe:= false;
+decenas:= existe;
+end;
+
 procedure muestraVector(vcant: tvnum; n: byte);
 var
   i: byte;
@@ -51,5 +72,10 @@ begin
   muestraVector(vcant, n);
   writeln;
   muestraVector(vmayor, n);
+  writeln;
+  if decenas(n,vcant) then
+    writeln('Hubo numeros en todas las decenas')
+  else
+    writeln('No hubo numeros en todas las decenas');
   readln;
 end.
