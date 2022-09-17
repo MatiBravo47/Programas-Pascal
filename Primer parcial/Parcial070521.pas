@@ -29,7 +29,7 @@
 //procedimiento, según corresponda. Los valores de
 //X, E1 y E2 se piden por teclado antes del respectivo cálculo
 program Parcial070521;
-uses crt;
+uses crt, unit1;
 type
   tvstring = array[1..10] of string;
   tvnum = array[1..10] of byte;
