@@ -19,17 +19,17 @@
 program Parcial021220;
 uses crt;
 Type
-  TVS= array[1..12] of string[6];
-  TVR= array[1..12] of real;
+  TVS = array[1..12] of string[6];
+  TVR = array[1..12] of real;
 
 procedure leeArch(var codigo: tvs; Var IGG, IGM: TVR; var N: byte);
 var
   arch: text;
   blanco, PCR: char;
-  i:byte;
+  i: byte;
 begin
   n:= 0;
-  assign(arch,'HISOPADOS.txt'); reset(arch);
+  assign(arch, 'HISOPADOS.txt'); reset(arch);
   while not eof (Arch) do
     begin
     n:= n + 1;
@@ -40,7 +40,7 @@ begin
   close(arch);
 end;
 
-function supera(n: byte; vectorReal1,VectorReal2: tvr; Umbralx, umbraly: real):byte;
+function supera(n: byte; vectorReal1, VectorReal2: tvr;Umbralx, umbraly: real): byte;
 var
   cantidad, i: byte;
 begin
@@ -53,7 +53,7 @@ begin
 supera:= cantidad;
 end;
 
-procedure Superar(n:byte; vector1Real,Vector2Real:tvr);
+procedure Superar(n: byte; vector1Real, Vector2Real: tvr);
 var
   x, y: real;
 begin
@@ -62,13 +62,13 @@ begin
   Writeln('La cantidad es ',supera(N, vector1Real, Vector2Real, X, Y));
 end;
 
-procedure codigoPaciente(n:byte; vectorcodigo:tvs;vectorReal1,VectorReal2:tvr );
+procedure codigoPaciente(n: byte;vectorcodigo: tvs;vectorReal1, VectorReal2: tvr );
 var
   codigoPaciente: string[6];
   encontrado: boolean;
   i: byte;
 begin
-  encontrado:=False;
+  encontrado:= False;
   writeln('Ingrese codigo de paciente :'); Readln(CodigoPaciente);
   CodigoPaciente:= upcase(CodigoPaciente);
   for i:=1 to N do
@@ -83,9 +83,9 @@ begin
        Writeln('No fue encontrado');
 end;
 
-function Superior(n:byte;VectorIGM,VectorIGG:tvr):real;
+function Superior(n: byte;VectorIGM, VectorIGG: tvr): real;
 var
-  i,cantidad: byte;
+  i, cantidad: byte;
 begin
   cantidad:= 0;
   for i:= 1 to N do
@@ -99,14 +99,14 @@ end;
 var
   codigo: tvs ;
   igg, igm :tvr;
-  n:byte;
+  n: byte;
 
 begin
   clrscr;
-  leeArch(codigo,IGG,IGM,N);
-  superar(n,igg,igm);
-  codigoPaciente(n,codigo,igg,igm);
-  writeln('El porcentaje de IGM superior al IGG es del ',superior(n,igm,igg):5:2,'%');
+  leeArch(codigo, IGG, IGM, N);
+  superar(n, igg, igm);
+  codigoPaciente(n, codigo, igg, igm);
+  writeln('El porcentaje de IGM superior al IGG es del ',superior(n, igm, igg):5:2,'%');
   readln;
 end.
 
