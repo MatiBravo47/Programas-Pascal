@@ -26,6 +26,7 @@ end;
 Var
   variableGlobal  : tipoVariable;
   variable2Global : tipoVariable2;
+
 //programa principal
 begin
   clrscr;

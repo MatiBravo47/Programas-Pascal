@@ -9,7 +9,7 @@ Const
 Type
   TV = array[1..50] of word;
 
-function nombreFuncion(variable3: tipoVariable): tipoVariable;
+function nombreFuncion(variable3: tipoVariable): tipoVariableSalida;
 var
   variableLocal: tipoVariableLocal;
 begin
