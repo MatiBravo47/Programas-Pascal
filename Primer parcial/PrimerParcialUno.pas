@@ -1,3 +1,18 @@
+//1)Una compañía Láctea recibe la producción diaria de, en litros de
+//leche, de N tambos de la zona,
+//durante varios días consecutivos (no se conoce).
+//Los datos vienen de la siguiente manera:
+// Código del Tambo (cadena de 4 caracteres) y a continuación
+//o la entrega diaria en litros, 0=fin de datos.
+//Se pide, armar 3 vectores paralelos, COD, TOT, PROM y además
+//calcular e informar:
+//a) Código del tambo que más leche entregó a la compañía.
+//b) Cuántos superaron un promedio de X litros de entrega.
+//c) Dado un código, el total y el promedio diario entregado,
+//(si es que existe dicho código).
+//COD con los códigos de cada Tambo
+//TOT con los totales de litros entregados
+//PROM con el promedio diario entregado
 program PrimerParcialUno;
 Uses crt;
 Type
