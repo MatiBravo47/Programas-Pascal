@@ -71,13 +71,35 @@ program Teoria1;
 
 //Archivo
 
-//assign
-//reset
-//read/readln
-//rewrite
-//write/writeln
-//close             ->cierra archivo
+//assign(arch,'nombrearchivo.txt')
+//Enlaza la variable de tipo text con el archivo físico en el
+//disco. Necesario para lectura/ escritura
+
+//reset(arch): Prepara al archivo para la lectura, ubicándose al
+//comienzo
+
+//read/readln (arch,variable):
+//Se leen del archivo los valores y se almacenan en las
+//variables indicadas en la lista
+
+//rewrite(arch)
+//Prepara al archivo para la escritura, ubicándose al
+//comienzo
+
+//write/writeln(arch)
+//Se graban en el archivo los valores contenidos en las
+//variables de la lista.
+
+//close
+//cierra archivo(muy importante no olvidarse!)
+
 //eof (end of file)
+//Función booleana que detecta el fin del archivo
+
+//Importe:
+//verificar que el archivo no hay espacios en blanco
+//no deseados ya que puede traer un problema no esperado.
+
 
 //Ciclo Repeat
 
