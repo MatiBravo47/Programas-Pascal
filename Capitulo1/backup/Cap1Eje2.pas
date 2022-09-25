@@ -12,7 +12,6 @@ An:=A1+3*(K-1);
 Writeln('El k-enesimo termino es ',AN);
 Dif:=An-(A1+3*K);
 Writeln('La diferencia es: ',Dif);
-
 readln;
 end.
 

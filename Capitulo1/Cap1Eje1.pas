@@ -1,4 +1,4 @@
-program Cap1Eje01;
+program Cap1Eje1;
   Uses crt;
   Var
     N, M, BNec, NNec: Real;
@@ -14,4 +14,3 @@ begin
   Writeln('Necesitas comprar ',BNec:4:2,' litros de pintura blanca');
   Readln;
 end.
-
