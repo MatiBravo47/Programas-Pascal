@@ -33,10 +33,29 @@ program Teoria1;
 
 //Estructura de control selectiva
 
+//nos permite evaluar una condicion y decidir cuales
+//sentencias a ejecutar,entre dos alternativas excluyentes.
+
 //if condicion then
 //		 sentencia 1
 //else
 //    sentencia 2;
+
+//Estructura de decision Generalizada(o multiple)
+
+//Cuando en una estructura selectiva anidada, las distintas
+//alternativas dependen del valor resultante de una expresion
+//de tipo ordinal, se puede utilizar la estructura case.
+
+//Case expresion of
+//  Lista de constantes 1: sentencia1;
+//  Lista de constantes 2: Sentencia2;
+//  .
+//  .
+//  Listas de constantes n: sentenciasn;
+//[else  (opcional, se ejecuta al no ejecutarse ninguna de las anteriores)
+//  SentenciaK;]
+//end;
 
 //Estructura de control iterativa, de repeticion o ciclos
 

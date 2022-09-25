@@ -33,6 +33,9 @@ program Teoria1;
 
 //Estructura de control selectiva
 
+//nos permite evaluar una condicion y decidir cuales
+//sentencias a ejecutar,entre dos alternativas excluyentes.
+
 //if condicion then
 //		 sentencia 1
 //else
@@ -78,6 +81,16 @@ program Teoria1;
 //var
 //begin
 //end;
+
+//Capitulo 5
+
+//arreglos
+
+//type
+//		tipoVector = array [1..10] of integer;
+//var
+//	 vec1: tipoVector;
+
 
 
 
