@@ -1,18 +1,18 @@
-//Ejercicio tipo 1er parcial
-//Una imprenta realiza folletos y su costo depende de la cantidad de palabras, del tipo y tamaño de letra.
-//Un archivo de texto contiene en cada línea (finalizada con un punto) los datos de un folleto.
-//El primer carácter es el tipo (A,B,C), luego un blanco el tamaño (1,2), luego un blanco seguido de una secuencia de
-//caracteres que forman palabras separadas por uno o mas blancos, al final un punto.
-//Ejemplo: A 2 xxxxx xxxxxxxxx xxxxxx xxxxxxx.
-//Se pide procesar el archivo y generar 3 arreglos paralelos: Costo, CantPal y MasLarga, contendrán de cada folleto su
-//costo, la cantidad de palabras y la cantidad de caracteres de la palabra más larga
-//El costo se calcula de la siguiente manera: $1 la palabra, dependiendo del Tipo de letra: 'A' duplica el importe,
-//'B' triplica,'C' quintuplica. Además si el tamaño es 2 tiene un costo adicional del 50%
-//Ejemplo:
-//Luego:
-//a) Indicar el costo del folleto que contenga la palabra mas larga, si hay mas de uno el costo promedio de los mismos.
-//b) Para un entero N que ingresa por teclado, buscar el primer folleto que contenga exactamente N palabras y
-//mostrar su costo. (considerar que puede no existir)
+Ejercicio tipo 1er parcial
+Una imprenta realiza folletos y su costo depende de la cantidad de palabras, del tipo y tamaño de letra.
+Un archivo de texto contiene en cada línea (finalizada con un punto) los datos de un folleto.
+El primer carácter es el tipo (A,B,C), luego un blanco el tamaño (1,2), luego un blanco seguido de una secuencia de
+caracteres que forman palabras separadas por uno o mas blancos, al final un punto.
+Ejemplo: A 2 xxxxx xxxxxxxxx xxxxxx xxxxxxx.
+Se pide procesar el archivo y generar 3 arreglos paralelos: Costo, CantPal y MasLarga, contendrán de cada folleto su
+costo, la cantidad de palabras y la cantidad de caracteres de la palabra más larga
+El costo se calcula de la siguiente manera: $1 la palabra, dependiendo del Tipo de letra: 'A' duplica el importe,
+'B' triplica,'C' quintuplica. Además si el tamaño es 2 tiene un costo adicional del 50%
+Ejemplo:
+Luego:
+a) Indicar el costo del folleto que contenga la palabra mas larga, si hay mas de uno el costo promedio de los mismos.
+b) Para un entero N que ingresa por teclado, buscar el primer folleto que contenga exactamente N palabras y
+mostrar su costo. (considerar que puede no existir)
 program ejercicioTipoParcial2019;
 Uses crt;
 Type
