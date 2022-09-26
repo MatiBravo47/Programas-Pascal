@@ -22,7 +22,7 @@ Var
   arch: Text;
 Begin
   N:= 0;
-  Assign(Arch, 'PropuestoVector.txt'); Reset(Arch);
+  Assign(Arch,'PropuestoVector.txt'); Reset(Arch);
   While not eof (Arch)do
     Begin
     N:= N + 1;
