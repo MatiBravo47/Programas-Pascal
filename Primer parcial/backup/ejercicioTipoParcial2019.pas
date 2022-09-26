@@ -88,7 +88,6 @@ Begin
 CLOSE(Arch);
 end;
 
-//muestra vector cantidad de palabras, palabra mas larga y costo.
 Procedure Escribe(VCosto: TVR; VMasL, VCant: TVB; N: byte);
 Var
   i: byte;
