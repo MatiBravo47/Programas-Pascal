@@ -58,7 +58,7 @@ assign(arch,'bank.txt'); reset(arch);
 j:=0;
 while not eof (arch) do
   begin
-  read(arch, car);
+  read(arch,car);
   j:=j + 1;
   vNombres[j]:=''; //inicializa nombre
   while (car <> ' ') do
