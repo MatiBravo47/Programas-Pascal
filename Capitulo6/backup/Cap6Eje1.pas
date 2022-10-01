@@ -63,19 +63,19 @@ Var
 Begin
 w:= 0;
 For j:=1 to M do //Columna
-  Begin
-  SumaImpares:= 0;
-  For i:=1 to N do //Analiza toda la columna
-    begin
-    if odd(v[i, j]) then  //si es impar
-      SumaImpares:= SumaImpares + V[i,j];
-    end;
-  If (SumaImpares <> 0) then //genera elemento si tiene impares
-    begin
-    W:= W + 1;
-    Impares[W]:= SumaImpares;
-    end;
-  end;
+    Begin
+    SumaImpares:= 0;
+    For i:=1 to N do //Analiza toda la columna
+        begin
+        if odd(v[i, j]) then  //si es impar
+          SumaImpares:= SumaImpares + V[i,j];
+        end;
+    If (SumaImpares <> 0) then
+      begin
+      W:= W + 1;
+      Impares[W]:= SumaImpares;
+      end;
+   end;
 end;
 
 Procedure Mostrar(W: Byte; Impares: Tv);
