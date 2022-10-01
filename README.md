@@ -53,3 +53,13 @@ Temas
 • Arreglos paralelos
 <br>
 • Búsqueda – Inserción – Supresión
+
+### Práctica 6 – Matrices
+
+Temas
+<br>
+• Estructura de datos: arreglos multidimensionales
+<br>
+• Recorrido - Búsqueda
+<br>
+• Matrices y arreglos paralelos
