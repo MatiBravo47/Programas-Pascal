@@ -42,7 +42,7 @@ while not eof (Arch) do
     end;
   If (Ult mod Prim = 0) then //Verifica si deshace el vector o no
     Begin
-    N:= N + 1;//Suma fila a la matriz
+    N:=N + 1;//Suma fila a la matriz
     For i:= 1 to Y do //Pasa vector a matriz
       VM[N,I]:= V[i];//Cambia columna,mantiene fila
     end;
