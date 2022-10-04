@@ -67,7 +67,7 @@ end;
 
 var
   n: byte;
-  C: tm;
+  cuadradoMagico: tm;
 begin
   clrscr;
   Writeln('Ingrese orden de la matriz (impar)'); Readln(N);
