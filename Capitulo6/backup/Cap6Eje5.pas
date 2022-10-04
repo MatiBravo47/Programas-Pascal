@@ -115,7 +115,7 @@ for i:= 1 to N do
   end;
 end;
 
-//Número de cliente que más consumió
+Número de cliente que más consumió
 Function masConsumo(totalCompra: tv; n: byte): byte;
 Var
   i, maxi: byte;
