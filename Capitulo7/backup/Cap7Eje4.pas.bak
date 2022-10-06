@@ -17,7 +17,7 @@ program Cap7Eje4;
 uses crt;
 Type
   TR = record
-    Club : string[6];
+    Club : string;
     PJ, puntaje : byte;
   end;
 TV = array [1..4] of TR; //Vector que guarda todos los datos
@@ -34,7 +34,8 @@ TV = array [1..4] of TR; //Vector que guarda todos los datos
 Procedure LeeArch(Var tabla: TV;Var N: byte);
 Var
   arch: text;
-  i, j: byte;
+  i, j, PJ: byte;
+  nombre: string[6];
   perdio: boolean;
   Res, blanco: char;
 Begin
@@ -46,15 +47,15 @@ For i:= 1 to N do
   perdio:= false;
   With tabla[i] do
     begin
-    Read(Arch,club,PJ);
+    Read(Arch,Nombre,PJ);
     For j:= 1 to PJ do
       begin
-      Read(Arch,blanco,res);
+      Read(Arch,Res,blanco);
       if (res = 'G') then
         puntaje:=puntaje + 3;
       if (res = 'E') then
         Puntaje := Puntaje + 1;
-      if (res = 'P') then
+      if res = 'P' then
         Perdio:= true; //clequear esto
       end;
     end;

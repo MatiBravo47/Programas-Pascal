@@ -49,7 +49,7 @@ For i:= 1 to N do
     Read(Arch,club,PJ);
     For j:= 1 to PJ do
       begin
-      Read(Arch,blanco,res);
+      Read(Arch,Res,blanco);
       if (res = 'G') then
         puntaje:=puntaje + 3;
       if (res = 'E') then
