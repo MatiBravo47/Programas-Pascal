@@ -11,7 +11,7 @@ uses
    crt;
 const
    maxelem = 15;
-   estaciones:array[1..4] of string=('verano', 'otonio', 'invierno', 'primavera');
+   estaciones:array[1..4] of string=('verano','otonio','invierno','primavera');
 type
    st6 = string[6];
    persona = record
