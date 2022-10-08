@@ -1,5 +1,7 @@
 # Programas_Pascal
 
+## Primer Parcial
+
 ### Capitulo 1 - Estructura Secuencial
 
 Temas
@@ -53,6 +55,8 @@ Temas
 • Arreglos paralelos
 <br>
 • Búsqueda – Inserción – Supresión
+
+## Segundo Parcial
 
 ### Práctica 6 – Matrices
 
