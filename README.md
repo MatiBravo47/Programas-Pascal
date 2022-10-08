@@ -63,3 +63,12 @@ Temas
 • Recorrido - Búsqueda
 <br>
 • Matrices y arreglos paralelos
+
+### Práctica 7 – Registros
+
+Temas
+<br>
+• Estructura de datos: registros
+<br>
+• Estructuras anidadas
+
