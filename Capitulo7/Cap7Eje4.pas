@@ -22,61 +22,81 @@ Type
   end;
 TV = array [1..4] of TR; //Vector que guarda todos los datos
 
-
-//Procedure IniciaVec(N: Byte; Var puntajeTotal: TV);
-//var
-//  i: byte;
-//begin
-//for i:= 1 to N do
-//    puntajeTotal.puntaje[i]:= 0;
-//end;
-
-Procedure LeeArch(Var tabla: TV;Var N: byte);
+Procedure LeeArch(Var tabla: TV;Var N: byte; var cantidadInvictos:byte);
 Var
   arch: text;
   i, j: byte;
-  perdio: boolean;
+  invicto: boolean;
   Res, blanco: char;
 Begin
 ASSIGN(Arch, 'Ejercicio74.txt'); RESET(Arch);
 Readln(Arch, N);//Lee cantidad de equipos
-//IniciaVec(N, Puntaje);
+cantidadInvictos:= 0;
 For i:= 1 to N do
   begin
-  perdio:= false;
   With tabla[i] do
     begin
+    invicto:= true;
     Read(Arch,club,PJ);
     For j:= 1 to PJ do
       begin
       Read(Arch,blanco,res);
-      if (res = 'G') then
-        puntaje:=puntaje + 3;
-      if (res = 'E') then
-        Puntaje := Puntaje + 1;
-      if (res = 'P') then
-        Perdio:= true; //clequear esto
+      case res of
+      'G': puntaje := puntaje + 3;
+      'E': puntaje := puntaje + 1;
+      'P': invicto := false;
       end;
+      end;
+    if invicto then
+      cantidadInvictos:= cantidadInvictos + 1;
     end;
   Readln(Arch);
   end;
 CLOSE(Arch);
 end;
 
-//Procedure Listado();
-//var
-//Begin
-//For i:=1 to N do
-//  Writeln('Equipo : ',Equipos.Nombre ,'puntos: ',)
-//end;
+
+//Listado con los nombres de los clubes junto con el
+//puntaje obtenido
+Procedure Listado(tabla: TV; n: byte);
+var
+  i: byte;
+Begin
+writeln ('Equipo     Puntos');
+For i:=1 to N do
+  Writeln(tabla[i].club ,'     ',tabla[i].Puntaje)
+end;
+
+//Nombre de el/los punteros de la Tabla
+procedure PunteroCampeonato(tabla :tv; n: byte );
+var
+  i,puntajeMax :byte;
+  puntero:string[6];
+begin
+puntero :=tabla[1].club;
+puntajeMax:= tabla[1].puntaje;
+for i:=2 to N do
+  begin
+  if (tabla[i].Puntaje > puntajeMax) then
+    begin
+    puntero :=tabla[i].club;
+    puntajeMax:= tabla[i].puntaje;
+    end;
+  end;
+Writeln('Puntero del campeonato: ',puntero );
+end;
 
 Var
   tabla: TV;
-  n: byte;
+  n, cantidadInvictos: byte;
+
 //Programa principal
 begin
   clrscr;
-  leeArch(tabla, N);
+  leeArch(tabla, N, cantidadInvictos);
+  listado(tabla, n);
+  punteroCampeonato(tabla, n);
+  writeln('Poncentaje invictos: %',(CantidadInvictos/N * 100):5:2);
   readln;
 end.
 
