@@ -48,6 +48,7 @@ Begin
   Max:= Maximo
 end;
 
+
 Procedure RecorreFila(N, M: byte; V: TM);
 Var
   i: byte;
@@ -56,7 +57,8 @@ Begin
     Writeln('El maximo de la fila ',i ,' es ', Max(I, M, V))
 end;
 
-
+//Generar un arreglo con la suma de los impares de cada columna,
+//no generar elemento si la columna no tiene impares
 Procedure ArregloSI(N, M: byte; Var V: Tm; Var w: byte; var Impares: TV);
 Var
   i, j, sumaImpares: byte;
@@ -86,6 +88,8 @@ For i:=1 to W do
   Write(Impares[i],' ');
 end;
 
+//Dada una columna X, ingresada por el usuario,
+//hallar el promedio de sus elementos.
 Function Prom(N, X: byte; v: TM): real;
 Var
   i: byte;
