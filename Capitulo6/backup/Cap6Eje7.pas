@@ -21,6 +21,7 @@ end;
 function paradaMasBajaron():byte;
 var
 begin
+max:=0;
 for j:= 1 to m do
   for i:= 1 to n do
 

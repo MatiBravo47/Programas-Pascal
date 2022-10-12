@@ -15,7 +15,7 @@
 //end;
 program Cap8Eje1;
 uses crt;
-Function Potencia(X, N: integer): integer;// X elevado a la n
+Function Potencia(X, n: integer): integer;// X elevado a la n
   begin
     If (N = 0) then
       Potencia:= 1
