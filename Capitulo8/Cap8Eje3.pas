@@ -16,6 +16,7 @@ end;
 //Programa principal
 Var
   a,b:integer;
+
 begin
 clrscr;
 Writeln('Ingrese un numero');Readln(a);
