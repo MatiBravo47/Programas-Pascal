@@ -26,11 +26,11 @@ end;
 //t = 1
 //t mod 1 <> 0 => parImpar:= parImpar(0)
 //t = 0 =>parImpar:= 0 <= caso base
-//parImpar:= parImpar(0)=0  t=0
-//parImpar:= parImpar(1)=0  t=1
-//parImpar:= parImpar(2)= 1 + 0 t=2
-//parImpar
-
+//parImpar:= parImpar(0)= 0  t = 0
+//parImpar:= parImpar(1)= 0  t = 1
+//parImpar:= parImpar(2)= 1 + 0 = 1  t = 2
+//parImpar:= parImpar(3)= 1  t = 3
+//parImpar:= parImpar(4)= 1 + 1 = 2 t = 4
 {programa principal}
 var
    t: word;

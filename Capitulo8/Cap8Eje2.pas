@@ -4,6 +4,7 @@
 //      f(i - 1)      si i es impar
 program Cap8Eje2;
 uses crt;
+
 function parimpar (t: word): word;
 begin
 If (t = 0) then
