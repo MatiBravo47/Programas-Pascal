@@ -1,10 +1,3 @@
-//Ej 5) Sea V un arreglo de enteros, mediante procesos recursivos
-//se pide:
-//a) Calcular e informar la suma de sus elementos.
-//b) Mostrar sus elementos.
-//c) Mostrarlos en orden inverso.
-//d) Obtener el máximo de sus elementos.
-//e) Obtener el promedio
 program Cap8Eje5;
 uses crt;
 type
