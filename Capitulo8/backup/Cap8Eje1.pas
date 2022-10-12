@@ -15,13 +15,22 @@
 //end;
 program Cap8Eje1;
 uses crt;
-Function Potencia(X, n: integer): integer;// X elevado a la n
+Function Potencia(X, N: integer): integer;// X elevado a la n
   begin
     If (N = 0) then
-      Potencia:= 1
+      Potencia:= 1    //caso base
     else
-      Potencia:= Potencia(X, N - 1) * X
+      Potencia:= Potencia(X, N - 1) * X //caso recurrente
   end;
+//Ejemplo x = 3 ; N = 3
+//Potencia(3,3);
+//potencia(3,2)
+//potencia(3,1)
+//potencia(3,0)
+//potencia(3,0) * 3 => 1 * 3 = 3
+//potencia(3,1) * 3 => 3 * 3 = 9
+//potencia(3,2) * 3 => 9 * 3 = 27
+
 Var
   x, n: integer;
 begin
