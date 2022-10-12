@@ -12,7 +12,7 @@ else
   else
     confuso :=confuso (a + a, b div 2) + a;
 end;
-
+//ejemplo a = 3,b = 4
 //Programa principal
 Var
   a,b:integer;
