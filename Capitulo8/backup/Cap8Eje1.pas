@@ -22,15 +22,13 @@ Function Potencia(X, N: integer): integer;// X elevado a la n
     else
       Potencia:= Potencia(X, N - 1) * X //caso recurrente
   end;
-//Ejemplo x = 3 ; N = 3
-//Potencia(3,3);
-//potencia(3,2)
-//potencia(3,1)
-//potencia(3,0)
-//potencia(3,0) * 3 => 1 * 3 = 3
+//Ejemplo x = 3 ; N = 3;
+//potencia(3,2);
+//potencia(3,1);
+//potencia(3,0);
+//potencia(3,0) * 3 => 1 * 3 = 3 //llega al caso base donde n = 0
 //potencia(3,1) * 3 => 3 * 3 = 9
 //potencia(3,2) * 3 => 9 * 3 = 27
-
 Var
   x, n: integer;
 begin

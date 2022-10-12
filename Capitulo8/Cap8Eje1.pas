@@ -26,7 +26,8 @@ Function Potencia(X, N: integer): integer;// X elevado a la n
 //potencia(3,2);
 //potencia(3,1);
 //potencia(3,0);
-//potencia(3,0) * 3 => 1 * 3 = 3 //llega al caso base donde n = 0
+//potencia(3,0) donde n = 0 => potencia = 1
+//potencia(3,0) * 3  => 1 * 3 = 3 llega al caso base donde n = 0
 //potencia(3,1) * 3 => 3 * 3 = 9
 //potencia(3,2) * 3 => 9 * 3 = 27
 Var
