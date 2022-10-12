@@ -26,7 +26,7 @@ end;
 //Invierte(2):= pal[2] + invierte(lamina, 1)
 //Invierte(1):= pal[1]
 //i = 1 => invierte := pal[1]
-//=> invierte:= 'l';
+//=> invierte:=L;
 //i = 2 => invierte := pal[2] + invierte(1);
 //=> invierte:= 'a' + 'l';
 //i = 3 => invierte := pal[3] + invierte(2);
