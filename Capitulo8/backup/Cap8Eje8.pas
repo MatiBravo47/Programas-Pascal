@@ -3,7 +3,7 @@ Type
   TM = array[1..10,1..10] of integer;
   TV = array[1..10] of integer;
 
-procedure LeerArch(Var Mat: TM; Var N, M: byte);
+procedure LeerArch(Var matriz: TM; Var N, M: byte);
 Var
   arch: text;
   i, j: byte;
@@ -13,44 +13,43 @@ begin
   for i:= 1 to N do
   begin
     for j:= 1 to M do
-      read(arch, Mat[i,j]);
+      read(arch, matriz[i,j]);
     readln(arch);
   end;
   close(arch);
 end;
 
-procedure muestra(V: TV; N: byte);
+procedure muestra(vector: TV; N: byte);
 Var
   i: byte;
 begin
   for i:= 1 to N do
-    write(V[i]:4);
+    write(vector[i]:4);
 end;
 
-procedure GeneraVec(Var V: TV; Mat: TM; i, j, M: byte; Aux: integer);
+procedure GeneraVec(Var vector: TV; matriz: TM; i, j, M: byte; Aux: integer);
 begin
   if (i > 0) then
   begin
-    if (Mat[i,j] > Aux) then
-      Aux:= Mat[i,j];
+    if (matriz[i,j] > Aux) then
+      Aux:= matriz[i,j];
     if (j > 1) then
-      GeneraVec(V, Mat, i, j - 1, M, Aux)
+      GeneraVec(vector, matriz, i, j - 1, M, Aux)
     else
       begin
-      V[i]:= Aux;
-      GeneraVec(V, Mat, i - 1, M, M, -999);
+      vector[i]:= Aux;
+      GeneraVec(vector, Matriz, i - 1, M, M, -999);
     end;
   end;
 end;
 
 Var
-  Mat: TM;
-  V: TV;
+  matriz: TM;
+  vector: TV;
   N, M: byte;
 begin
-  LeerArch(Mat, N, M);
-  GeneraVec(V, Mat, N, M, M, -999);
-  Muestra(V, N);
+  LeerArch(matriz, N, M);
+  GeneraVec(vector, matriz, N, M, M, -999);
+  Muestra(vector, N);
   readln;
 end.
-
