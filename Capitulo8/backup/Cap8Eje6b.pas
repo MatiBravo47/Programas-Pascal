@@ -4,8 +4,7 @@
 //Implementar
 //b) para un arreglo ordenado en forma ascendente, una búsqueda
 //binaria recursiva
-//ejemplo:
-//vector = [1, 2, 3, 4, 5, 6]
+
 program Cap8Eje6b;
 uses crt;
 type
