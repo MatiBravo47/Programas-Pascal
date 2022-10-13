@@ -27,7 +27,6 @@ begin
     end;
   Close(arch);
 end;
-
 Function MinimoMatriz(Matriz: TipoMatriz; i, j, N: byte): integer; //Recorro la matriz por fila
 var
   minimo: integer;
