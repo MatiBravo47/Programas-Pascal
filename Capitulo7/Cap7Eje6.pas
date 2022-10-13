@@ -12,7 +12,7 @@ Type
 TV = array [1..9]of TRD;
 TM = array[1..3,1..3]of Real;
 
-//Lee Archivo
+
 Procedure LeeArch(Var vectorRegistro1: TV; Var K: Byte);
 Var
   Arch: Text;
@@ -23,7 +23,7 @@ While not eof (Arch) do
   Begin
   K:= K + 1;
   With vectorRegistro1[K] do
-  Readln(Arch, Pos.i, Pos.j, Valor);
+    Readln(Arch, Pos.i, Pos.j, Valor);
   end;
 end;
 
@@ -37,7 +37,7 @@ While not eof (Arch) do
   Begin
   P:= P + 1;
   With (vectorRegistro2[P]) do
-  Readln(Arch, Pos.i, Pos.j, Valor);
+    Readln(Arch, Pos.i, Pos.j, Valor);
   end;
 end;
 
@@ -65,7 +65,7 @@ Begin
 For i:= 1 to N do
   Begin
   Writeln;
-  For j:=1 to M do
+  For j:= 1 to M do
     Write(' ',(matriz[i,j]):2:0);
   end;
 end;
