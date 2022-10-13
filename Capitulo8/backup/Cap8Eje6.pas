@@ -8,6 +8,7 @@ program Cap8Eje6;
 uses crt;
 type
   TV = array[1..10] of integer;
+
 Procedure LeeArch(Var vector: TV; Var N: byte);
 Var
   arch: text;

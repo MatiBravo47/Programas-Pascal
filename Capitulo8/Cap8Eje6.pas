@@ -4,6 +4,14 @@
 //Implementar:
 //a) considerando el arreglo desordenado, una búsqueda lineal
 //recursiva
+//ejemplo:
+//1
+//4
+//3
+//4
+//2
+//1
+//7
 program Cap8Eje6;
 uses crt;
 type
