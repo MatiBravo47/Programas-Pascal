@@ -1,3 +1,10 @@
+//Ej 8) Desarrollar un procedimiento recursivo que devuelva en un
+//arreglo los máximos de cada fila de una matriz de MxN
+//ejemplo:
+//3 4
+//1 2 3 4
+//7 2 9 8
+//3 5 3 1
 program Cap8Eje8;
 Type
   TM = array[1..10,1..10] of integer;
@@ -27,18 +34,18 @@ begin
     write(vector[i]:4);
 end;
 
-procedure GeneraVec(Var vector: TV; matriz: TM; i, j, M: byte; Aux: integer);
+procedure GeneraVector(Var vector: TV; matriz: TM; i, j, M: byte; Aux: integer);
 begin
   if (i > 0) then
   begin
     if (matriz[i,j] > Aux) then
       Aux:= matriz[i,j];
     if (j > 1) then
-      GeneraVec(vector, matriz, i, j - 1, M, Aux)
+      GeneraVector(vector, matriz, i, j - 1, M, Aux)
     else
       begin
       vector[i]:= Aux;
-      GeneraVec(vector, Matriz, i - 1, M, M, -999);
+      GeneraVector(vector, Matriz, i - 1, M, M, -999);
     end;
   end;
 end;
@@ -50,7 +57,7 @@ Var
 
 begin
   LeerArch(matriz, N, M);
-  GeneraVec(vector, matriz, N, M, M, -999);
+  generaVector(vector, matriz, N, M, M, -999);
   Muestra(vector, N);
   readln;
 end.
