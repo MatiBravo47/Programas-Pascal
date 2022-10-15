@@ -59,7 +59,6 @@ Temas
 ### Errores importantes a corregir!: :disappointed:
 - Constantes en mayusculas
 - Usar valores mas grandes en cantidad de celdas vector que los ejemplos
-- Una funcion no debe tener parametros de salida 
 - Una funcion no debe tener lecturas dentro,tiene que recibirlas como parametros
 
 
