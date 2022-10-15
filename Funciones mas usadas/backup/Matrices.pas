@@ -285,7 +285,7 @@ MuestraVec(Vmin, n);
 Writeln();
 Writeln('El vector con el total de cada fila es: ');
 VectorTotalFilas(Mat, N, M, VTotFila);
-MuestraVec(VTotFila, N);
+MuestraVec(VTotFila,N);
 Writeln();
 Writeln('Elija la fila donde quiere calcular el minimo');
 Readln(filaEle);//Fila elegida
