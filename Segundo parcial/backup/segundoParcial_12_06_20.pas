@@ -11,7 +11,7 @@
 program segundoParcial_12_06_20;
 uses crt;
 type
-  tipoMatriz = array[1..5,1..5] of char;
+  tipoMatriz = array[1..4,1..5] of char;
 
 procedure leeArch(var n, m: byte; var matriz:tipoMatriz);
 var

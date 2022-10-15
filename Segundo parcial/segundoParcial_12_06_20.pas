@@ -13,9 +13,9 @@ uses crt;
 type
   tipoMatriz = array[1..4,1..5] of char;
 
-procedure leeArch(var n, m: byte; var matriz:tipoMatriz);
+procedure leeArch(var n, m: byte; var matriz: tipoMatriz);
 var
-  arch:text;
+  arch: text;
   blanco: char;
   i, j: byte;
 begin

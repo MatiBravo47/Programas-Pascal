@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.0.4\bin\x86_64-win64\fpc.exe" Date="1331391477"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq &quot;-FiC:\lazarus\Programas Lazarus\Funciones mas usadas\lib\x86_64-win64&quot; &quot;-FuC:\lazarus\Programas Lazarus\Funciones mas usadas\&quot; &quot;-FUC:\lazarus\Programas Lazarus\Funciones mas usadas\lib\x86_64-win64\&quot; &quot;-FEC:\lazarus\Programas Lazarus\Funciones mas usadas\&quot; &quot;-oC:\lazarus\Programas Lazarus\Funciones mas usadas\Vectores.exe&quot; Vectores.pas"/>
-</CONFIG>
