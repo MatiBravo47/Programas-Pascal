@@ -56,6 +56,13 @@ Temas
 <br>
 • Búsqueda – Inserción – Supresión
 
+#Errores importantes a corregir!:
+- Constantes en mayusculas
+- Usar valores mas grandes en cantidad de celdas vector que los ejemplos
+- Una funcion no debe tener parametros de salida 
+- Una funcion no debe tener lecturas dentro,tiene que recibirlas como parametros
+
+
 ## Segundo Parcial
 
 ### Práctica 6 – Matrices
