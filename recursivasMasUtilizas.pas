@@ -1,70 +1,82 @@
 //Functiones y procedimientos recursivos mas usados
 program recursivasMasUtilizas;
-//Muestra un vector
-Procedure muestra(V:TV;n:byte);
+uses crt;
+type
+  TipoMatriz = array[1..20,1..20] of byte;
+  TipoVector = array[1..20] of byte;
+
+Procedure muestraVector(vector: tipoVector; n: byte);
 Begin
-  if (n>1) then
-    muestra(V,n-1);
-write(V[N],' ');
+  if (n > 1) then
+    muestraVector(vector, n - 1);
+write(vector[N],' ');
 end;
 
-//muestra elementos vector alreves
-Procedure Inver(V:TV;n:byte);
+Procedure muestraVectorInvertido(vector: tipoVector; n: byte);
 begin
-Write (V[N],' ');
-if (n>1) then
-  Inver(V,n-1);
+Write (vector[N],' ');
+if (n > 1) then
+  muestraVectorInvertido(vector, n - 1);
 end;
-//Maximo de un vector
-function Max(V:tv;n:byte):integer;
+
+function maximoVector(vector: tipoVector; n: byte): integer;
 var
-  aux:integer;
+  aux: integer;
 begin
-if n=1 then //El primero es el maximo momentaneo
-  max:=v[n]
+if (n = 1) then //El primero es el maximo momentaneo
+  maximoVector:= vector[n]
 else
-begin
-  aux:=Max(V,n-1); //guardo maximo en auxiliar
-  if v[n]> aux then //si el valor actual es mayor
-    max :=v[n]      //se guarda en maximo
-  else
-    max:=aux;       //sino queda el antiguo valor
-  end;
-end;
-//Muestra la suma de los elementos de un vector
-Function Suma(V:TV;N:byte):integer;
-begin
-  if (n=1) then
-  suma:=v[n]
-  else
-  Suma :=V[N] + suma(V,N-1);
-end;
-
-//Promedio
-function Promedio(v:Tv;n:byte):real;
-begin
-  promedio:=suma(V,n) / n ;
-end;
-
-//Minimo matriz
-Function MinimoMatriz(Mat:TipoMatriz;i,j,N:byte):integer; //Recorro la matriz por fila
-var
-  minimo:integer;
-begin
-  if (i=0) then
-    Minimo:=Mat[1,1]
-  else
   begin
-    if j>1 then
-      Minimo:=MinimoMatriz(Mat,i,j-1,N)
-    else
-      Minimo:=MinimoMatriz(Mat,i-1,N,N);
-    if Mat[i,j]<Minimo then
-      Minimo:=Mat[i,j];
+  aux:= maximoVector(vector, n - 1); //guardo maximo en auxiliar
+  if (vector[n] > aux) then //si el valor actual es mayor
+    maximoVector := vector[n]      //se guarda en maximo
+  else
+    maximoVector := aux;       //sino queda el antiguo valor
   end;
-  MinimoMatriz:=Minimo;
 end;
 
+Function sumaElementosVector(vector: tipoVector; N: byte): integer;
 begin
+  if (n = 1) then
+    sumaElementosVector:= vector[n]
+  else
+    sumaElementosVector := vector[n] + sumaElementosVector(vector, N - 1);
+end;
+
+function Promedio(vector: tipoVector; n: byte): real;
+begin
+  promedio:= sumaElementosVector(vector, n) / n ;
+end;
+
+Function minimoMatriz(Matriz: TipoMatriz; i, j , N: byte): integer; //Recorro la matriz por fila
+var
+  minimo: integer;
+begin
+  if (i = 0) then
+    Minimo:= matriz[1, 1]
+  else
+    begin
+    if (j > 1) then
+      Minimo:= minimoMatriz(Matriz, i, j - 1, N)
+    else
+      Minimo:= minimoMatriz(Matriz, i - 1, N, N);
+    if (matriz[i,j] < Minimo) then
+      Minimo:=matriz[i,j];
+  end;
+  MinimoMatriz:= Minimo;
+end;
+
+var
+  matriz: tipoMatriz;
+  vector: tipoVector;
+  n, i ,j: byte;
+
+begin
+  muestraVector(vector, n);
+  muestraVectorInvertido(vector, n);
+  maximoVector(vector, n);
+  sumaElementosVector(vector, n);
+  promedio(vector, n);
+  minimoMatriz(Matriz, i ,j , n);
 end.
 
