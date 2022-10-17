@@ -90,3 +90,8 @@ Temas
 <br>
 • Pasaje de parámetros
 
+### Editores online de pascal recomendados:
+- https://www.jdoodle.com/execute-pascal-online/
+- https://www.onlinegdb.com/online_pascal_compiler
+- https://app.codingrooms.com/w/VyFnkt5AmRqF
+
