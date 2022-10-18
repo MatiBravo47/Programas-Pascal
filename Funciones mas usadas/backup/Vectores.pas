@@ -63,7 +63,7 @@ clrscr;
 Writeln('Ingrese tamanio vector'); Readln(N);
 Writeln('El vector es ');
 MuestraVector(vector,N); Writeln();
-Writeln('La suma del vector es ', SumaElementosVector(vector,N));
+Writeln('La suma del vector es ',SumaElementosVector(vector,N));
 Writeln('El minimo del vector es ', minimoVector(vector,n));
 Writeln('El maximo del vector es ', maximoVector(vector,n));
 Readln;
