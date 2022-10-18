@@ -106,7 +106,7 @@ Seleccion(vector, N);
 //Burbujeo(vector, N);
 //Shell(vector, N);
 //Insercion(vector, N);
-Muestra(vector, N);
+Muestra(V, N);
 readln;
 end.
 
