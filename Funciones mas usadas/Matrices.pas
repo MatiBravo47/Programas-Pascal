@@ -98,7 +98,7 @@ minfila:=Min;
 end;
 
 //Genera Arregla con el maximo de cada fila y lo muestra
-Procedure VecMaxFila(matriz: tipoMatrizInteger; N, M: byte);
+Procedure vectorMaximoCadaFila(matriz: tipoMatrizInteger; N, M: byte);
 Var
   i, j, k: byte;
   max: integer;
@@ -121,7 +121,7 @@ end;
 
 //Utilizacion la funcion generar un arreglo VMin de N elementos,
 //que contenga el minimo de cada fila.
-Procedure VectorMinimos(matriz: tipoMatrizInteger; N, M: byte; var Vmin: tipoVector);
+Procedure VectorMinimoCadaFila(matriz: tipoMatrizInteger; N, M: byte; var Vmin: tipoVector);
 Var
   i: byte;
 begin
@@ -131,7 +131,7 @@ end;
 
 //A partir de la matriz y de un vector de M elementos reales
 //calcular cuantas filas coinciden con el vector.
-Function CuantosCoinciden(matriz: tipoMatrizInteger; N, M: byte; vector: tipoVector): byte;
+Function coincidenciasFilasMatriz(matriz: tipoMatrizInteger; N, M: byte; vector: tipoVector): byte;
 Var
   Cont , i, j: byte;
 begin
@@ -149,7 +149,7 @@ end;
 
 //Dada una columna X,ingresada por el usuario,hallar el promedio
 //de sus elementos.
-Function Promedio(N: byte; x: integer; matriz: tipoMatrizInteger): real;
+Function promedioColumnaX(N: byte; x: integer; matriz: tipoMatrizInteger): real;
 var
   acu: word;
   cant, i: byte;
@@ -277,9 +277,9 @@ muestraMatriz(matriz, n, m);
 Writeln('El minimo de la matriz es ', MinimoMatriz(matriz, n, m));
 Writeln('El maximo de la matriz es ', maximoMatriz(matriz, n, m));
 Writeln('La cantidad columna con algun cero es:  ', cantcolumnaceros(matriz, n, m));
-VecMaxfila(matriz, N, M);
+vectorMaximoCadaFila(matriz, N, M);
 Writeln('El vector con el minimo de cada fila es:');
-VectorMinimos(matriz, n, m, Vmin);
+VectorMinimoCadaFila(matriz, n, m, Vmin);
 MuestraVector(Vmin, n);
 Writeln();
 Writeln('El vector con el total de cada fila es: ');
@@ -294,8 +294,8 @@ VectorMinimos(matriz,n,m,vmin);
 //Writeln('El color que tiene mas fichas es :',MasFichas(N,T1,T2));
 Writeln();
 Writeln('Ingrese una columna'); Readln(X);
-Writeln('El promedio de la columna ', x,' es : ',promedio(n, x, matriz):5:2);
-cuantoscoinciden(matriz, n, m, vector);
+Writeln('El promedio de la columna ', x,' es : ',promedioColumnaX(n, x, matriz):5:2);
+coincidenciasFilasMatriz((matriz, n, m, vector);
 //Writeln('El color que mas aparece es: ',color(n,t1));
 
 Readln;
