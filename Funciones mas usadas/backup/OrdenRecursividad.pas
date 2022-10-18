@@ -85,9 +85,9 @@ If (pri < ult) then
 end
 end;
 
-procedure MuestraVector(vector: tv);
+procedure MuestraVector(vector:tv);
 var
-  i: byte;
+  i:byte;
 begin
   for i:=1 to 12 do
   write(vector[i]:4);
