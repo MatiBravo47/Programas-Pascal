@@ -142,7 +142,7 @@ var
   minimo: integer;
 begin
   if (i = 0) then
-    Minimo:= matriz[1,1]
+    Minimo:= Mat[1,1]
   else
   begin
     if (j > 1) then

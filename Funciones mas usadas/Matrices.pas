@@ -42,7 +42,7 @@ Begin
   For i:= 1 to N do
     Begin
     For j:= 1 to M do
-      Read(Arch,Mat[i,j]);
+      Read(Arch,matriz[i,j]);
     Readln(Arch);
     end;
   CLOSE(Arch);
