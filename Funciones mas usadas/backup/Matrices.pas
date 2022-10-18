@@ -2,9 +2,8 @@ program Matrices;
 Uses crt;
 Type
   tipoMatrizInteger = array[1..10,1..10] of integer;
-  tipoVector = array[1..20] of integer;
   tipoMatrizChar = array[1..10,1..10] of char;
-
+  tipoVector = array[1..20] of integer;
 //Lee Archivo
 //4 5
 //1 -1 3 0 5
@@ -42,7 +41,7 @@ Begin
   For i:= 1 to N do
     Begin
     For j:= 1 to M do
-      Read(Arch,Mat[i,j]);
+      Read(Arch,matriz[i,j]);
     Readln(Arch);
     end;
   CLOSE(Arch);
@@ -86,35 +85,35 @@ MaximoMatriz:= maximo;
 end;
 
 //Calcular el minimo elemento de una fila en particular
-Function MinFila(Mat: TM; filaEle, m: byte): integer;
+Function MinFila(matriz: tipoMatrizInteger; filaEle, m: byte): integer;
 Var
   j: byte;
   min: Integer;
 begin
-min:= Mat[filaEle,1];
+min:= matriz[filaEle,1];
 for j:= 2 to M do
-  if (min > mat[filaEle,j]) then
-    min:= Mat[filaEle,j];
+  if (min > matriz[filaEle,j]) then
+    min:= matriz[filaEle,j];
 minfila:=Min;
 end;
 
 //Genera Arregla con el maximo de cada fila y lo muestra
-Procedure VecMaxFila(Mat: TM; N, M: byte);
+Procedure VecMaxFila(matriz: tipoMatrizInteger; N, M: byte);
 Var
   i, j, k: byte;
   max: integer;
-  v: TV;
+  vector: tipoVector;
 begin
 k:= 1;
 Writeln('El vector con el maximo de cada fila es : ');
 For i:= 1 to N do
   begin
-  max:= Mat[i,1];
+  max:= matriz[i,1];
   for j:= 1 to M do
-    if (Max < Mat[i,j]) then
-      max:= Mat[i,j];
-  V[k]:= Max;
-  Write(' ', v[k]);
+    if (Max < matriz[i,j]) then
+      max:= matriz[i,j];
+  vector[k]:= Max;
+  Write(' ', vector[k]);
   k:= k + 1;
   end;
 Writeln('');
@@ -122,17 +121,17 @@ end;
 
 //Utilizacion la funcion generar un arreglo VMin de N elementos,
 //que contenga el minimo de cada fila.
-Procedure VectorMinimos(Mat: TM; N, M: byte; var Vmin: TV);
+Procedure VectorMinimos(matriz: tipoMatrizInteger; N, M: byte; var Vmin: tipoVector);
 Var
   i: byte;
 begin
 for i:= 1 to N do
-  VMin[i]:= MinFila(Mat, i, M);
+  VMin[i]:= MinFila(matriz, i, M);
 end;
 
 //A partir de la matriz y de un vector de M elementos reales
 //calcular cuantas filas coinciden con el vector.
-Function CuantosCoinciden(Mat: TM; N, M: byte; Vec: TV): byte;
+Function CuantosCoinciden(matriz: tipoMatrizInteger; N, M: byte; vector: tipoVector): byte;
 Var
   Cont , i, j: byte;
 begin
@@ -140,9 +139,9 @@ cont:= 0;
 for i:= 1 to N do
   begin
   j:= 1;
-  While (j < M) and (Vec[j] = Mat[i,j]) do
+  While (j < M) and (vector[j] = matriz[i,j]) do
      j:= j + 1;
-  if (Vec[j] = Mat[i,j]) then
+  if (vector[j] = matriz[i,j]) then
     cont:= Cont +1;
   end;
 CuantosCoinciden:= Cont;
@@ -150,7 +149,7 @@ end;
 
 //Dada una columna X,ingresada por el usuario,hallar el promedio
 //de sus elementos.
-Function Promedio(N: byte; x: integer; Mat: TM): real;
+Function Promedio(N: byte; x: integer; matriz: tipoMatrizInteger): real;
 var
   acu: word;
   cant, i: byte;
@@ -159,63 +158,63 @@ acu:= 0;
 cant:= 0;
 for i:= 1 to N do
   begin
-  acu:= acu + Mat[i,x];//suma columna
+  acu:= acu + matriz[i,x];//suma columna
   cant:= cant + 1;
   end;
 promedio:= acu / cant;
 end;
 
 //Suma total de cada fila
-Function TotalFila(P: TM; fila, M: byte): word;
+Function TotalFila(Matriz2: tipoMatrizInteger; fila, M: byte): word;
 var
   j: byte;
   acum: word;
 begin
 Acum:= 0;
 for j:= 1 to M do
-  Acum:=Acum + p[Fila,j];
+  Acum:=Acum + matriz2[Fila,j];
 TotalFila:= Acum;
 end;
 
 //Almacena total de cada fila en un vector
-Procedure VectorTotalFilas(P: TM; N, M: byte; Var VTotFila: TV);
+Procedure VectorTotalFilas(matriz2: tipoMatrizInteger; N, M: byte; Var VTotFila: tipoVector);
 var
   i: byte;
 Begin
 for i:= 1 to N do
-  VTotFila[i]:= TotalFila(P, i, m)
+  VTotFila[i]:= TotalFila(matriz2, i, m)
 end;
 
 //Devuelve la posicion del maximo del vector
-Function Maximo(V: TV; N: byte): byte;
+Function Maximo(vector: tipoVector; N: byte): byte;
 begin
 end;
 
 //recorre filas en la columna ,buscando 0
-Function ColumnaCeros (Mat: TM; N, Col: byte): boolean;
+Function ColumnaCeros (matriz: tipoMatrizInteger; N, Col: byte): boolean;
 Var
   i: byte;
 begin
 i:= 1;
-While (i <= n) and (Mat[i,col] <> 0) do
+While (i <= n) and (matriz[i,col] <> 0) do
    i:= i + 1;
 ColumnaCeros:= i <= N;
 end;
 
 //Si encuentra 0's cuenta
-Function CantColumnaCeros(Mat: TM; N, M: byte): byte;
+Function CantColumnaCeros(matriz: tipoMatrizInteger; N, M: byte): byte;
 Var
   j, cont: byte;
 begin
 cont:= 0;
 for j:= 1 to M do
-  if (ColumnaCeros(Mat, N, j)) then
+  if (ColumnaCeros(matriz, N, j)) then
     cont :=cont + 1;
 CantColumnaCeros:= Cont;
 end;
 
 //Mas aparariciones entre 2 cosas
-Function Color(N: Byte; T1: TMCHAR): String;
+Function Color(N: Byte; matrizChar: tipoMatrizChar): String;
 Var
 i, j: Byte;
 Rojo, Azul: Word;
@@ -225,7 +224,7 @@ Azul:= 0;
 For i:= 1 to N do
   For j:= 1 to N do
     Begin
-    If (T1[i,j] = 'A') then
+    If (matrizChar[i,j] = 'A') then
       Azul:= Azul + 1
     else
       Rojo:= Rojo + 1;
@@ -240,7 +239,7 @@ else
 end;
 
 //Color con mas fichas
-Function MasFichas(N: Byte; T1: TMChar ;T2 : TM): String;  //Creo que no funciona bien
+Function MasFichas(N: Byte; matrizChar: tipoMatrizChar ;matrizByte : tipoMatrizInteger): String;  //Creo que no funciona bien
 Var
 Rojo, azul: Word;
 i, j: Byte;
@@ -251,10 +250,10 @@ For i:= 1 to N do
   Begin
   For j:= 1 to N do
     Begin
-    If (T1[i,j] = 'R') then
-      Rojo:= Rojo + T2[i,j]
+    If (matrizChar[i,j] = 'R') then
+      Rojo:= Rojo + matrizByte[i,j]
     else
-      Azul:= Azul + T2[i,j];
+      Azul:= Azul + matrizByte[i,j];
     end;
   end;
 If (Rojo > Azul) then //Falta mejorar de si son iguales
@@ -264,39 +263,39 @@ else
 end;
 
 Var
-  Mat, P, T2: TM;
+  matriz, matriz2, matrizByte: tipoMatrizInteger;
   N, X, m, filaEle: byte;
-  v, vmin, vec, VTotFila: TV;
-  T1: TMCHAR;
+  vector, vmin, vector2, VTotFila: tipoVector;
+  matrizChar: tipoMatrizChar;
 //Programa principal
 begin
 //Inicia matriz en 0
 //IniciaMatriz(Mat,n,m);
-LeeArch(N, M, Mat);
+LeeArch(N, M, matriz);
 Writeln('La matriz es: ');
-MuestraMat(Mat, n, m);
-Writeln('El minimo de la matriz es ', minimo(Mat, n, m));
-Writeln('El maximo de la matriz es ', maximo(Mat, n, m));
-Writeln('La cantidad columna con algun cero es:  ', cantcolumnaceros(Mat, n, m));
-VecMaxfila(Mat, N, M);
+muestraMatriz(matriz, n, m);
+Writeln('El minimo de la matriz es ', MinimoMatriz(matriz, n, m));
+Writeln('El maximo de la matriz es ', maximoMatriz(matriz, n, m));
+Writeln('La cantidad columna con algun cero es:  ', cantcolumnaceros(matriz, n, m));
+VecMaxfila(matriz, N, M);
 Writeln('El vector con el minimo de cada fila es:');
-VectorMinimos(Mat, n, m, Vmin);
-MuestraVec(Vmin, n);
+VectorMinimos(matriz, n, m, Vmin);
+MuestraVector(Vmin, n);
 Writeln();
 Writeln('El vector con el total de cada fila es: ');
-VectorTotalFilas(Mat, N, M, VTotFila);
-MuestraVec(VTotFila, N);
+VectorTotalFilas(matriz, N, M, VTotFila);
+MuestraVector(VTotFila, N);
 Writeln();
 Writeln('Elija la fila donde quiere calcular el minimo');
 Readln(filaEle);//Fila elegida
-Writeln('El minimo de la fila ',FilaEle, ' es ',MinFila(Mat,filaEle,m));
-VectorMinimos(Mat,n,m,vmin);
+Writeln('El minimo de la fila ',FilaEle, ' es ',MinFila(matriz,filaEle,m));
+VectorMinimos(matriz,n,m,vmin);
 
 //Writeln('El color que tiene mas fichas es :',MasFichas(N,T1,T2));
 Writeln();
-Writeln('Ingrese una columna');Readln(X);
-Writeln('El promedio de la columna ',x,' es : ',promedio(n,x,mat):5:2);
-cuantoscoinciden(Mat,n,m,vec);
+Writeln('Ingrese una columna'); Readln(X);
+Writeln('El promedio de la columna ', x,' es : ',promedio(n, x, matriz):5:2);
+cuantoscoinciden(matriz, n, m, vec);
 //Writeln('El color que mas aparece es: ',color(n,t1));
 
 Readln;
