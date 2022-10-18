@@ -68,7 +68,7 @@ begin
 clrscr;
 LeeVector(vector, N);
 Writeln('Ingrese nombre de la persona'); Readln(nombreIngresado);
-Consulta(V, N, nombreIngresado, peso);
+Consulta(V, N, Nom, peso);
 readln;
 end.
 
