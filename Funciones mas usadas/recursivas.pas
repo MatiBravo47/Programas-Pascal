@@ -146,158 +146,156 @@ begin
   else
   begin
     if (j > 1) then
-      Minimo:= MinimoMatriz(Mat, i, j - 1, N)
+      Minimo:= MinimoMatriz(matriz, i, j - 1, N)
     else
-      Minimo:=MinimoMatriz(Mat , i - 1, N, N);
-    if (Mat[i,j] < Minimo) then
-      Minimo:= Mat[i,j];
+      Minimo:=MinimoMatriz(matriz , i - 1, N, N);
+    if (matriz[i,j] < Minimo) then
+      Minimo:= matriz[i,j];
   end;
   MinimoMatriz:= Minimo;
 end;
 
 //Devuelve en un arreglo Maximo de cada fila
-procedure GeneraVec(Var Vec: TV; Mat: TM; i, j, M: byte; Aux: integer);
+procedure MaximoCadaFila(Var vector: TV; matriz: TM; i, j, M: byte; Aux: integer);
 begin
   if (i > 0) then
     begin
-    if (Mat[i,j] > Aux) then
-      Aux:= Mat[i,j];
+    if (matriz[i,j] > Aux) then
+      Aux:= matriz[i,j];
     if (j > 1) then
-      GeneraVec(Vec, Mat, i, j - 1, M, Aux)
+      MaximoCadaFila(vector, matriz, i, j - 1, M, Aux)
     else
       begin
-      Vec[i]:= Aux;
-      GeneraVec(Vec, Mat, i - 1, M, M, -999);
+      vector[i]:= Aux;
+      maximoCadaFila(vector, matriz, i - 1, M, M, -999);
     end;
   end;
 end;
 
 //Recorre una matriz numerica de N*M y devolver la cantidad
 //de negativos que almacena.
-Function CantNeg(Mat: TM; I, J, M: byte): byte;
+Function cantidadNegativosMatriz(matriz: TM; I, J, M: byte): byte;
 var
   incr: byte;
 begin
 if (i = 0) then
-  cantNeg:= 0
+  cantidadNegativosMatriz:= 0
 else
   begin
-  if (mat[i,j] < 0) then
+  if (matriz[i,j] < 0) then
     incr:= 1
   else
     incr:= 0;
   if (j > 1) then
-    CantNeg:= Incr + cantNeg (Mat, i, j - 1, M)
+    CantidadNegativosMatriz:= Incr + cantidadNegativosMatriz(matriz, i, j - 1, M)
   else
-    CantNeg:= Incr + CantNeg (Mat, i - 1, m, m)
+    CantidadNegativosMatriz:= Incr + CantidadNegativosMatriz(Matriz, i - 1, m, m)
   end;
 end;
 
-//Cantidad de positivos de una matriz
-Function CantPosi(Mat: TM; i, j ,M: byte): byte;
+Function CantidadPositivosMatriz(matriz: TM; i, j ,M: byte): byte;
 var
   Incr: byte;
 Begin
 if (i = 0) then
-  CantPosi:= 0
+  CantidadPositivosMatriz:= 0
 else
   begin
-  if (mat[i,j] > 0) then
+  if (matriz[i,j] > 0) then
     incr:= 1
   else
     incr:= 0;
   if (j > 1) then
-    CantPosi:=Incr + CantPosi(Mat, i, j - 1, M)
+    CantidadPositivosMatriz:= Incr + CantidadPositivosMatriz(matriz, i, j - 1, M)
   else
-    CantPosi:=Incr+CantPosi(Mat,i-1,M,M);
+    CantidadPositivosMatriz:= Incr + CantidadPositivosMatriz(Matriz,i-1,M,M);
   end;
 end;
 
 //Verificar si una matriz mat de N*M,cumple que un elemento
 //X se encuentra al menos una vez en cada columna
-Function Cumple (Mat: TM; X: real; i, j, n: byte): boolean;
+Function Cumple (Matriz: TM; X: real; i, j, n: byte): boolean;
 begin
 if (j = 0) then
   cumple:= true
 else
-  if (mat[i,j] = x) then
-    cumple:= cumple(mat, x, n, j - 1, n) //columna anterior,ultima fila
+  if (matriz[i,j] = x) then
+    cumple:= cumple(matriz, x, n, j - 1, n) //columna anterior,ultima fila
   else
     if (i > 1) then //sigue buscando en la misma columna
-      cumple:= cumple(mat, x, i - 1, j, n)//fila anterior,misma columna
+      cumple:= cumple(matriz, x, i - 1, j, n)//fila anterior,misma columna
     else
       cumple:= false //x no esta en la columna
 end;
 
-//Muestra matriz
-Procedure EscribirMatriz(Mat: TM; i, j, n, m: byte);
+Procedure muestraMatriz(matriz: TM; i, j, n, m: byte);
 begin
 if (i > 0) then
   begin
-  write(Mat[n - i + 1, m - j + 1]);
+  write(matriz[n - i + 1, m - j + 1]);
   if (j = 1) then
     begin
     Writeln;
-    EscribirMatriz(Mat, i - 1, m, n, m);
+    muestraMatriz(matriz, i - 1, m, n, m);
     end
   else
-    EscribirMatriz(Mat, i, j - 1, n, m);
+    muestraMatriz(matriz, i, j - 1, n, m);
   end;
 end;
 
 //Inicializar matriz cuadrada
 //Num es el stopper
-Procedure IniciaMat(fil, col, num: byte; var b: tm);
+Procedure IniciaMatrizCuadrada(fila, col, num: byte; var b: tm);
 begin
-if (fil = 1) and (col = 1) then //si es el primer elemento
-  b[fil,col]:= 0   //guarda 0 en esa pos
+if (fila = 1) and (col = 1) then //si es el primer elemento
+  b[fila,col]:= 0   //guarda 0 en esa pos
 else
   begin
-  b[fil, col]:= 0;
+  b[fila, col]:= 0;
   if (col > 1) then
-    iniciaMat(fil, col - 1, num, b) //Baja columna
+    IniciaMatrizCuadrada(fila, col - 1, num, b) //Baja columna
   else
-   iniciaMat(fil - 1, num, num, b); //Baja una fila y va a ultima columna
+   IniciaMatrizCuadrada(fila - 1, num, num, b); //Baja una fila y va a ultima columna
   end;
 end;
 
 Var
   x, n, m, i, j, aux: byte;
-  mat, B: TM;
-  Vec, A: tv;
+  matriz, B: TM;
+  vector, A: tv;
 begin
 clrscr;
-Leearch(N, M, Mat);
+Leearch(N, M, matriz);
 //Write('Tiene al menos una vez el valor ',X,' en cada columna ',Cumple(Mat,x,n,m,n));
 //Write(CantNeg(Mat,n,M,M));
 Writeln('El vector es: ');
-Muestra(V, N);
+Muestra(vector, N);
 Writeln();
 Writeln('El vector alreves es');
 inver(V, N);
 Writeln;
-Writeln('El maximo del vector es :',max(V, N));
-Writeln('La suma los componentes del vector es: ',Suma(V, N));
-Writeln('El promedio del vector es :',Promedio(V, N):5:2);
+Writeln('El maximo del vector es :',max(vector, N));
+Writeln('La suma los componentes del vector es: ',Suma(vector, N));
+Writeln('El promedio del vector es :',Promedio(vector, N):5:2);
 Writeln('Ingrese un valor');Readln(x);
-If esta(V, N, X) then
+If esta(vector, N, X) then
   Writeln('El valor ', x,' se encuentra en el vector ')
 else
   Writeln('El valor ', x,' no se encuentra en el vector' );
-If (buscarLineal(V, N, X) <> 0) then
-  Writeln('Ese valor se encuentra en la posicion ',buscarLineal(V, N, X));
+If (buscarLineal(vector, N, X) <> 0) then
+  Writeln('Ese valor se encuentra en la posicion ',buscarLineal(vector, N, X));
 Writeln('El vector con el maximo de cada fila es :' );
-GeneraVec(Vec, Mat, n, m, m, aux);
-Muestra(Vec, N);
+GeneraVec(vector, matriz, n, m, m, aux);
+Muestra(vector, N);
 writeln();
-If cumple(Mat, x, n, m, n) then
+If cumple(matriz, x, n, m, n) then
   Writeln('El valor ', X,' se encuentra en cada columna')
 else
   Writeln('El valor ', x, ' no se encuentra en cada columna');
-Writeln('La cantidad de positivos de la matriz es: ',CantPosi(Mat, n, m, m));
-Writeln('La cantidad de negativos de la matriz es: ',CantNeg(Mat, n, m, m));
+Writeln('La cantidad de positivos de la matriz es: ',CantPosi(matriz, n, m, m));
+Writeln('La cantidad de negativos de la matriz es: ',CantNeg(matriz, n, m, m));
 Writeln('La matriz es ');
-EscribirMatriz(Mat, n, m, n, m);
+EscribirMatriz(matriz, n, m, n, m);
 Writeln('El vector inicializado en 0 es :');
 IniciaV(4, A);
 Muestra(A, 4);
