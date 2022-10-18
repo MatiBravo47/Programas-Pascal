@@ -1,5 +1,5 @@
 //Functiones y procedimientos recursivos mas usados
-program recursivasMasUtilizadas;
+program recursivasMasUtilizas;
 uses crt;
 type
   TipoMatriz = array[1..20,1..20] of byte;
