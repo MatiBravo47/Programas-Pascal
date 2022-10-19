@@ -1,39 +1,9 @@
 //Functiones y procedimientos recursivos mas usados
-program recursivasMasUtilizas;
+program recursivasMasUtilizadas;
 uses crt;
 type
   TipoMatriz = array[1..20,1..20] of byte;
   TipoVector = array[1..20] of byte;
-
-Procedure muestraVector(vector: tipoVector; n: byte);
-Begin
-  if (n > 1) then
-    muestraVector(vector, n - 1);
-write(vector[N],' ');
-end;
-
-Procedure muestraVectorInvertido(vector: tipoVector; n: byte);
-begin
-Write (vector[N],' ');
-if (n > 1) then
-  muestraVectorInvertido(vector, n - 1);
-end;
-
-function maximoVector(vector: tipoVector; n: byte): integer;
-var
-  aux: integer;
-begin
-if (n = 1) then //El primero es el maximo momentaneo
-  maximoVector:= vector[n]
-else
-  begin
-  aux:= maximoVector(vector, n - 1); //guardo maximo en auxiliar
-  if (vector[n] > aux) then //si el valor actual es mayor
-    maximoVector := vector[n]      //se guarda en maximo
-  else
-    maximoVector := aux;       //sino queda el antiguo valor
-  end;
-end;
 
 Function sumaElementosVector(vector: tipoVector; N: byte): integer;
 begin
