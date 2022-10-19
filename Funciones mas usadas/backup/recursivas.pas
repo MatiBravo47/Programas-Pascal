@@ -205,9 +205,9 @@ else
     incr:= 1
   else
     incr:= 0;
-  if (j > 1) then
+  if (j > 1) then //baja una columna
     CantidadPositivosMatriz:= Incr + CantidadPositivosMatriz(matriz, i, j - 1, M)
-  else
+  else //baja una fila, va a ultima columna
     CantidadPositivosMatriz:= Incr + CantidadPositivosMatriz(Matriz,i-1,M,M);
   end;
 end;
@@ -239,7 +239,7 @@ if (fila > 0) then
     muestraMatriz(matriz, fila - 1, m, n, m);
     end
   else
-    muestraMatriz(matriz, fila, j - 1, n, m);
+    muestraMatriz(matriz, fila, columna - 1, n, m);
   end;
 end;
 
