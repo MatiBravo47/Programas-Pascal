@@ -182,13 +182,13 @@ if (i = 0) then
   cantidadNegativosMatriz:= 0
 else
   begin
-  if (matriz[i,j] < 0) then
+  if (matriz[i,j] < 0) then //si es positivo cuenta
     incr:= 1
   else
     incr:= 0;
-  if (j > 1) then
+  if (j > 1) then  //baja una columna
     CantidadNegativosMatriz:= Incr + cantidadNegativosMatriz(matriz, i, j - 1, M)
-  else
+  else  //baja una fila, va a ultima columna
     CantidadNegativosMatriz:= Incr + CantidadNegativosMatriz(Matriz, i - 1, m, m)
   end;
 end;

@@ -182,7 +182,7 @@ if (i = 0) then
   cantidadNegativosMatriz:= 0
 else
   begin
-  if (matriz[i,j] < 0) then
+  if (matriz[i,j] < 0) then //si es positivo cuenta
     incr:= 1
   else
     incr:= 0;
@@ -201,7 +201,7 @@ if (i = 0) then
   CantidadPositivosMatriz:= 0
 else
   begin
-  if (matriz[i,j] > 0) then
+  if (matriz[i,j] > 0) then //si es positivo cuenta
     incr:= 1
   else
     incr:= 0;
