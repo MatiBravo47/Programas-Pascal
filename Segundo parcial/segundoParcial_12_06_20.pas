@@ -11,8 +11,14 @@
 program segundoParcial_12_06_20;
 uses crt;
 type
+  TregMayus = record
+    columna: byte;
+    porcentaje: real;
+  end;
+
   tipoMatriz = array[1..4,1..5] of char;
-  tipoVector = array[1..5] of byte;
+  tipoVector = array[1..5] of TregMayus;
+
 
 procedure leeArch(var n, m: byte; var matriz: tipoMatriz);
 var
@@ -54,51 +60,31 @@ var
   j: byte;
 begin
 for j:= 1 to M do
-  vector[j]:= cantidadMayusculasColumnax(matriz,i,j,n);
+  begin
+  vector[j].porcentaje:= cantidadMayusculasColumnax(matriz,i,j,n)/n*100;
+  vector[j].columna:= j;
+  end;
 end;
-
-//Muestra un vector
-Procedure muestraVector(vector: tipoVector; n: byte);
-Begin
-  if (n > 1) then
-    muestraVector(vector, n - 1);
-write(vector[N], ' ');
-end;
-
-//Procedure Insercion(Var vector: tipoVector; N: byte);
-//Var
-//  Aux: integer;
-//  i, j: byte;
-//Begin
-//for i:= 2 to N do
-//  begin
-//  j:=i - 1;
-//  Aux:= vector[i];
-//  While (j > 0) and (aux < vector[j]) do
-//    begin
-//    vector[j+1] :=vector[j];
-//    j:= j - 1;
-//    end;
-//  vector[j+1]:= Aux;
-//  end;
-//end;
 
 Procedure Shell (Var vector: tipoVector; n: byte);
 Var
   Cambio: boolean;
-  Aux: Integer;
-  i, paso: byte;
+  Aux: real;
+  i, paso, aux2: byte;
 begin
   paso:= N div 2;
   repeat
     repeat
       cambio:= false;
       for i:= 1 to (N - paso) do
-        if (vector[i] > vector[i + paso]) then
+        if (vector[i].porcentaje > vector[i + paso].porcentaje) then
           begin
-          aux:= vector[i];
-          vector[i]:= vector[i + paso];
-          vector[i + paso]:= aux;
+          aux:= vector[i].porcentaje;
+          aux2:=vector[i].columna;
+          vector[i].porcentaje:= vector[i + paso].porcentaje;
+          vector[i].columna:= vector[i + paso].columna;
+          vector[i + paso].porcentaje:= aux;
+          vector[i + paso].columna:= aux2;
           cambio:= true;
           end;
     until not cambio;
@@ -108,7 +94,7 @@ end;
 
 Procedure invierteVector(vector: tipoVector; n: byte);
 begin
-Write (vector[N],' ');
+Writeln (vector[n].columna,'                   ',vector[n].porcentaje:5:2);
 if (n > 1) then
   invierteVector(vector, n - 1);
 end;
@@ -122,6 +108,7 @@ begin
   leeArch(n, m, matriz);
   cuentaMayusculasColumnas(matriz, n, m, n, vector);
   shell(vector,m);
+  writeln('Columna            Porcentaje');
   invierteVector(vector,m);
   readln;
 end.
