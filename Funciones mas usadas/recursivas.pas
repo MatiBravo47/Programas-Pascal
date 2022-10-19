@@ -228,18 +228,18 @@ else
       cumple:= false //x no esta en la columna
 end;
 
-Procedure muestraMatriz(matriz: TM; i, j, n, m: byte);
+Procedure muestraMatriz(matriz: TM; fila, columna, n, m: byte);
 begin
-if (i > 0) then
+if (fila > 0) then
   begin
-  write(matriz[n - i + 1, m - j + 1]);
-  if (j = 1) then
+  write(matriz[n - fila + 1, m - columna + 1]);
+  if (columna = 1) then
     begin
     Writeln;
-    muestraMatriz(matriz, i - 1, m, n, m);
+    muestraMatriz(matriz, fila - 1, m, n, m);
     end
   else
-    muestraMatriz(matriz, i, j - 1, n, m);
+    muestraMatriz(matriz, fila, columna - 1, n, m);
   end;
 end;
 

@@ -228,18 +228,18 @@ else
       cumple:= false //x no esta en la columna
 end;
 
-Procedure muestraMatriz(matriz: TM; i, j, n, m: byte);
+Procedure muestraMatriz(matriz: TM; fila, columna, n, m: byte);
 begin
-if (i > 0) then
+if (fila > 0) then
   begin
-  write(matriz[n - i + 1, m - j + 1]);
-  if (j = 1) then
+  write(matriz[n - fila + 1, m - columna + 1]);
+  if (columna = 1) then
     begin
     Writeln;
-    muestraMatriz(matriz, i - 1, m, n, m);
+    muestraMatriz(matriz, fila - 1, m, n, m);
     end
   else
-    muestraMatriz(matriz, i, j - 1, n, m);
+    muestraMatriz(matriz, fila, j - 1, n, m);
   end;
 end;
 
@@ -265,37 +265,37 @@ Var
   vector, A: tv;
 begin
 clrscr;
-Leearch(N, M, Mat);
+Leearch(N, M, matriz);
 //Write('Tiene al menos una vez el valor ',X,' en cada columna ',Cumple(Mat,x,n,m,n));
 //Write(CantNeg(Mat,n,M,M));
 Writeln('El vector es: ');
-Muestra(V, N);
+Muestra(vector, N);
 Writeln();
 Writeln('El vector alreves es');
 inver(V, N);
 Writeln;
-Writeln('El maximo del vector es :',max(V, N));
-Writeln('La suma los componentes del vector es: ',Suma(V, N));
-Writeln('El promedio del vector es :',Promedio(V, N):5:2);
+Writeln('El maximo del vector es :',max(vector, N));
+Writeln('La suma los componentes del vector es: ',Suma(vector, N));
+Writeln('El promedio del vector es :',Promedio(vector, N):5:2);
 Writeln('Ingrese un valor');Readln(x);
-If esta(V, N, X) then
+If esta(vector, N, X) then
   Writeln('El valor ', x,' se encuentra en el vector ')
 else
   Writeln('El valor ', x,' no se encuentra en el vector' );
-If (buscarLineal(V, N, X) <> 0) then
-  Writeln('Ese valor se encuentra en la posicion ',buscarLineal(V, N, X));
+If (buscarLineal(vector, N, X) <> 0) then
+  Writeln('Ese valor se encuentra en la posicion ',buscarLineal(vector, N, X));
 Writeln('El vector con el maximo de cada fila es :' );
-GeneraVec(Vec, Mat, n, m, m, aux);
-Muestra(Vec, N);
+GeneraVec(vector, matriz, n, m, m, aux);
+Muestra(vector, N);
 writeln();
-If cumple(Mat, x, n, m, n) then
+If cumple(matriz, x, n, m, n) then
   Writeln('El valor ', X,' se encuentra en cada columna')
 else
   Writeln('El valor ', x, ' no se encuentra en cada columna');
-Writeln('La cantidad de positivos de la matriz es: ',CantPosi(Mat, n, m, m));
-Writeln('La cantidad de negativos de la matriz es: ',CantNeg(Mat, n, m, m));
+Writeln('La cantidad de positivos de la matriz es: ',CantPosi(matriz, n, m, m));
+Writeln('La cantidad de negativos de la matriz es: ',CantNeg(matriz, n, m, m));
 Writeln('La matriz es ');
-EscribirMatriz(Mat, n, m, n, m);
+EscribirMatriz(matriz, n, m, n, m);
 Writeln('El vector inicializado en 0 es :');
 IniciaV(4, A);
 Muestra(A, 4);
