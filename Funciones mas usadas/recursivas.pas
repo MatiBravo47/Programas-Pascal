@@ -2,17 +2,17 @@
 program recursivas;
 uses crt;
 type
-  tv = array[1..12] of integer;
-  tm = array[1..10,1..10] of integer;
+  tipoVector = array[1..12] of integer;
+  tipoMatriz = array[1..10,1..10] of integer;
 const
-  V: tv = (5,1,12,8,-1,3,10,9,14,0,15,7);
+  vector: tipoVector = (5,1,12,8,-1,3,10,9,14,0,15,7);
   //Lee Archivo
   //4 5
   //1 -1 3 0 5
   //2 0 2 2 2
   //5 0 5 4 -1
   //9 9 9 9 8
-Procedure LeeArch(Var N, M: Byte; Var matriz: TM);
+Procedure LeeArch(Var N, M: Byte; Var matriz: tipoMatriz);
 Var
   i, j: Byte;
   Arch: text;
@@ -30,35 +30,35 @@ end;
 
 //VECTOR
 //Inicializar vector en 0
-Procedure iniciaVector(fila: byte; var A: tv);
+Procedure iniciaVector(fila: byte; var vector: tipoVector);
 Begin
 if (fila = 1) then
-  A[fila]:= 0
+  vector[fila]:= 0
 else
   begin
-  A[fila]:= 0;
-  iniciaVector(fila - 1, A);
+  vector[fila]:= 0;
+  iniciaVector(fila - 1, vector);
   end;
 end;
 
 //Muestra un vector
-Procedure muestraVector(vector: TV; n: byte);
+Procedure muestraVector(vector: tipoVector; n: byte);
 Begin
   if (n > 1) then
-    muestra(vector, n - 1);
+    muestraVector(vector, n - 1);
 write(vector[N], ' ');
 end;
 
 //muestra elementos vector alreves
-Procedure invierteVector(vector: TV; n: byte);
+Procedure muestraVectorInvertido(vector: tipoVector; n: byte);
 begin
 Write (vector[N],' ');
 if (n > 1) then
-  invierteVector(vector, n - 1);
+  muestraVectorInvertido(vector, n - 1);
 end;
 
 //Maximo de un vector
-function maximoVector(vector: tv; n: byte): integer;
+function maximoVector(vector: tipoVector; n: byte): integer;
 var
   aux: integer;
 begin
@@ -75,7 +75,7 @@ else
 end;
 
 //Muestra la suma de los elementos de un vector
-Function SumaElementosVector(vector: TV; N: byte): integer;
+Function SumaElementosVector(vector: tipoVector; N: byte): integer;
 begin
   if (n = 1) then
     sumaElementosVector:= vector[n]
@@ -84,13 +84,13 @@ begin
 end;
 
 //Promedio vector
-function PromedioVector(vector: Tv; n: byte): real;
+function PromedioVector(vector: tipoVector; n: byte): real;
 begin
   promedioVector:= sumaElementosVector(vector, n) / n ;
 end;
 
 //Verificar si un valor X se encuentra en un arreglo V de N elementos
-Function estaEnVector(vector: TV; N: byte; x:real): boolean;
+Function estaEnVector(vector: tipoVector; N: byte; x:real): boolean;
 begin
   if (n > 0) then
     if (vector[n] = x) then
@@ -102,7 +102,7 @@ begin
 end;
 
 //Busqueda lineal posicion de un vector desordenado
-Function buscarLineal(vector: TV; N, X: byte): byte;
+Function buscarLineal(vector: tipoVector; N, X: byte): byte;
 begin
 if (vector[N] = X) then
   buscarLineal:= N
@@ -118,14 +118,14 @@ If (buscarLineal > n) then
 end;
 
 //busqueda binaria para vector ordenado en forma ascendente
-function busquedaBinaria (ini, fin: byte; vector: TV; elemento: real): byte;
+function busquedaBinaria (ini, fin: byte; vector: tipoVector; elemento: real): byte;
 var
   Prom: byte;
 begin
 prom:= (Ini + fin) div 2;
-if (V[prom] <> elemento) and (ini < fin) then
-  if (V[prom] > elemento) then
-    busquedaBinaria:= busquedaBinaria (ini, prom - 1, V, elemento)
+if (vector[prom] <> elemento) and (ini < fin) then
+  if (vector[prom] > elemento) then
+    busquedaBinaria:= busquedaBinaria (ini, prom - 1, vector, elemento)
   else
     busquedaBinaria:= busquedaBinaria(prom + 1, fin, vector, elemento)
 else
@@ -137,7 +137,7 @@ end;
 
 //MATRIZ
 //Elemento Minimo matriz cuadrada
-Function MinimoMatriz(matriz: TM; i, j, N: byte): integer; //Recorro la matriz por fila
+Function MinimoMatriz(matriz: tipoMatriz; i, j, N: byte): integer; //Recorro la matriz por fila
 var
   minimo: integer;
 begin
@@ -156,7 +156,7 @@ begin
 end;
 
 //Devuelve en un arreglo Maximo de cada fila
-procedure MaximoCadaFila(Var vector: TV; matriz: TM; i, j, M: byte; Aux: integer);
+procedure MaximoCadaFila(Var vector: tipoVector; matriz: tipoMatriz; i, j, M: byte; Aux: integer);
 begin
   if (i > 0) then
     begin
@@ -174,7 +174,7 @@ end;
 
 //Recorre una matriz numerica de N*M y devolver la cantidad
 //de negativos que almacena.
-Function cantidadNegativosMatriz(matriz: TM; I, J, M: byte): byte;
+Function cantidadNegativosMatriz(matriz: tipoMatriz; I, J, M: byte): byte;
 var
   incr: byte;
 begin
@@ -193,7 +193,7 @@ else
   end;
 end;
 
-Function CantidadPositivosMatriz(matriz: TM; i, j ,M: byte): byte;
+Function CantidadPositivosMatriz(matriz: tipoMatriz; i, j ,M: byte): byte;
 var
   Incr: byte;
 Begin
@@ -214,7 +214,7 @@ end;
 
 //Verificar si una matriz mat de N*M,cumple que un elemento
 //X se encuentra al menos una vez en cada columna
-Function Cumple (Matriz: TM; X: real; i, j, n: byte): boolean;
+Function Cumple (Matriz: tipoMatriz; X: real; i, j, n: byte): boolean;
 begin
 if (j = 0) then
   cumple:= true
@@ -228,7 +228,7 @@ else
       cumple:= false //x no esta en la columna
 end;
 
-Procedure muestraMatriz(matriz: TM; fila, columna, n, m: byte);
+Procedure muestraMatriz(matriz: tipoMatriz; fila, columna, n, m: byte);
 begin
 if (fila > 0) then
   begin
@@ -245,40 +245,40 @@ end;
 
 //Inicializar matriz cuadrada
 //Num es el stopper
-Procedure IniciaMatrizCuadrada(fila, col, num: byte; var b: tm);
+Procedure IniciaMatrizCuadrada(fila, col, num: byte; var matriz2: tipoMatriz);
 begin
 if (fila = 1) and (col = 1) then //si es el primer elemento
-  b[fila,col]:= 0   //guarda 0 en esa pos
+  matriz2[fila,col]:= 0   //guarda 0 en esa pos
 else
   begin
-  b[fila, col]:= 0;
+  matriz2[fila, col]:= 0;
   if (col > 1) then
-    IniciaMatrizCuadrada(fila, col - 1, num, b) //Baja columna
+    IniciaMatrizCuadrada(fila, col - 1, num, matriz2) //Baja columna
   else
-   IniciaMatrizCuadrada(fila - 1, num, num, b); //Baja una fila y va a ultima columna
+   IniciaMatrizCuadrada(fila - 1, num, num, Matriz2); //Baja una fila y va a ultima columna
   end;
 end;
 
 Var
   x, n, m, i, j, aux: byte;
-  matriz, B: TM;
-  vector, A: tv;
+  matriz, B: tipoMatriz;
+  A: tipoVector;
 begin
 clrscr;
 Leearch(N, M, matriz);
 //Write('Tiene al menos una vez el valor ',X,' en cada columna ',Cumple(Mat,x,n,m,n));
 //Write(CantNeg(Mat,n,M,M));
 Writeln('El vector es: ');
-Muestra(vector, N);
+muestraVector(vector, N);
 Writeln();
 Writeln('El vector alreves es');
-inver(V, N);
+muestraVectorInvertido(vector, N);
 Writeln;
-Writeln('El maximo del vector es :',max(vector, N));
-Writeln('La suma los componentes del vector es: ',Suma(vector, N));
-Writeln('El promedio del vector es :',Promedio(vector, N):5:2);
+Writeln('El maximo del vector es :',maximoVector(vector, N));
+Writeln('La suma los componentes del vector es: ',SumaElementosVector(vector, N));
+Writeln('El promedio del vector es :',PromedioVector(vector, N):5:2);
 Writeln('Ingrese un valor');Readln(x);
-If esta(vector, N, X) then
+If estaEnVector(vector, N, X) then
   Writeln('El valor ', x,' se encuentra en el vector ')
 else
   Writeln('El valor ', x,' no se encuentra en el vector' );
@@ -286,7 +286,7 @@ If (buscarLineal(vector, N, X) <> 0) then
   Writeln('Ese valor se encuentra en la posicion ',buscarLineal(vector, N, X));
 Writeln('El vector con el maximo de cada fila es :' );
 GeneraVec(vector, matriz, n, m, m, aux);
-Muestra(vector, N);
+muestraVector(vector, N);
 writeln();
 If cumple(matriz, x, n, m, n) then
   Writeln('El valor ', X,' se encuentra en cada columna')
