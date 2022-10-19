@@ -190,7 +190,7 @@ Function Maximo(vector: tipoVector; N: byte): byte;
 begin
 end;
 
-//recorre filas en la columna ,buscando 0
+//recorre columna contando 0's
 Function ColumnaCeros (matriz: tipoMatrizInteger; N, Col: byte): boolean;
 Var
   i: byte;
@@ -294,7 +294,7 @@ VectorMinimos(matriz,n,m,vmin);
 //Writeln('El color que tiene mas fichas es :',MasFichas(N,T1,T2));
 Writeln();
 Writeln('Ingrese una columna'); Readln(X);
-Writeln('El promedio de la columna ', x,' es : ',promedio(n, x, matriz):5:2);
+Writeln('El promedio de la columna ', x,' es : ',promedioColumnaX(n, x, matriz):5:2);
 coincidenciasFilasMatriz((matriz, n, m, vector);
 //Writeln('El color que mas aparece es: ',color(n,t1));
 

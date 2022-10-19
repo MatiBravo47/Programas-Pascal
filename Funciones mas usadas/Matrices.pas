@@ -190,7 +190,7 @@ Function Maximo(vector: tipoVector; N: byte): byte;
 begin
 end;
 
-//recorre filas en la columna ,buscando 0
+//recorre columna ,buscando 0
 Function ColumnaCeros (matriz: tipoMatrizInteger; N, Col: byte): boolean;
 Var
   i: byte;
