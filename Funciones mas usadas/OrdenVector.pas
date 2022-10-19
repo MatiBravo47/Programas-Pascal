@@ -4,6 +4,7 @@ Type
   TV = array[1..12] of integer;
 const
   vector: tv =(5,1,12,8,-1,3,10,9,14,0,15,7);
+
 //Metodo de seleccion(Mas ineficiente)
 Procedure Seleccion(Var vector: TV; N: byte);
 Var
