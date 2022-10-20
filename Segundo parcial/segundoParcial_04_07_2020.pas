@@ -35,7 +35,7 @@ type
     dia: byte;
     turno: char;
   end;
-  tipoVector = array[1..60] of tReg;
+  tipoVector = array[1..60] of tReg; //en el caso de haber los turnos en cada dia
   tipoMatriz = array [1..11,1..3] of byte;
 
 Procedure IniciaMatrizCuadrada(fila, col, num: byte; var matriz2: tipoMatriz);
@@ -56,15 +56,20 @@ procedure leeArch(var n:byte; var vector:tipoVector; var matriz:tipoMatriz);
 var
   blanco: char;
   arch:text;
-  promosVendidas,i: byte ;
+  promosVendidas,i,detallePromo: byte ;
 begin
 n:= 0;
 assign(arch,'segundoParcial_04_07_2020.txt'); reset(arch);
 while not eof (arch) do
   begin
-  n:=n + 1;
+  n:=n + 1; //cantidad de filas
   read(arch,vector[n].dia, blanco, vector[n].turno, promosVendidas );
-  //for i:= 1 to
+  for i:= 1 to promosVendidas do
+    begin
+    read(arch,detallePromo);
+    matriz[n,detallePromo]:=matriz[n,detallePromo] + 1;
+    end;
+  readln(arch);
   end;
 close(arch);
 end;
