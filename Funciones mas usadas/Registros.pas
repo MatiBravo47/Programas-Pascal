@@ -48,7 +48,7 @@ begin
 j:= 1;
 While (j <= N) and (vector[j].nombre <> nombreIngresado) do //Busca nombre
   j:= j + 1;  //Si no coincide,suma indice
-if (j <= N) then
+if (j <= N) then //si coincide, realiza esta operacion
   begin
   peso:= vector[j].Peso;
   Writeln('El peso es: ', Peso:5:2);
