@@ -30,25 +30,32 @@
 //los mismos, NO deben figurar como constantes en el código desarrollado.
 program segundoParcial_04_07_2020;
 uses crt;
+const
+  PROMO1 = 700;
+  PROMO2 = 400;
+  PROMO3 = 500;
+  INCREMENTO = 1.10; //%10
+  FILAS = 11;
+  COLUMNAS = 3;
 type
   tReg = record
     dia: byte;
     turno: char;
   end;
   tipoVector = array[1..60] of tReg; //en el caso de haber los turnos en cada dia
-  tipoMatriz = array [1..11,1..3] of byte;
+  tipoMatriz = array [1..FILAS,1..COLUMNAS] of byte;
 
-Procedure IniciaMatrizCuadrada(fila, col, num: byte; var matriz2: tipoMatriz);
+Procedure InicializaMatriz(fila, col, num: byte; var matriz: tipoMatriz);
 begin
 if (fila = 1) and (col = 1) then //si es el primer elemento
-  matriz2[fila,col]:= 0   //guarda 0 en esa pos
+  matriz[fila,col]:= 0   //guarda 0 en esa pos
 else
   begin
-  matriz2[fila, col]:= 0;
+  matriz[fila, col]:= 0;
   if (col > 1) then
-    IniciaMatrizCuadrada(fila, col - 1, num, matriz2) //Baja columna
+    InicializaMatriz(fila, col - 1, num, matriz) //Baja columna
   else
-   IniciaMatrizCuadrada(fila - 1, num, num, Matriz2); //Baja una fila y va a ultima columna
+   InicializaMatriz(fila - 1, num, num, Matriz); //Baja una fila y va a ultima columna
   end;
 end;
 
@@ -73,15 +80,46 @@ while not eof (arch) do
   end;
 close(arch);
 end;
+
+Procedure Consulta(vector: tipoVector; N: byte; diaIngresado: byte; matriz: tipoMatriz; var recaudacionTotal: real);
+Var
+  j: byte;
+  recaudacion: real;
+begin
+j:= 1;
+recaudacionTotal:=0;
+While (j <= N) and (vector[j].dia <= diaIngresado) do
+  begin
+  While (j <= N) and (vector[j].dia <> diaIngresado) do //Busca nombre
+    j:= j + 1;  //Si no coincide,suma indice
+  if (j <= N) then
+    begin
+    if vector[j].turno = 'M' then
+      recaudacion:= matriz[j,1] * PROMO1 + matriz[j,2] * PROMO2 + matriz[j,3] * PROMO3
+    else
+      recaudacion:= (matriz[j,1] * PROMO1 + matriz[j,2] * PROMO2 + matriz[j,3] * PROMO3)*INCREMENTO;
+    recaudacionTotal:= recaudacionTotal + recaudacion;
+
+    j:= j + 1;
+    end
+  else
+    RecaudacionTotal:= 0;
+  end;
+Writeln('La recaudacion total es: ', recaudacionTotal:5:2);
+end;
+
 //programa principal
 var
   vector: tipoVector;
-  n: byte;
+  n, diaIngresado: byte;
   matriz:tipoMatriz;
+  recaudacionTotal: real;
 begin
 clrscr;
-iniciaMatrizCuadrada(11,3,11,matriz);
+inicializaMatriz(FILAS,COLUMNAS,FILAS,matriz);
 leeArch(n,vector,matriz);
+writeln('Ingrese un dia');readln(diaIngresado);
+consulta(vector, n,diaIngresado,matriz,recaudacionTotal);
 readln;
 end.
 
