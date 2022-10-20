@@ -37,6 +37,7 @@ const
   INCREMENTO = 1.10; //%10
   FILAS = 11;
   COLUMNAS = 3;
+
 type
   tReg = record
     dia: byte;
@@ -44,6 +45,9 @@ type
   end;
   tipoVector = array[1..60] of tReg; //en el caso de haber los turnos en cada dia
   tipoMatriz = array [1..FILAS,1..COLUMNAS] of byte;
+  tipoVectorWord = array[1..3] of word;
+const
+    vectorPromos: tipoVectorWord = (700,400,500);
 
 Procedure InicializaMatriz(fila, col, num: byte; var matriz: tipoMatriz);
 begin
@@ -83,29 +87,51 @@ end;
 
 Procedure Consulta(vector: tipoVector; N: byte; diaIngresado: byte; matriz: tipoMatriz; var recaudacionTotal: real);
 Var
-  j: byte;
+  j,i: byte;
   recaudacion: real;
 begin
-j:= 1;
+i:= 1;
 recaudacionTotal:=0;
-While (j <= N) and (vector[j].dia <= diaIngresado) do
+While (i <= N) and (vector[i].dia <= diaIngresado) do
   begin
-  While (j <= N) and (vector[j].dia <> diaIngresado) do //Busca nombre
-    j:= j + 1;  //Si no coincide,suma indice
-  if (j <= N) then
+  While (i <= N) and (vector[i].dia <> diaIngresado) do //Busca nombre
+    i:= i + 1;  //Si no coincide,suma indice
+  if (i <= N) then
     begin
-    if vector[j].turno = 'M' then
-      recaudacion:= matriz[j,1] * PROMO1 + matriz[j,2] * PROMO2 + matriz[j,3] * PROMO3
+    if vector[i].turno = 'M' then
+      for j:=1 to 3 do
+        recaudacionTotal:= recaudacionTotal + matriz[i,j] * vectorPromos[j]
     else
-      recaudacion:= (matriz[j,1] * PROMO1 + matriz[j,2] * PROMO2 + matriz[j,3] * PROMO3)*incremento;
-    recaudacionTotal:= recaudacionTotal + recaudacion;
-
-    j:= j + 1;
+      for j:=1 to 3 do
+      recaudacionTotal:= recaudacionTotal + (matriz[i,j] * vectorPromos[j])*1.10;
+    i:= i + 1;
     end
-  else
-    RecaudacionTotal:= 0;
   end;
 Writeln('La recaudacion total es: ', recaudacionTotal:5:2);
+end;
+
+Function sumaColumnaX(N: byte; x: integer; matriz: tipoMatriz; vector:tipoVector): real;
+var
+  acu: real;
+  i: byte;
+begin
+acu:= 0;
+for i:= 1 to N do
+  begin
+  if (vector[i].turno = 'M') then
+    acu:= acu + (matriz[i,x] * vectorPromos[x]) //suma columna
+  else
+    acu:= acu + (matriz[i,x] * vectorPromos[x]) * 1.10;
+  end;
+sumaColumnaX:=Acu;
+end;
+
+procedure muestraSumaColumnas(N, M: byte; matriz: tipoMatriz; vector:tipoVector);
+var
+  j: byte;
+begin
+  for j:= 1 to M do
+    Writeln('promo ',j,': ',sumaColumnaX(N, j, matriz,vector):5:2);
 end;
 
 //programa principal
@@ -120,6 +146,7 @@ inicializaMatriz(FILAS,COLUMNAS,FILAS,matriz);
 leeArch(n,vector,matriz);
 writeln('Ingrese un dia');readln(diaIngresado);
 consulta(vector, n,diaIngresado,matriz,recaudacionTotal);
+muestraSumaColumnas(N, COLUMNAS, matriz, vector);
 readln;
 end.
 
