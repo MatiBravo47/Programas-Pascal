@@ -75,7 +75,7 @@ var
   matriz:tipoMatriz;
 begin
 clrscr;
-iniciaMatrizCuadrada(11,3,11,matriz);
+iniciaMatrizCuadrada(11,3,11,matriz2);
 leeArch(n,vector,matriz);
 readln;
 end.

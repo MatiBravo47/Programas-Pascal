@@ -46,11 +46,11 @@ Var
   j: byte;
 begin
 j:= 1;
-While (j <= N) and (V[j].nombre <> nombreIngresado) do //Busca nombre
+While (j <= N) and (vector[j].nombre <> nombreIngresado) do //Busca nombre
   j:= j + 1;  //Si no coincide,suma indice
 if (j <= N) then
   begin
-  peso:= V[j].Peso;
+  peso:= vector[j].Peso;
   Writeln('El peso es: ', Peso:5:2);
   end
 else
@@ -68,7 +68,7 @@ begin
 clrscr;
 LeeVector(vector, N);
 Writeln('Ingrese nombre de la persona'); Readln(nombreIngresado);
-Consulta(V, N, nombreIngresado, peso);
+Consulta(vector, N, nombreIngresado, peso);
 readln;
 end.
 
