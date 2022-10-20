@@ -243,19 +243,18 @@ if (fila > 0) then
   end;
 end;
 
-//Inicializar matriz cuadrada
-//Num es el stopper
-Procedure IniciaMatrizCuadrada(fila, col, num: byte; var matriz2: tipoMatriz);
+//Num es el stopper, en este caso cantidad de filas por recorre por fila 
+Procedure InicializaMatriz(fila, col, num: byte; var matriz: tipoMatriz);
 begin
 if (fila = 1) and (col = 1) then //si es el primer elemento
-  matriz2[fila,col]:= 0   //guarda 0 en esa pos
+  matriz[fila,col]:= 0   //guarda 0 en esa pos
 else
   begin
-  matriz2[fila, col]:= 0;
+  matriz[fila, col]:= 0;
   if (col > 1) then
-    IniciaMatrizCuadrada(fila, col - 1, num, matriz2) //Baja columna
+    IniciaMatriz(fila, col - 1, num, matriz) //Baja columna
   else
-   IniciaMatrizCuadrada(fila - 1, num, num, Matriz2); //Baja una fila y va a ultima columna
+   IniciaMatriz(fila - 1, num, num, Matriz); //Baja una fila y va a ultima columna
   end;
 end;
 
