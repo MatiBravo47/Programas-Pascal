@@ -95,3 +95,20 @@ Temas
 - https://www.onlinegdb.com/online_pascal_compiler
 - https://app.codingrooms.com/w/VyFnkt5AmRqF
 
+### IDE usado
+- Lazarus https://www.lazarus-ide.org/
+<br>
+### Recomendaciones: 
+- No tener free pascal instalado.
+- No alterar path de instalacion lazarus.
+- Para configurar modo pantalla unica: 
+Paquete-> Abrir archivo de paquete (.lpk)-> DiscoLocal(C)
+<br>
+Lazarus -> Components -> anchordocking -> desing 
+<br>
+Abrir archivo 'anchordockingdsgn' -> compilar -> Instalar
+
+
+
+
+
