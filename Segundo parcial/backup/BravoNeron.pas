@@ -1,4 +1,4 @@
-program segundoParcial_20_05_22 ;
+program BravoNeron ;
 Uses crt;
 Type
   TregP = record
