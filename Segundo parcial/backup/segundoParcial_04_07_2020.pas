@@ -31,10 +31,6 @@
 program segundoParcial_04_07_2020;
 uses crt;
 const
-  PROMO1 = 700;
-  PROMO2 = 400;
-  PROMO3 = 500;
-  INCREMENTO = 1.10; //%10
   FILAS = 11;
   COLUMNAS = 3;
 
