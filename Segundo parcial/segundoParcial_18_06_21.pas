@@ -31,8 +31,7 @@
 //Condición para aprobar: los siguientes subprogramas (funciones y procedimientos,
 //según corresponda), necesarios
 //para resolver el problema planteado, deben ser resueltos correctamente en forma
-//recursiva: (como mínimo 2 de los
-//3)
+//recursiva: (como mínimo 2 de los 3)
 //- Obtener la posición del máximo de una fila (para el inciso a)
 //- Total de ventas de tipo de combustible (para el inciso b)
 //- Total de ventas del día (para el inciso b)
@@ -81,6 +80,20 @@ begin
     readln(arch);
     end;
   close(arch);
+end;
+
+//devuelve posicion
+function maximoRecursivo(matCajas: TMR, N, M: byte): byte;
+begin
+if M=1 then
+  maximoRecursivo :=1,
+else
+  begin
+  if m > 1 then
+    maximoRecursivo := maximoRecursivo(matCajas, n, m-1);
+  if matCajas[n, maximoRecursivo] < matCajas[n,m] then
+    maximoRecursivo := m;
+  end;
 end;
 
 //programa principal
