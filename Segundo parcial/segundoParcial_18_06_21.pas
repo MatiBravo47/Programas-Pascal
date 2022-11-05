@@ -83,15 +83,15 @@ begin
 end;
 
 //devuelve posicion maximo
-function maximoRecursivo(matCajas: TMR, N, M: byte): byte;
+function maximoRecursivo(matrizVentas: tipoMatriz; N, M: byte): byte;
 begin
-if M=1 then
-  maximoRecursivo :=1,
+if (M = 1) then
+  maximoRecursivo :=1
 else
   begin
   if m > 1 then
-    maximoRecursivo := maximoRecursivo(matCajas, n, m-1);
-  if matCajas[n, maximoRecursivo] < matCajas[n,m] then
+    maximoRecursivo := maximoRecursivo(matrizVentas, n, m-1);
+  if matrizVentas[n, maximoRecursivo] < matrizVentas[n,m] then
     maximoRecursivo := m;
   end;
 end;

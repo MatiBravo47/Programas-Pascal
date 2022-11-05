@@ -82,11 +82,11 @@ begin
   close(arch);
 end;
 
-//devuelve posicion
-function maximoRecursivo(matCajas: TMR, N, M: byte): byte;
+//devuelve posicion maximo
+function maximoRecursivo(matrizVentas: tipoMatriz; N, M: byte): byte;
 begin
-if M=1 then
-  maximoRecursivo :=1,
+if (M = 1) then
+  maximoRecursivo :=1
 else
   begin
   if m > 1 then
