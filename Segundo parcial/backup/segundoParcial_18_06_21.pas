@@ -82,6 +82,7 @@ begin
   close(arch);
 end;
 
+//devuelve posicion
 function maximoRecursivo(matCajas: TMR, N, M: byte): byte;
 begin
 if M=1 then
