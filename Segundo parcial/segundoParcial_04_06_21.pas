@@ -126,6 +126,7 @@ if (n = 1) then //El primero es el minimo momentaneo
   posicionMinimoVector:= n;
   minimoVector:= vector[n];
   end
+
 else
   begin
   aux:= minimoVector(vector, n - 1);

@@ -1,0 +1,5 @@
+4
+Infinia    105
+NaftaSuper 90
+GasOil     85
+Premiun    100

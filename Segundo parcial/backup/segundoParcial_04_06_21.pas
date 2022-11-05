@@ -117,7 +117,7 @@ for i:= 1 to N do
 end;
 
 //Minimo de un vector
-function minimoVector(vector: tipoVectorWord; n: byte): integer;
+function posicionMinimoVector(vector: tipoVectorWord; n: byte): integer;
 var
   aux: integer;
 begin
