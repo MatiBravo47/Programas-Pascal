@@ -273,6 +273,16 @@ begin
   promedioColumnaMatriz:= sumaElementosColumna(cajaRubro, n,auxRubro) / n ;
 end;
 
+//maximo de la fila,devuelve indice recursivo
+function maximoFila(cajaRubro:TM;fila,m:byte):byte;
+begin
+  if (m > 0) then
+    maximoFila(cajaRubro,fila,m-1);
+  if (m = 1) or (cajaRubro[fila,m] > cajaRubro[fila,maximoFila]) then
+    maximoFila:= m;
+end;
+
+
 Var
   x, n, m, i, j, aux: byte;
   matriz, B: tipoMatriz;

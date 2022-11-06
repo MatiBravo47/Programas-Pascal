@@ -270,7 +270,7 @@ end;
 //Promedio Columna de una matriz
 function PromedioColumnaMatriz(cajaRubro: TM; n,auxRubro:byte): real;
 begin
-  promedioMatriz:= sumaElementosColumna(cajaRubro, n,auxRubro) / n ;
+  promedioColumnaMatriz:= sumaElementosColumna(cajaRubro, n,auxRubro) / n ;
 end;
 
 Var
