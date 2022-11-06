@@ -16,7 +16,7 @@
 //c) Para un importe X, cuantos rubros registraron ventas por encima de X en
 // todas las cajas.
 program segundoParcial_28_10_19;
-uses crt;
+uses crt, SysUtils;
 type
   ST = string[8];
   Treg = record
@@ -125,7 +125,7 @@ begin
     end;
 end;
 
-//verifica si supera x importe por columna(cada caja del rubro)
+//verifica si supera x importe por columna(cajas del rubro)
 function controlXCaja(cajaRubro: TM; N, M: byte; x: integer): boolean;
 begin
   if (n = 0) then
