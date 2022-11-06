@@ -22,9 +22,8 @@
 //c) Generar un arreglo con los apellidos y pisos de los ocupantes que son
 //propietarios de los departamentos identificados con un número (entre 1 y 6)
 //ingresado por teclado. Luego mostrar el arreglo generado.
-//Condición para aprobar: los siguientes subprogramas (función o procedimiento,
-//según corresponda), necesarios para resolver el problema planteado,
-//deben ser resueltos correctamente en forma recursiva:
+//Condición para aprobar: los siguientes subprogramas, necesarios para resolver
+//el problema planteado, deben ser resueltos correctamente en forma recursiva:
 //- Verificar si determinado piso tiene todos sus departamentos ocupados con
 //más de 2 personas (para el inciso a)
 //- Contar departamentos ocupados en todo el edificio para determinada categoría
@@ -35,7 +34,42 @@
 //vectores y matrices
 
 program segundoParcial_27_10_21;
+uses crt;
+const M = 6;
+type
+  ST3 = string[3];
+  ST12 = string[12];
+  tReg = record
+    jugador : ST12;
+    codigo : ST3;
+    inscripto : char;
+  end;
+  tipoVector = array[1..M] of tReg;
+  tipoMatriz = array[1..8,1..M] of byte;
 
+procedure iniciaMatriz();
 begin
+
+end;
+
+procedure leeArchOcupantes(var matriz:tipoMatriz;var vector:tipoVector;var n,m:byte);
+var
+  arch:text;
+begin
+  assign(arch,'ocupantes.txt');reset(arch);
+  readln(arch,n);
+  iniciaMatriz();
+  while not eof (arch) do
+    begin
+    readln(arch,i,j,vector[j].jugador,vector[j].codigo,matriz[i,j],blanco,vector[j].inscripto);
+    end;
+  close(arch);
+end;
+
+
+//programa principal
+begin
+  clrscr;
+  readln;
 end.
 

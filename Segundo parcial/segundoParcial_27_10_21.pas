@@ -34,7 +34,43 @@
 //vectores y matrices
 
 program segundoParcial_27_10_21;
+uses crt;
+const M = 6;
+type
+  ST3 = string[3];
+  ST12 = string[12];
+  tReg = record
+    jugador : ST12;
+    codigo : ST3;
+    inscripto : char;
+  end;
+  tipoVector = array[1..M] of tReg;
+  tipoMatriz = array[1..8,1..M] of byte;
 
+procedure iniciaMatriz();
 begin
+
+end;
+
+procedure leeArchOcupantes(var matriz:tipoMatriz;var vector:tipoVector;var n,m:byte);
+var
+  arch:text;
+  i,j:byte;
+begin
+  assign(arch,'ocupantes.txt');reset(arch);
+  readln(arch,n);
+  iniciaMatriz();
+  while not eof (arch) do
+    begin
+    readln(arch,i,j,vector[j].jugador,vector[j].codigo,matriz[i,j],blanco,vector[j].inscripto);
+    end;
+  close(arch);
+end;
+
+
+//programa principal
+begin
+  clrscr;
+  readln;
 end.
 
