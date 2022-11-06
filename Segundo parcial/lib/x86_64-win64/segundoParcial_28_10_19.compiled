@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1429738194"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq &quot;-FiC:\Users\Matt_\OneDrive\Desktop\Programas Pascal\Programas_Pascal\Segundo parcial\lib\x86_64-win64&quot; &quot;-FuC:\Users\Matt_\OneDrive\Desktop\Programas Pascal\Programas_Pascal\Segundo parcial\&quot; &quot;-FUC:\Users\Matt_\OneDrive\Desktop\Programas Pascal\Programas_Pascal\Segundo parcial\lib\x86_64-win64\&quot; &quot;-FEC:\Users\Matt_\OneDrive\Desktop\Programas Pascal\Programas_Pascal\Segundo parcial\&quot; &quot;-oC:\Users\Matt_\OneDrive\Desktop\Programas Pascal\Programas_Pascal\Segundo parcial\segundoParcial_28_10_19.exe&quot; segundoParcial_28_10_19.pas"/>
+  <Complete Value="False"/>
+</CONFIG>
