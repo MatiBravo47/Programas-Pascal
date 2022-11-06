@@ -27,6 +27,7 @@ type
   TVR = array[1..10] of Treg;
   TM = array[1..50,1..50] of real;
 
+
 procedure blanqueo(var Mat: TM; i, j, m: byte);
 begin
   if (i >= 1 ) then

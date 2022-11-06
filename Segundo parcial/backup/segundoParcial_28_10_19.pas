@@ -146,7 +146,7 @@ var
   valMaxRubro: real;
 
 begin
-  lectura(cajaRUbro, n, m, productos);
+  lectura(cajaRubro, n, m, productos);
   writeln('Ingrese el rubro(8 caracteres complete con espacio)' );
   readln(r);
   auxRubro:= buscaRubro(r, productos, m);
