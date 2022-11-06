@@ -82,18 +82,19 @@ begin
       buscaRubro:= buscaRubro(r, productos, m - 1);
 end;
 
-function promedio(cajaRubro: TM; n, m: byte): real;
-var
-  suma: real;
+//Muestra la suma de los elementos de una columna AuxRubro de una matriz
+Function SumaElementosVector(cajaRubro: TM; N,auxRubro: byte): real;
 begin
-  if (n < 1) then
-    suma:= 0
+  if (n = 1) then
+    sumaElementosVector:= cajaRubro[n,auxRubro]
   else
-    begin
-    promedio:= suma + promedio(cajaRubro, n - 1, m);
-    suma:= cajaRubro[n,m];
-    end;
-  promedio:= suma;
+    sumaElementosVector:= cajaRubro[N,auxRubro] + sumaElementosVector(cajaRubro, N - 1, auxRubro);
+end;
+
+//Promedio Columna de una matriz
+function PromedioMatriz(cajaRubro: TM; n,auxRubro:byte): real;
+begin
+  promedioMatriz:= sumaElementosVector(cajaRubro, n,auxRubro) / n ;
 end;
 
 procedure maxGan(cajaRubro: TM; productos: TVR; i, m: byte; var aux: byte; var val: real);
@@ -104,11 +105,13 @@ begin
     val:= cajaRubro[i,1] * (productos[m].margen) / 100;
     end
   else
-    maxGan(cajaRubro, productos, i , m - 1, aux, val);
-  if ((cajaRubro[i,m] * (productos[m].margen)/100) > val) then
     begin
-    val:= (cajaRubro[i,m] * productos[m].margen) / 100;
-    aux:= m;
+    maxGan(cajaRubro, productos, i , m - 1, aux, val);
+    if ((cajaRubro[i,m] * (productos[m].margen)/100) > val) then
+      begin
+      val:= (cajaRubro[i,m] * productos[m].margen) / 100;
+      aux:= m;
+      end;
     end;
 end;
 
@@ -159,7 +162,7 @@ begin
     writeln('rubro no encontrado')
   else
     writeln('para el rubro ,', r ,'su promedio de ventas es de ',
-    promedio(cajaRubro, n, m) / N:5:2);
+    promedioMatriz(cajaRubro, n, auxRubro):5:2);
   writeln('ingrese la caja D');
   readln(D);
   maxGan(cajaRubro, productos, d, m, auxRubroMax, valMaxRubro);
