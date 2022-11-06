@@ -97,6 +97,15 @@ begin
   promedioMatriz:= sumaElementosVector(cajaRubro, n,auxRubro) / n ;
 end;
 
+//maximo de la fila,devuelve indice recursivo
+function maximoFila(cajaRubro:TM;fila,m:byte):byte;
+begin
+  if (m > 0) then
+    maximoFila(cajaRubro,fila,m-1);
+  if (m = 1) or (cajaRubro[fila,m] > cajaRubro[fila,maximoFila]) then
+    maximoFila:= m;
+end;
+
 procedure maxGan(cajaRubro: TM; productos: TVR; i, m: byte; var aux: byte; var val: real);
 begin
   if (M = 1) then
@@ -171,6 +180,7 @@ begin
   writeln('Ingrese un importe');
   readln(x);
   writeln(' para x = ', x,' ', cuentaRubrosX(cajaRubro, n, m, x),' rubro/s');
+  writeln(maximoFila(cajaRubro,4,m));
   readln()
 end.
 
