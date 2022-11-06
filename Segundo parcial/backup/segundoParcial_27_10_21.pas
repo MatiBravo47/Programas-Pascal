@@ -22,8 +22,9 @@
 //c) Generar un arreglo con los apellidos y pisos de los ocupantes que son
 //propietarios de los departamentos identificados con un número (entre 1 y 6)
 //ingresado por teclado. Luego mostrar el arreglo generado.
-//Condición para aprobar: los siguientes subprogramas, necesarios para resolver
-//el problema planteado, deben ser resueltos correctamente en forma recursiva:
+//Condición para aprobar: los siguientes subprogramas (función o procedimiento,
+//según corresponda), necesarios para resolver el problema planteado,
+//deben ser resueltos correctamente en forma recursiva:
 //- Verificar si determinado piso tiene todos sus departamentos ocupados con
 //más de 2 personas (para el inciso a)
 //- Contar departamentos ocupados en todo el edificio para determinada categoría
