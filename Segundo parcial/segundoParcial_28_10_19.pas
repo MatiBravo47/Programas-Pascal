@@ -18,23 +18,24 @@
 program segundoParcial_28_10_19;
 uses crt;
 type
-  ST=string[8];
+  ST = string[8];
   Treg = record
-    rubro:ST;
-    margen:real;
+    rubro: ST;
+    margen: real;
   end;
 
   TVR = array[1..10] of Treg;
   TM = array[1..50,1..50] of real;
 
 
+//inicializa matriz (cajaRubro) en 0
 procedure blanqueo(var Mat: TM; i, j, m: byte);
 begin
   if (i >= 1 ) then
     begin
-    if (j > 1 ) then
+    if (j > 1 ) then //baja de por columnas
       blanqueo(Mat, i, j - 1, M)
-    else
+    else  //baja una fila cuando llega a la primera columna
       blanqueo(Mat, i - 1, M, M);
     Mat[i,j]:= 0;
     end;
@@ -49,11 +50,13 @@ begin
   assign(arch, 'parcial2.txt'); reset(arch);
   readln(arch, n, m);
   blanqueo(cajaRubro, n, m, m);
+  //almacena en registro productos
   for j:= 1 to M do
     begin
     with productos[j] do
       readln(arch, rubro, margen)
     end;
+  //lee matriz cajaRubro
   for i:= 1 to N do
     begin
     read(arch, j, val);
@@ -67,16 +70,17 @@ begin
   close(arch);
 end;
 
+//busqueda de un rubro en arreglo de registros,devuelve indice
 function buscaRubro(R: ST; productos: TVR; M: byte): byte;
-  begin
-    if (m = 0) then
-      buscaRubro :=0
+begin
+  if (m = 0) then
+    buscaRubro :=0
+  else
+    if (productos[m].rubro = R) then
+      buscaRubro:= m
     else
-      if (productos[m].rubro = r) then
-        buscaRubro:= m
-      else
-        buscaRubro:= buscaRubro(r, productos, m - 1);
-    end;
+      buscaRubro:= buscaRubro(r, productos, m - 1);
+end;
 
 function promedio(cajaRubro: TM; n, m: byte): real;
 var
@@ -159,10 +163,11 @@ begin
   writeln('ingrese la caja D');
   readln(D);
   maxGan(cajaRubro, productos, d, m, auxRubroMax, valMaxRubro);
-  writeln('para la caja', d,'el rubro con mayor ganancia es el ', auxRubroMax ,
-  '(' , productos[auxRubroMax].rubro,') con ' , valMaxRubro:5:2, '$');
+  writeln('Para la caja ', d,' el rubro con mayor ganancia es el ', auxRubroMax ,
+  ' ( ' , productos[auxRubroMax].rubro,') con $' , valMaxRubro:5:2);
+  writeln('Ingrese un importe');
   readln(x);
-  writeln(' para x=', x,' ', cuentaRubrosX(cajaRubro, n, m, x),'rubros');
+  writeln(' para x = ', x,' ', cuentaRubrosX(cajaRubro, n, m, x),' rubro/s');
   readln()
 end.
 
