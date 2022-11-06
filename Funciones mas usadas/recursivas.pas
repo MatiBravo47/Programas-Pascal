@@ -258,6 +258,21 @@ else
   end;
 end;
 
+//Muestra la suma de los elementos de una columna AuxRubro de una matriz
+Function SumaElementosColumna(cajaRubro: TM; N,auxRubro: byte): real;
+begin
+  if (n = 1) then
+    sumaElementosColumna:= cajaRubro[n,auxRubro]
+  else
+    sumaElementosColunna:= cajaRubro[N,auxRubro] + sumaElementosColumna(cajaRubro, N - 1, auxRubro);
+end;
+
+//Promedio Columna de una matriz
+function PromedioColumnaMatriz(cajaRubro: TM; n,auxRubro:byte): real;
+begin
+  promedioColumnaMatriz:= sumaElementosColumna(cajaRubro, n,auxRubro) / n ;
+end;
+
 Var
   x, n, m, i, j, aux: byte;
   matriz, B: tipoMatriz;
