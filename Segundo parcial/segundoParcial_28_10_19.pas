@@ -98,14 +98,15 @@ begin
 end;
 
 //maximo de la fila,devuelve indice recursivo
-function maximoFila(cajaRubro:TM;fila,m:byte):byte;
-begin
-  if (m > 0) then
-    maximoFila(cajaRubro,fila,m-1);
-  if (m = 1) or (cajaRubro[fila,m] > cajaRubro[fila,maximoFila]) then
-    maximoFila:= m;
-end;
+//function maximoFila(cajaRubro:TM;fila,m:byte):byte;
+//begin
+//  if (m > 0) then
+//    maximoFila(cajaRubro,fila,m-1);
+//  if (m = 1) or (cajaRubro[fila,m] > cajaRubro[fila,maximoFila]) then
+//    maximoFila:= m;
+//end;
 
+//para una caja D el rubro con mayor ganancia(en el dia).Especificar la ganancia
 procedure maxGan(cajaRubro: TM; productos: TVR; i, m: byte; var aux: byte; var val: real);
 begin
   if (M = 1) then
@@ -124,6 +125,7 @@ begin
     end;
 end;
 
+//verifica si supera x importe por columna(cajas del rubro)
 function controlXCaja(cajaRubro: TM; N, M: byte; x: integer): boolean;
 begin
   if (n = 0) then
@@ -137,6 +139,8 @@ begin
     end;
 end;
 
+
+//cuenta cuantos superan x importe recorre por fila(rubros)
 function cuentaRubrosX(cajaRubro: TM; N, M: byte; x: integer): byte;
 var
   incr: byte;
@@ -180,7 +184,7 @@ begin
   writeln('Ingrese un importe');
   readln(x);
   writeln(' para x = ', x,' ', cuentaRubrosX(cajaRubro, n, m, x),' rubro/s');
-  writeln(maximoFila(cajaRubro,4,m));
+//  writeln(maximoFila(cajaRubro,4,m));
   readln()
 end.
 
